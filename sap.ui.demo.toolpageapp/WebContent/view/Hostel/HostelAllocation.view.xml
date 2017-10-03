@@ -1,0 +1,256 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Hostel.HostelRegister"
+	xmlns:layout="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+  		
+ 	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Hostel Registration">
+	
+			<ScrollContainer
+						height="100%"
+						width="100%"
+						horizontal="false"
+						vertical="true">
+			
+			<layout:Grid defaultSpan="XL4 L6 M6 S12">
+							<layout:VerticalLayout>
+								<Label text="Book ISBN No."/>
+								<Select
+										
+										width="200px"
+										forceSelection="true"
+										change="onSelectChange"
+										items="{
+                                                    path: '/ProductNames'
+                                                }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Book No."/>
+								<Select
+										
+										width="200px"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: '/ProductCategories'
+                                                 }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Title."/>
+								<Select
+										
+										width="200px"
+										forceSelection="true"
+										change="onSelectChange"
+										items="{
+                                                    path: '/ProductNames'
+                                                }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Author."/>
+								<Select
+										
+										width="200px"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: '/ProductCategories'
+                                                 }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Edition."/>
+								<Select
+										
+										width="200px"
+										forceSelection="true"
+										change="onSelectChange"
+										items="{
+                                                    path: '/ProductNames'
+                                                }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Book Category."/>
+								<Select
+										
+										width="200px"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: '/ProductCategories'
+                                                 }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Publisher."/>
+								<Select
+										
+										width="200px"
+										forceSelection="true"
+										change="onSelectChange"
+										items="{
+                                                    path: '/ProductNames'
+                                                }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="No.of Copies."/>
+								<Select
+										
+										width="200px"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: '/ProductCategories'
+                                                 }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Shelf No.."/>
+								<Select
+										
+										width="200px"
+										forceSelection="true"
+										change="onSelectChange"
+										items="{
+                                                    path: '/ProductNames'
+                                                }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Book Position."/>
+								<Select
+										
+										width="200px"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: '/ProductCategories'
+                                                 }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Book Cost."/>
+								<Select
+										
+										width="200px"
+										forceSelection="true"
+										change="onSelectChange"
+										items="{
+                                                    path: '/ProductNames'
+                                                }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Language."/>
+								<Select
+										
+										width="200px"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: '/ProductCategories'
+                                                 }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+							<layout:VerticalLayout>
+								<Label text="Book Condition"/>
+								<Select
+										
+										width="200px"
+										change="onSelectChange"
+										forceSelection="true"
+										items="{
+                                                    path: '/ProductCategories'
+                                                 }">
+									<core:Item key="{key}" text="{name}"/>
+								</Select>
+							</layout:VerticalLayout>
+			
+			</layout:Grid>
+			
+	</ScrollContainer>		
+		
+	</IconTabFilter>
+	
+			<IconTabFilter
+				text="Allocated List">
+				<m:Panel>
+					<Table id="idProductsTable"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Start Year" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Start Month" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"
+										/>
+									<Text
+										text="{SupplierName}" />
+									<core:Icon
+									    id="test"
+			src="sap-icon://syringe"
+			class="size1"
+			color="#031E48"
+			ariaLabelledBy="Library/AddBooks"
+			press="handleStethoscopePress" >
+			<core:layoutData>
+				<FlexItemData growFactor="1" />
+			</core:layoutData>
+		</core:Icon>
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</m:Panel>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+</mvc:View>

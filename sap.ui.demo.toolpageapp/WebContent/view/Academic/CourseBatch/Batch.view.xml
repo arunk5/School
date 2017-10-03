@@ -1,0 +1,110 @@
+<core:View xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns="sap.m"
+
+	controllerName="sap.ui.demo.toolpageapp.controller.Academic.CourseBatch.Batch"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Batch View" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+
+<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Add Batch">
+				
+				<Label text="Course" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+
+								<Label text="Batch Name" labelFor="input-a" design="Bold"
+									required="true" />
+								<Input id="input-a" required="true" width="100%" />
+								<Label text="Start Date" labelFor="input-b" design="Bold"
+									required="true" />
+								<DatePicker id="input-b" placeholder="Enter Date ..." valueFormat="dd.MM.yyyy"
+									change="handleChange" class="sapUiSmallMarginBottom" />
+								<Label text="End Date" design="Bold" labelFor="input-c"
+									required="true" />
+								<DatePicker id="input-c" placeholder="Enter Date ..." valueFormat="dd.MM.yyyy"
+									change="handleChange" class="sapUiSmallMarginBottom" />
+								<Label text="Maximum No Of Students" design="Bold"
+									labelFor="input-d" required="true" />
+								<Input id="input-d" required="true" />
+								<Button text=" Add Batch " press="onSave"/>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Batch List">
+				
+				<Table id="idProducts" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+								<headerToolbar>
+									<Toolbar>
+										<Title text="Batch Details" level="H2" />
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Course" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Batch" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Max No Students" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Start Date" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="End Date" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+									
+									
+								</columns> 
+								<items>
+									<ColumnListItem>
+										<cells>
+											
+											<Text text="{Course}" />
+											<Text text="{Batch}" />
+											<Text text="{MaxNoOfStudents}" />
+											<Text text="{StartDate}" />
+											<Text text="{EndDate}" />
+											<HBox>
+                                     <Button icon="sap-icon://edit" press="onEditPress"/>
+                                     <Button icon="sap-icon://delete" press="onDelete"/>
+                                           </HBox>
+										 
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+
+
+
+
+
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,108 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Transport.AddRoute"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+    	
+	<l:ResponsiveSplitter defaultPane="default">
+		<l:PaneContainer>
+			<l:SplitPane  requiredParentWidth="600">
+								<m:Panel headerText="Add Route">
+								    <l:VerticalLayout width="100%">
+					<Label text="Vehicle No.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+					<Label text="Route Code (required)" labelFor="input-b" />
+					<Input id="input-b"/>
+					<Label text="Route Start Place (required)" labelFor="input-c"/>
+					<Input id="input-c"/>
+					
+					<Label text="Route Stop Place (required)" labelFor="input-d"/>
+					<Input id="input-d"/>
+										
+
+								
+				</l:VerticalLayout>
+				</m:Panel>
+			</l:SplitPane>
+			
+			<l:SplitPane requiredParentWidth="400" id="default">
+				<m:Panel>
+					<Table id="idProductsTable"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Vehicle No" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Code" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Route Start Place" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Route Stop Place" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"/>
+									<Text
+										text="{SupplierName}" />
+									<Text
+										text="Hyderabad" />
+									<Text
+										text="Banjara Hills" />
+									<core:Icon
+									    id="test"
+			src="sap-icon://syringe"
+			class="size1"
+			color="#031E48"
+			ariaLabelledBy="Library/AddBooks"
+			press="handleStethoscopePress" >
+			<core:layoutData>
+				<FlexItemData growFactor="1" />
+			</core:layoutData>
+		</core:Icon>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</m:Panel>
+			</l:SplitPane>
+			
+			
+			
+		</l:PaneContainer>
+	</l:ResponsiveSplitter>
+	
+</mvc:View>

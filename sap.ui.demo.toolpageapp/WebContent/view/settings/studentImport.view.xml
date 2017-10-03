@@ -1,0 +1,63 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:l="sap.ui.layout" 
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified"
+    xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1"
+    xmlns:t="sap.ui.table"
+		   xmlns:tnt="sap.tnt"
+		controllerName="sap.ui.demo.toolpageapp.controller.settings.studentImport" xmlns:html="http://www.w3.org/1999/xhtml">
+	<ScrollContainer id="page3"
+                             horizontal="false"
+                             vertical="true"
+                             height="100%">
+                <IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Student Import">
+				<m:Panel header="Promotion And Alumni">
+				<l:VerticalLayout>
+				
+		    <u:FileUploader
+			id="fileUploader1"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"/>
+		    <Button
+			text="Submit"
+			press="handleUploadPress"/>
+	           </l:VerticalLayout>
+				
+				
+				
+				 </m:Panel>
+				</IconTabFilter>
+				<IconTabFilter text="Student Data Update">
+				
+				<m:Panel header="Promotion And Alumni">
+				<l:VerticalLayout>
+				
+		    <u:FileUploader
+			id="fileUploader2"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"/>
+		    <Button
+			text="Submit"
+			press="handleUploadPress"/>
+	         </l:VerticalLayout>
+				
+				
+				
+				 </m:Panel>
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+            </ScrollContainer>
+</mvc:View>

@@ -1,0 +1,99 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+	controllerName="sap.ui.demo.toolpageapp.controller.Academic.CourseBatch.CourseView"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Course View" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+
+			<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				<items>
+
+					<IconTabFilter text="Add Course">
+						<Label text="Course Name" required="true" labelFor="input-a"
+							design="Bold" class="settingsLabel" />
+
+						<Input id="input-a" required="true" width="100%" liveChange ="coursevalidation"/>
+						<Label text="Description" labelFor="input-b" design="Bold"
+								 />
+						<Input id="input-b" required="true" width="100%" />
+						<Label text="Code" labelFor="input-c" design="Bold"
+							/>
+						<Input id="input-c" required="true" width="100%" />
+						<Label text="Minimum Attendance Percentage" design="Bold"
+							labelFor="input-d" required="true" />
+						<Input id="input-d" required="true" width="100%" />
+						<Label text="Attendance Type" design="Bold" required="true" />
+						<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+							<core:Item key="{AttendanceType}" text="{AttendanceType}" />
+						</Select>
+
+						<Label text="Total Working Days" design="Bold" required="true" />
+						<Input id="input-4" required="true" />
+
+						<Label text="Syllabus Name" design="Bold" required="true" />
+						<Select id="SelectId" width="100%" items="{path: '/ProductCollection' }">
+							<core:Item key="{SyllabusName}" text="{SyllabusName}" />
+						</Select>
+						<Button text=" Add Course " press="addCourse" />
+					</IconTabFilter>
+
+					<IconTabFilter text="Courses List">
+                    
+                    <Table id="idProductsTable" inset="false" mode="SingleSelectMaster"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Course" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Attendance Type" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Minimum Attendance" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Total Working Days" />
+									</Column>
+									
+									<Column hAlign="Left">
+										<Text text="Manage" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{course_id}" />
+											<Text text="{Course}" />
+											<Text text="{AttendanceType}" />
+											<Text text="{MinimumAttendance}" />
+											<Text text="{TotalWorkingDays}" />
+											<HBox>
+                                     <Button icon="sap-icon://edit" press="onPress"/>
+                                     <Button icon="sap-icon://delete" press="onDelete"/>
+                                           </HBox>
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+                     
+					</IconTabFilter>
+
+				</items>
+
+
+			</IconTabBar>
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,109 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.AssignmentNotes.AddAssignment" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title=" Notes Section " showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Add Notes">
+				<l:VerticalLayout width="100%">
+								<Label text="Title" required="true" labelFor="input-a"
+									design="Bold" class="settingsLabel" />
+
+								<Input id="input-a" required="true" width="100%" />
+								<Label text="Description" labelFor="input-b" design="Bold"
+									 />
+								<Input id="input-b" required="true" width="100%" />
+								<Label text="Course" labelFor="input-c" design="Bold"
+									required="true" />
+								<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+								<Label text="Batch" design="Bold" labelFor="input-d"
+									required="true" />
+								<Select id="Selec" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+								<Label text="Subject" design="Bold"
+									 required="true" />
+								<Select id="Sele" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Subject}" text="{Subject}" />
+								</Select>
+								
+														
+								<Label text="Date of Submission" design="Bold"
+									 required="true" />
+								<DatePicker
+			id="DP1"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+								<Button text=" Save "  press="addNotes" />
+							</l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Notes List">
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Title" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Course" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Batch" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Subject" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Submitted By" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{LectureCode}" />
+											<Text text="{Course}" />
+											<Text text="{Batch}" />
+											<Text text="{Subject}" />
+											<Text text="{Student}" />
+											<Button icon= 'sap-icon://edit' press="onPress" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

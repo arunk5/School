@@ -1,0 +1,252 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:m="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+	controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.SetExam"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Set Exam" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+
+
+			<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+
+				<items>
+					<IconTabFilter text="Set Exam">
+						<l:Splitter width="100%" orientation="Vertical">
+							<m:Panel headerText="Select Course And Batch" width="100%">
+								<l:VerticalLayout width="100%">
+
+									<Label text="Course" labelFor="input-a" design="Bold"
+										required="true" />
+									<Select id="Select20" width="100%"
+										items="{path: '/ProductCollection' }">
+										<core:Item key="{Course}" text="{Course}" />
+									</Select>
+									<Label text="Batch" labelFor="input-b" design="Bold" />
+									<Select id="Select21" width="100%"
+										items="{path: '/ProductCollection' }">
+										<core:Item key="{Batch}" text="{Batch}" />
+									</Select>
+								</l:VerticalLayout>
+
+								<layoutData>
+									<l:SplitterLayoutData size="40%" />
+								</layoutData>
+							</m:Panel>
+							<l:Splitter id="mainSplitter1">
+								<m:Panel headerText="Configure Exam And Subject" width="100%">
+
+									<Label text="Term" labelFor="input-a" design="Bold"
+										required="true" />
+									<Select id="Select22" width="100%"
+										items="{path: '/ProductCollection' }">
+										<core:Item key="{Term}" text="{Term}" />
+									</Select>
+									<Label text="Exam Name" labelFor="input-b" design="Bold" />
+									<Select id="Select23" width="100%"
+										items="{path: '/ProductCollection' }">
+										<core:Item key="{ExamName}" text="{ExamName}" />
+									</Select>
+									<Label text="Subject" labelFor="input-a" design="Bold"
+										required="true" />
+									<Select id="Select24" width="100%"
+										items="{path: '/ProductCollection' }">
+										<core:Item key="{Subject}" text="{Subject}" />
+									</Select>
+									<Label text="Max Mark" labelFor="input-b" design="Bold" />
+									<Input id="Input1" width="100%">
+									</Input>
+									<Label text="Pass Mark" labelFor="input-b" design="Bold" />
+									<Input id="Input2" width="100%">
+									</Input>
+									<layoutData>
+										<l:SplitterLayoutData size="500px" />
+									</layoutData>
+								</m:Panel>
+								<m:Panel headerText="Configure Date And Time">
+
+									<Label text="Exam Date" />
+									<DatePicker id="DTI0" dateValue="{/date}" />
+									<Label text="Start Time" />
+									<DateTimeInput id="DTI1" type="Time"
+										placeholder="Exam Start Time ..." class="sapUiSmallMarginBottom" />
+									<Label text="End Time" />
+									<DateTimeInput id="DTI2" type="Time" placeholder="Exam End Time ..."
+									class="sapUiSmallMarginBottom" />
+
+									<layoutData>
+										<l:SplitterLayoutData size="auto" />
+									</layoutData>
+								</m:Panel>
+
+							</l:Splitter>
+
+
+
+						</l:Splitter>
+					</IconTabFilter>
+					<IconTabFilter text="Exam List">
+						<l:VerticalLayout width="90%">
+
+
+							<m:Panel height="100%" width="100%">
+								<Table id="idProductsTable1" inset="false"
+									items="{
+			path: '/ProductCollection'
+			
+		}">
+									<columns>
+										<Column hAlign="Center">
+											<Text text="SNo" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Term" />
+										</Column>
+										<Column hAlign="Center">
+											<Text text="Exam Name" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Course" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Batch" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Subject" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Exam Date" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Manage" />
+										</Column>
+
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Text text="{SNo}" />
+												<Text text="{Term}" />
+												<Text text="{ExamName}" />
+												<Text text="{Course}" />
+												<Text text="{Batch}" />
+												<Text text="{Subject}" />
+												<Text text="{StartDate}" />
+												<HBox>
+													<Button icon="sap-icon://edit" press="onPress" />
+													<Button icon="sap-icon://delete" press="onDelete" />
+													<Button icon="sap-icon://show" press="onshow" />
+												</HBox>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+
+							</m:Panel>
+
+
+
+						</l:VerticalLayout>
+					</IconTabFilter>
+					<IconTabFilter text="Reports">
+
+						<l:Splitter width="100%" orientation="Vertical">
+							<m:Panel headerText="Exam Reports" width="100%">
+								<FlexBox width="100%" alignItems="Start" fitContainer="true">
+									<items>
+										<Label text="Course" labelFor="Select" textAlign="Center"
+											class="sapUiSmallMargin" />
+										<Select id="Select1" maxWidth="200px" width="400px"
+											items="{path: '/ProductCollection' }">
+											<core:Item key="{Course}" text="{Course}" />
+										</Select>
+										<Label text="Exam Name" labelFor="Sele" class="sapUiSmallMargin" />
+										<Select id="Sele2" maxWidth="200px" width="400px"
+											items="{path: '/ProductCollection' }">
+											<core:Item key="{Assessment Name}" text="{Assessment Name}" />
+										</Select>
+
+									</items>
+								</FlexBox>
+
+
+
+								<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+									<items>
+										
+										<Button text="Print" type="onPress" />
+									</items>
+								</FlexBox>
+
+								<layoutData>
+									<l:SplitterLayoutData size="40%"
+										resizable="true" />
+								</layoutData>
+							</m:Panel>
+							<m:Panel headerText="Exam List" height="100%" width="100%">
+								<Table id="idProductsTable" inset="false"
+									items="{
+			path: '/ProductCollection'
+			
+		}">
+									<columns>
+										<Column hAlign="Center">
+											<Text text="Term" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Subject" />
+										</Column>
+										<Column hAlign="Center">
+											<Text text="Course" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Batch" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Date" />
+										</Column>
+
+										<Column hAlign="Center">
+											<Text text="Time" />
+										</Column>
+
+
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Text text="{SNo}" />
+												<Text text="{Student}" />
+												<Text text="{UpperMark}" />
+												<Text text="{LowerMark}" />
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+								<layoutData>
+									<l:SplitterLayoutData size="80%" />
+								</layoutData>
+							</m:Panel>
+						</l:Splitter>
+
+
+
+					</IconTabFilter>
+
+				</items>
+			</IconTabBar>
+
+
+
+		</content>
+	</Page>
+</core:View>

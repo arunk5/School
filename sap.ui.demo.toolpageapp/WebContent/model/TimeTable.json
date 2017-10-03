@@ -1,0 +1,150 @@
+{
+	"ProductCollection": [
+		{
+			"SNo": "1",
+			"Name": " Arman ",
+			"Weekday": "Monday",
+			"Subject": "Artifical Intelligence",
+			"Lecture Code":"LEC03",
+			"Time":"10:30-11:30",
+			"Day":"Monday",
+			"TimeTable Name":"TT-I",
+			"Edit":"sap-icon://edit",
+			"Manage": " EDIT "
+			
+		},
+		{
+			"SNo": "2",
+			"Name": " Arman ",
+			"Weekday": "Tuesday",
+			"Batch": "MBA Finance Eveng",
+			"Student":" Arjun ",
+			"Subject": "Managerial Economics",
+			"Lecture Code":"LEC29",
+			"Time":"13:30-15:00",
+			"Day":"Thursday",
+			"TimeTable Name":"TT-III",
+			"Edit":"sap-icon://edit",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "3",
+			"Course": " BCA ",
+			"Batch": " A ",
+			"Student":" Manish ",
+			"Subject": "Design Algorithms",
+			"Lecture Code":"LEC17",
+			"Time":"9:00-10:00",
+			"Day":"Friday",
+			"TimeTable Name":"TT-IV",
+			"Edit":"sap-icon://edit",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "4",
+			"Course": " Economics ",
+			"Batch": " Semester-1 ",
+			"Student":" Akhil ",
+			"Subject": "Ethical Hacking",
+			"Lecture Code":"LEC33",
+			"Time":"15:00-16:00",
+			"Day":"Tuesday",
+			"TimeTable Name":"TT-VI",
+			"Edit":"sap-icon://edit",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "5",
+			"Course": "B.Com",
+			"Batch": "Semester II",
+			"Student":" Mahesh ",
+			"Subject": "Computer Architecture And Organization",
+			"Lecture Code":"LEC006",
+			"Time":"10:00-11:00",
+			"Day":"Friday",
+			"TimeTable Name":"TT-XI",
+			"Edit":"sap-icon://edit",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "6",
+			"Course": "PCM",
+			"Batch": "Semester II",
+			"Student":" Salman ",
+			"Subject": "Networks",
+			"Lecture Code":"LEC036",
+			"Time":"12:00-1:00",
+			"Day":"Wednesday",
+			"TimeTable Name":"TT-X",
+			"Edit":"sap-icon://edit",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "7",
+			"Course": " STD-VII",
+			"Batch": "Semester II",
+			"Student":" Sushanth ",
+			"Subject": "Physics",
+			"Lecture Code":"LEC258",
+			"Time":"11:00-12:00",
+			"Day":"Monday",
+			"TimeTable Name":"TT-VII",
+			"Edit":"sap-icon://edit",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "8",
+			"Course": " STD-VIII",
+			"Batch": "Semester II",
+			"Student":" Ramya ",
+			"Subject": "Maths",
+			"Lecture Code":"LEC269",
+			"Time":"10:00-11:00",
+			"Day":"Friday",
+			"TimeTable Name":"TT-VIII",
+			"Edit":"sap-icon://edit",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "9",
+			"Course": " STD-IX",
+			"Batch": "Semester II",
+			"Student":" Aarthi ",
+			"Subject": "Chemistry",
+			"Lecture Code":"LEC74",
+			"Time":"10:00-11:00",
+			"Day":"Tuesday",
+			"TimeTable Name":"TT-IX",
+			"Edit":"sap-icon://edit",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "10",
+			"Course": " STD-X",
+			"Batch": "Semester II",
+			"Student":" Rupesh ",
+			"Subject": "English",
+			"Lecture Code":"LEC37",
+			"Time":"9:00-10:00",
+			"Day":"Wednesday",
+			"TimeTable Name":"TT-III",
+			"Edit":"sap-icon://edit",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "11",
+			"Course": " PREP ",
+			"Batch": "Semester II",
+			"Student":" Harish ",
+			"Subject": "History",
+			"Lecture Code":"LEC63",
+			"Time":"10:00-11:00",
+			"Day":"Thursday",
+			"TimeTable Name":"TT-I",
+			"Edit":"sap-icon://edit",
+			"Manage": "EDIT"
+		}		
+					
+	  ]
+}
+

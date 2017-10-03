@@ -1,0 +1,94 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Events.EventTypes"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+   	
+	<ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true"
+		focusable="true">
+    <Breadcrumbs currentLocationText="EventTypes" class="sapUiMediumMargin">
+				<Link press="onPress" text="Events"/>
+				
+			</Breadcrumbs>
+			
+ 	
+	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		xmlns:layout="sap.ui.layout"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Event Types">
+				<m:Panel>
+				    <layout:Grid defaultSpan="XL4 L6 M6 S12" width="100%">
+					<l:VerticalLayout width="100%">
+						<Label text="Event Type" labelFor="input-a" design="Bold"
+									required="true" />
+					 <Input id="input-a"/>
+		
+					</l:VerticalLayout>		
+				</layout:Grid>
+			<ToggleButton text="Save" enabled="true" pressed="true" press="onPress" />
+				</m:Panel>
+			</IconTabFilter>
+			<IconTabFilter text="Event Type List"><Table id="idProductsTable"
+						inset="false"
+						selectionMode="MultiToggle"
+						visibleRowCount="7"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}"
+						itemPress = "check">
+					<headerToolbar>
+			<Toolbar>
+				<Title text="Event Details" level="H2"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button	icon="sap-icon://download" press="onDataExport" />
+			</Toolbar>
+		</headerToolbar>
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Event Types"/>
+							</Column>
+							
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<ObjectIdentifier
+										
+										text="{ProductId}"/>
+									
+									
+									<HBox>
+											<Button icon="sap-icon://edit" press="onPress"/>
+											
+											<Button icon="sap-icon://delete" press="onPress"/>
+											</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+		</Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	</ScrollContainer>
+	
+</mvc:View>

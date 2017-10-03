@@ -1,0 +1,124 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Library.BookReturn"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	
+	xmlns="sap.m">
+		   <Breadcrumbs currentLocationText="Laptop" class="sapUiMediumMargin">
+				<Link press="onPress" text="Products"/>
+				<Link press="onPress" text="Suppliers"/>
+				<Link press="onPress" text="Titanium"/>
+				<Link press="onPress" text="Ultra portable"/>
+				<Link press="onPress" text="12 inch"/>
+				<Link press="onPress" text="Super portable deluxe"/>
+			</Breadcrumbs>
+						
+	<l:Splitter id="mainSplitter" height="500px" width="100%">
+		<Panel width="100%" headerText="Book Return">
+		    <l:VerticalLayout width="100%">
+		        <SearchField
+				id="searchField"
+				
+				placeholder="search for..."
+				enableSuggestions="true"
+				search="onSearch"
+				suggest="onSuggest"
+				suggestionItems="{
+					path: '/ProductCollection',
+					sorter: { path: 'Name' }
+				}"
+				>
+				<suggestionItems>
+					<SuggestionItem text="{Name}" description="{path:'Price'} {path:'CurrencyCode'}" key="{ProductId}"/>
+				</suggestionItems>
+			</SearchField>
+			</l:VerticalLayout>
+			<l:VerticalLayout width="100%">
+		    <Label text="Return / Renewal" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+								<Select
+								    width="500px"
+					forceSelection="false"
+					selectedKey="{/ProductCollection/1/ProductId}"
+					items="{
+						path: '/ProductCollection',
+						sorter: { path: 'Name' }
+					}">
+					<core:Item key="{ProductId}" text="{Name}" />
+				</Select>
+					
+					
+					
+					</l:VerticalLayout>
+					<layoutData><l:SplitterLayoutData size="400px" /></layoutData>
+				</Panel>
+			
+		<Table id="idProductsTable"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column
+								width="12em">
+								<Text text="User"/>
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Course" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Batch" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Book No" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"
+										text="{ProductId}"/>
+									<Text
+										text="{SupplierName}" />
+									<core:Icon
+									    id="test"
+			src="sap-icon://syringe"
+			class="size1"
+			color="#031E48"
+			ariaLabelledBy="Library/AddBooks"
+			press="handleStethoscopePress" >
+			<core:layoutData>
+				<FlexItemData growFactor="1" />
+			</core:layoutData>
+		</core:Icon>
+		
+								</cells>
+							</ColumnListItem>
+						</items>
+					
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+		</Table>
+		
+	</l:Splitter>
+	<l:HorizontalLayout class="buttons">
+		
+	</l:HorizontalLayout>
+	<l:VerticalLayout id="mainOptions" class="options">
+	</l:VerticalLayout>
+</mvc:View>

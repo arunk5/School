@@ -1,0 +1,59 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Placements.PlaceVendor" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Placements">
+		<content>
+	
+		<GenericTile id="Tile1"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Attendees" 
+				failedText = "Academic/CourseBatch/CourseView"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile2"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Place Cell Members"
+				failedText = "Academic/CourseBatch/CourseView"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile3"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Placed Details"
+				failedText = "Academic/CourseBatch/CourseView"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	            <GenericTile id="Tile4"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Place Vendor"
+				failedText = "Academic/CourseBatch/CourseView"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	
+		</content>
+	</Page>
+</core:View>

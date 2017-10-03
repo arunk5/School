@@ -1,0 +1,232 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:m="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.SetAssessment" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	 
+	 
+<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Set Assessment">
+				
+			<l:VerticalLayout width="90%">
+			
+			<Label text="Course" labelFor="input-b" design="Bold" required="true" />
+			<Select id="Select20" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+			<Label text="Batch" labelFor="input-b" design="Bold" required="true" />
+			<Select id="Select21" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+			<Label text="Subject" labelFor="input-b" design="Bold" required="true" />
+			<Select id="Select22" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Subject}" text="{Subject}" />
+								</Select>
+			
+			
+			
+			
+			
+		    <Label text="Assessment Type" labelFor="input-a" design="Bold" required="true" />
+			<Select id="Select" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom" >
+			<core:Item key="{AssessmentType}" text="{AssessmentType}" />
+			</Select>
+			
+			<Label text="Assessment Name" labelFor="input-b" design="Bold" />
+			  <Input value=" "
+			    id="AssName"					
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				
+		      <Label text="Max.Mark" labelFor="input-b" design="Bold" />
+			  <Input value=" "
+			   id="MaxMark"
+			   fieldWidth="60%"
+			   class="sapUiSmallMarginBottom" />
+			  <Button text="Add" press="AddAss"/>
+			  </l:VerticalLayout>
+			</IconTabFilter>
+			
+				<IconTabFilter text="Enter Assessment Mark">
+				
+			 <l:Splitter height="500px" orientation="Vertical">
+		     <l:VerticalLayout width="90%">
+		    <Label text="Assessment Name" labelFor="input-a" design="Bold" required="true" />
+			<Select id="Select11" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{AssessmentName}" text="{AssessmentName}" />
+								</Select>
+			<Label text="Term" labelFor="input-b" design="Bold" required="true" />
+			<Select id="Select12" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Term}" text="{Term}" />
+								</Select>
+			<Label text="Course" labelFor="input-b" design="Bold" required="true" />
+			<Select id="Select13" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+			<Label text="Batch" labelFor="input-b" design="Bold" required="true" />
+			<Select id="Select14" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+			<Label text="Subject" labelFor="input-b" design="Bold" required="true" />
+			<Select id="Select15" width="100%" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Subject}" text="{Subject}" />
+								</Select>
+			  <Label text="Marks Obtained" labelFor="input-b" design="Bold" />
+			  <Input value=" "
+			   id="MaxMark1"
+			   fieldWidth="60%"
+			   class="sapUiSmallMarginBottom" />
+			   <Button text="Add" press="AddMarks"/>
+			 <l:layoutData><l:SplitterLayoutData size="80%" /></l:layoutData>
+		     </l:VerticalLayout>
+		    				
+									
+	</l:Splitter>
+				
+			</IconTabFilter>
+			<IconTabFilter text="Mark List">  
+			
+	    <l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = "Select Criteria"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					fitContainer="true"
+					>
+					<items>
+					<!--     <Label text="Report For" labelFor="Select" textAlign="Center" class="sapUiSmallMargin"/>
+						<Select id="Select1" maxWidth="200px" width ="400px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>  --> 
+						<Label text="Assessment Name" labelFor="Sele" class="sapUiSmallMargin"/>		
+						<Select id="Sele2" maxWidth="200px" width ="400px" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{AssessmentName}" text="{AssessmentName}" />
+								</Select>
+						<Label text="Term" labelFor="Sel" class="sapUiSmallMargin"/>			
+						<Select id="Sel3" maxWidth="200px" width ="400px" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Term}" text="{Term}" />
+								</Select>
+								
+						</items>
+				</FlexBox>		
+				<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					fitContainer="true"
+					>
+					<items>
+						<Label text="Course" labelFor="Sel" class="sapUiSmallMargin"/>			
+						<Select id="Sel4" maxWidth="200px" width ="400px" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+						<Label text="Batch" labelFor="Sel" class="sapUiSmallMargin"/>			
+						<Select id="Sel5" maxWidth="200px" width ="400px" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+						<Label text="Subject" labelFor="Sel" class="sapUiSmallMargin"/>			
+						<Select id="Sel6" maxWidth="200px" width ="400px" items="{path: '/ProductCollection' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{Subject}" text="{Subject}" />
+								</Select>		
+								<Button text=" Show " press="onPress" />
+								
+					</items>
+				</FlexBox>	
+	
+			<layoutData><l:SplitterLayoutData size="40%" resizable="true"/></layoutData>
+		</m:Panel>
+		<m:Panel headerText = "Display Marks" height="100%" width="100%">
+									<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="Student Admission.No" />
+									</Column>
+		
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Student Name" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Max.Mark" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Mark" />
+									</Column>
+																			
+																											
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{StudentAdminNo}" />
+											<Text text="{StudentName}" />
+											<Text text="{AssessmentMaxMarks}" /> 
+											<Text text="{AssessmentMarks}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+			<layoutData><l:SplitterLayoutData size="80%" /></layoutData>
+		</m:Panel>
+	</l:Splitter>
+	
+			
+			
+			</IconTabFilter>
+			<!--  	<IconTabFilter text="Assessment List">
+				
+				<Table id="idProductsTable1" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="Student Admission.No" />
+									</Column>
+		
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Student Name" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Max.Mark" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Mark" />
+									</Column>
+																			
+																											
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Student}" />
+											<Text text="{UpperMark}" /> 
+											<Text text="{LowerMark}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				</IconTabFilter>  -->
+				</items>
+</IconTabBar>
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

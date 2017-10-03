@@ -1,0 +1,44 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Certifications.GenerateCertificate" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title=" Certificates Section ">
+		<content>
+	
+		<GenericTile id="Tile1"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Types Of Certificate" failedText="Academic/Certifications/CertificateType"
+				press="CertificateTypes">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile2"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header=" Custom Certificate " failedText="Academic/Certifications/CustomCertificate"
+				press="CustomCertificate">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile3"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header=" Generate Certificate " failedText="Academic/Certifications/Certificate"
+				press="Certificate">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	
+		</content>
+	</Page>
+</core:View>

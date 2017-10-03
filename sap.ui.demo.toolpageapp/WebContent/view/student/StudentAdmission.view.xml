@@ -1,0 +1,327 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.student.StudentAdmission" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Student Admission">
+		<content>
+	<Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="OFFICIAL DETAILS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	
+	<FlexBox  alignItems="Start" >
+	<items>
+		 <Label text="Academic Year" labelFor="Academic" required="true" class="sapUiSmallMargin"/>
+	   	 <Select id="Academic">
+		 <core:Item key="2016-2017" text="2016-2017" />
+		 </Select>
+		 <Label text="Registration Number" labelFor="Register" required="true" class="sapUiSmallMargin"/>		
+		 <Input id="Register" width="150px" >
+		</Input>
+		<Label text="Joining Date"  required="true" class="sapUiSmallMargin"/>		
+		<DatePicker width="175px" dateValue=""/>
+	</items>
+   </FlexBox>
+	
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Course" labelFor="Select" required="true" class="sapUiSmallMargin"/>
+	   	 <Select id="Course"  width="190px" items="{path: '/ProductCollection' }">
+		 <core:Item key="{Course}" text="{Course}" />
+		 </Select>
+		 <Label text="Batch" labelFor="Register" required="true" class="sapUiSmallMargin"/>		
+		 <Select id="Batch" width="230px" items="{path: '/ProductCollection' }">
+		 <core:Item key="{Batch}" text="{Batch}" />
+		 </Select>
+		<Label text="Roll No" labelFor="Sel" required="true" class="sapUiSmallMargin"/>		
+		<Input id="RollNo" width="130px" >
+		</Input>
+	</items>
+   </FlexBox>
+	
+	</content>
+	</Panel>
+	
+
+<Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="PERSONAL DETAILS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="First Name " labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <Input id="First" width="130px" >
+		 </Input>
+		 <Label text="Middle Name" labelFor="Register"  class="sapUiSmallMargin"/>		
+		  <Input id="Middle" width="130px" >
+		 </Input>	
+		<Label text="Last Name" labelFor="Sel"  class="sapUiSmallMargin"/>		
+		<Input id="Last" width="130px" >
+		</Input>
+	</items>
+   </FlexBox>
+	
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Date of Birth" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <DatePicker width="230px" dateValue=""/>
+		
+		 <Label text="Gender" labelFor="Gender"  class="sapUiSmallMargin"/>		
+		   <Select id="Gender" width="230px" items="{path: '/ProductCollection' }">
+		 <core:Item key="{Batch}" text="{Batch}" />
+		 </Select>
+		<Label text="Blood Group" labelFor="Blood"  class="sapUiSmallMargin"/>		
+		<Select id="Blood" width="230px" items="{path: '/ProductCollection' }">
+		 <core:Item key="{Batch}" text="{Batch}" />
+		 </Select>
+	</items>
+	
+   </FlexBox>
+   
+   <FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Birth Place" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	  <Input id="Birth" width="230px" >
+		 </Input>
+		
+		 <Label text="Nationality" labelFor="Gender"  class="sapUiSmallMargin"/>		
+		  <Input id="Nationality" width="230px" >
+		 </Input>
+		<Label text="Mother Tongue" labelFor="Blood"  class="sapUiSmallMargin"/>		
+		<Input id="Mother" width="230px" >
+		</Input>
+	</items>
+	
+   </FlexBox>
+   
+   <FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Category" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <DatePicker width="230px" dateValue=""/>
+		
+		 <Label text="Religion" labelFor="Gender"  class="sapUiSmallMargin"/>		
+		  <Input id="Gender1" width="230px" >
+		 </Input>
+		<Label text="Caste" labelFor="Blood"  class="sapUiSmallMargin"/>		
+		<Input id="Blood1" width="230px" >
+		</Input>
+	</items>
+	
+   </FlexBox>
+	
+	</content>
+	</Panel>
+
+<Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="CONTACT DETAILS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Permanent Address :" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	     <TextArea cols="30" rows="6" />
+		
+		 <Label text="Present Address" labelFor="Gender"  class="sapUiSmallMargin"/>		
+		 <TextArea cols="30" rows="6" />
+		
+	</items>
+	
+   </FlexBox>
+	
+	 <FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="City" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	  <Input id="City" width="230px" >
+		 </Input>
+		
+		 <Label text="Pin" labelFor="Gender"  class="sapUiSmallMargin"/>		
+		  <Input id="Pin" width="230px" >
+		 </Input>
+		<Label text="Country" labelFor="Blood"  class="sapUiSmallMargin"/>		
+		<Input id="Country" width="230px" >
+		</Input>
+	</items>
+	
+   </FlexBox>
+	
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="State" labelFor="First" class="sapUiSmallMargin"/>
+	   	  <Input id="State" width="230px" >
+		 </Input>
+		
+		 <Label text="Phone" labelFor="Gender"  class="sapUiSmallMargin"/>		
+		  <Input id="Phone" width="230px" >
+		 </Input>
+		 
+		<Label text="Mobile" labelFor="Blood"  class="sapUiSmallMargin"/>		
+		<Input id="Mobile" width="230px" >
+		</Input>
+	</items>
+	
+   </FlexBox>
+	
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Email" labelFor="First" class="sapUiSmallMargin"/>
+	   	  <Input id="Email" width="230px" >
+		 </Input>
+		
+		 <Label text="Upload Photo" labelFor="Gender"  class="sapUiSmallMargin"/>		
+		 <u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"/>
+	</items>
+	
+   </FlexBox> 	</content> 	</Panel>
+
+
+<Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="FATHER'S DETAILS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Name" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <Input id="Name2" width="230px" >
+		 </Input>
+		 <Label text="Mobile" labelFor="Register"  class="sapUiSmallMargin"/>		
+		  <Input id="Mobile2" width="230px" >
+		 </Input>
+		<Label text="Job" labelFor="Sel"  class="sapUiSmallMargin"/>		
+		<Input id="Job2" width="230px" >
+		</Input>
+	</items>
+   </FlexBox>
+	
+	
+	
+	</content>
+	</Panel>
+
+<Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="MOTHER'S DETAILS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Name" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <Input id="Name3" width="230px" >
+		 </Input>
+		 <Label text="Mobile" labelFor="Register"  class="sapUiSmallMargin"/>		
+		  <Input id="Mobile3" width="230px" >
+		 </Input>
+		<Label text="Job" labelFor="Sel"  class="sapUiSmallMargin"/>		
+		<Input id="Job3" width="230px" >
+		</Input>
+	</items>
+   </FlexBox>
+	
+	
+	
+	</content>
+	</Panel>
+
+<Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="GUARDIAN'S DETAILS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Name" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <Input id="Name4" width="230px" >
+		 </Input>
+		 <Label text="Mobile" labelFor="Register"  class="sapUiSmallMargin"/>		
+		  <Input id="Mobile4" width="230px" >
+		 </Input>
+		<Label text="Job" labelFor="Sel"  class="sapUiSmallMargin"/>		
+		<Input id="Job4" width="230px" >
+		</Input>
+	</items>
+   </FlexBox> </content> </Panel>
+
+
+<Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="PREVIOUS QUALIFICATION DETAILS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="School Name" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <Input id="Name5" width="230px" >
+		 </Input>
+		 <Label text="School Address" labelFor="Register"  class="sapUiSmallMargin"/>		
+		  <TextArea cols="30" rows="6" />
+		<Label text="Qualification" labelFor="Sel"  class="sapUiSmallMargin"/>		
+		<Input id="Job5" width="230px" >
+		</Input>
+	</items>
+   </FlexBox> 
+   <l:VerticalLayout width="100%">
+   
+        <CheckBox text="Mark List"  />
+		<CheckBox text="Birth Certificate" />
+		<CheckBox text="Transfer Certificate" />
+		<CheckBox text=" Caste Certificate" />
+		<CheckBox text="Migration Certificate"/>
+		<CheckBox text="Affidavit" /> 
+   
+   
+   </l:VerticalLayout>
+   </content> </Panel>
+
+<!--  <Panel>
+	<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="OTHERS:-"/>
+			</Toolbar>
+	</headerToolbar>
+	<content>
+	<FlexBox width="100%" alignItems="Start" >
+	<items>
+		 <Label text="Name" labelFor="First" required="true" class="sapUiSmallMargin"/>
+	   	 <Input id="Name46" width="230px" >
+		 </Input>
+		 <Label text="Mobile" labelFor="Register"  class="sapUiSmallMargin"/>		
+		  <Input id="Mobile46" width="230px" >
+		 </Input>
+		<Label text="Job" labelFor="Sel"  class="sapUiSmallMargin"/>		
+		<Input id="Job46" width="230px" >
+		</Input>
+	</items>
+   </FlexBox> </content> </Panel>  --> 
+
+
+  
+<Button text="Save" />
+
+
+	
+		</content>
+	</Page>
+</core:View>

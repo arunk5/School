@@ -1,0 +1,71 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:m="sap.m" xmlns:l="sap.ui.layout"
+	controllerName="sap.ui.demo.toolpageapp.controller.settings.visitorsList"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<m:Page showHeader="false" enableScrolling="false" class="sapUiContentPadding">
+		<m:content>
+
+			<m:Panel>
+				<headerToolbar>
+					<Toolbar>
+						<Title level="Visitors List" text="Visitors List" />
+					</Toolbar>
+				</headerToolbar>
+				<l:VerticalLayout width="100%">
+					<Table id="HeaderTable" inset="false"
+						items="{
+			path: '/ProductCollection'
+			
+		}">
+
+						<columns>
+							<Column width="12em">
+								<Text text="SNo" />
+							</Column>
+							<Column width="12em">
+								<Text text="Visitor Category" />
+							</Column>
+
+							<Column width="12em">
+								<Text text="Visitor" />
+							</Column>
+							
+							<Column width="12em">
+								<Text text="Whom To Visit" />
+							</Column>
+							
+							<Column width="12em">
+								<Text text="Purpose" />
+							</Column>
+							
+							<Column width="12em">
+								<Text text="Course" />
+							</Column>
+							
+							<Column width="12em">
+								<Text text="Batch" />
+							</Column>
+							
+							<Column width="12em">
+								<Text text="Student" />
+							</Column>
+							
+					
+						</columns>
+
+
+						<items>
+							<ColumnListItem>
+								<Text text="{Name}" />
+								<CheckBox selected="{Visibilty}" />
+							</ColumnListItem>
+						</items>
+
+					</Table>
+
+				</l:VerticalLayout>
+			</m:Panel>
+
+		</m:content>
+	</m:Page>
+</mvc:View>

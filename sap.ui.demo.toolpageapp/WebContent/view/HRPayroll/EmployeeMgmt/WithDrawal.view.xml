@@ -1,0 +1,86 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.EmployeeMgmt.WithDrawal" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Withdrawal Form" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Withdrawal Form">
+				<l:VerticalLayout width="100%">
+								<Label text=" Department" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Department}" text="{Department}" />
+								</Select>
+
+								<Label text=" Employee Name " labelFor="input-a" design="Bold"
+									required="true" />
+									
+								<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{ClassTeacher}" text="{ClassTeacher}" />
+								</Select>
+								
+								<Label text="Replace With" labelFor="input-b" design="Bold"
+									required="true" />
+								<Input id="Sele" width="100%" >
+									
+								</Input>
+										<CheckBox text="Exchange  ( Enable this option to exchange the teachers.)" selected="true" />														
+								<Button text=" WithDraw " press="onSave"/>
+							</l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Withdrawn Lists">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Employee Code" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Employee " />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="WithDrawn Date" />
+									</Column>
+																											
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Hours}" />
+											<Text text="{ClassTeacher}" />
+											<Text text="{Start Date}" />
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

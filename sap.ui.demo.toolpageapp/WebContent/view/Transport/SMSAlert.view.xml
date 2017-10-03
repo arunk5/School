@@ -1,0 +1,28 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Transport.SmsAlert"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+   				<m:Panel headerText="SMS Alert">
+					<l:VerticalLayout width="100%">
+					<Label text="SMS For.(required)" labelFor="input-a"/>
+						<Select
+						forceSelection="false"
+						
+						>
+						<core:Item key="ProductId" text="Contract" />
+						<core:Item key="ProductId1" text="Ownership" />
+					</Select>
+					<Label text="Message (required)" labelFor="input-b" />
+					<Input id="input-b"/>
+					
+				</l:VerticalLayout>
+				</m:Panel>
+			
+			
+		
+</mvc:View>

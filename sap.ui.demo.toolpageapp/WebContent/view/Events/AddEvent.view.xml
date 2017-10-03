@@ -1,0 +1,127 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Events.AddEvent"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+ <ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true"
+		focusable="true">
+    	
+	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		xmlns:layout="sap.ui.layout"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Add Events">
+				<m:Panel headerText="Add Events">
+					<Label text="Event Name.(required)" labelFor="input-a"/>
+					<Input id="input-a" required="true"/>
+					<l:VerticalLayout width="100%">
+					<Label text="Event Type (required)" labelFor="input-d"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+					<Label text="Description (required)" labelFor="input-e"/>
+					<Input id="input-e"/>
+					<Label text="Start Date (required)" labelFor="input-f"/>
+					<DatePicker id="input-f" placeholder="Enter Date ..."
+									change="handleChange" class="sapUiSmallMarginBottom" />
+					<Label text="End Date (required)" labelFor="input-g"/>
+					<DatePicker id="input-g" placeholder="Enter Date ..."
+									change="handleChange" class="sapUiSmallMarginBottom" />
+					
+					<Label text="Organizer/Incharge Name (required)" labelFor="input-h"/>
+					<Input id="input-h"/>
+					<Label text="Event For (required)" labelFor="input-d"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+								
+				</l:VerticalLayout>								
+				
+				</m:Panel>
+			</IconTabFilter>
+			<IconTabFilter text="Add Events List"><Table id="idProductsTable"
+						inset="false"
+						selectionMode="MultiToggle"
+						visibleRowCount="7"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}"
+						itemPress = "check">
+					<headerToolbar>
+			<Toolbar>
+				<Title text="Event Details" level="H2"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button	icon="sap-icon://download" press="onDataExport" />
+			</Toolbar>
+		</headerToolbar>
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Event"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="Start Date"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="End Date"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="Event For"/>
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<HBox>
+											<Button icon="sap-icon://edit" press="onPress"/>
+											
+											<Button icon="sap-icon://delete" press="onPress"/>
+											</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+		</Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	</ScrollContainer>
+	
+	
+</mvc:View>

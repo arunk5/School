@@ -1,0 +1,67 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Certifications.CertificateType" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Certificate Type" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Add Certificate">
+				
+				<l:VerticalLayout width="100%">
+								<Label text="Certificate Type" required="true" labelFor="input-a"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId" width="100%" items="{path: '/ProductCollection' }">
+							<core:Item key="{CertificateType}" text="{CertificateType}" />
+						</Select>
+								<Button text="save"/>
+							</l:VerticalLayout>
+				
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Certificate List">
+				 <Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column minScreenWidth="Tablet">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Certificate" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Attendance Type" />
+									</Column>
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{CertificateType}" />
+											<Text text="{AttendanceType}" />
+											
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+	
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,66 @@
+{
+	"ProductCollection": [
+		{
+			"SNo": "1",
+			"SubjectName": " Artifical Intelligence ",
+			"SubjectCode": " A.I ",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "2",
+			"SubjectName": " Managerial Economics ",
+			"SubjectCode": " MEFA ",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "3",
+			"SubjectName": " Design Algorithms ",
+			"SubjectCode": "DAA",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "4",
+            "SubjectName": " C/C++ ",
+			"SubjectCode": "Prgm",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "5",
+			"SubjectName": " Ethical Hacking ",
+			"SubjectCode": "EH",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "6",
+			"SubjectName": " Computer Architecture And Organization ",
+			"SubjectCode": "CAO",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "7",
+			"SubjectName": " Networks ",
+			"SubjectCode": "Ntwk",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "8",
+		    "SubjectName": " Physics ",
+			"SubjectCode": "Phy",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "9",
+			"SubjectName": " Maths ",
+			"SubjectCode": "M1",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "10",
+			"SubjectName": " Maths ",
+			"SubjectCode": "M2",
+			"Manage": " EDIT "
+		}
+					
+	  ]
+}
+

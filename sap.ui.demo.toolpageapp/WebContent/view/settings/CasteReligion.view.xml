@@ -1,0 +1,127 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.settings.CasteReligion"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+   	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Caste Details">
+	<l:ResponsiveSplitter defaultPane="default">
+		<l:PaneContainer>
+			<l:SplitPane  requiredParentWidth="600">
+				<m:Panel headerText="Caste Detail Input Sheet">
+					<Label text="Caste Name" labelFor="input-a" design="Bold"/>
+					<Input id="input-a" required="true"/>
+					
+					<Button text="Save"/>
+				</m:Panel>
+			</l:SplitPane>
+			
+			<l:SplitPane requiredParentWidth="400" id="default">
+				<m:Panel>
+					<Table id="idProductsTable"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Caste Name" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"
+										text="{ProductId}"/>
+									<Text
+										text="{SupplierName}" />
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</m:Panel>
+			</l:SplitPane>
+			
+			
+			
+		</l:PaneContainer>
+	</l:ResponsiveSplitter>
+	</IconTabFilter>
+	
+			<IconTabFilter
+				text="Religion Details">
+				<l:ResponsiveSplitter defaultPane="default">
+		<l:PaneContainer>
+			<l:SplitPane  requiredParentWidth="600">
+				<m:Panel headerText="Religion Details Input Sheet">
+					<Label text="Religion Name" labelFor="input-a1" design="Bold"/>
+					<Input id="input-a1" required="true"/>
+					
+					<Button text="Save"/>
+				</m:Panel>
+			</l:SplitPane>
+			
+			<l:SplitPane requiredParentWidth="400" id="default1">
+				<m:Panel>
+					<Table id="idProductsTable1"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Religion Name" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"
+										text="{ProductId}"/>
+									<Text
+										text="{SupplierName}" />
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</m:Panel>
+			</l:SplitPane>
+			
+			
+			
+		</l:PaneContainer>
+	</l:ResponsiveSplitter>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+</mvc:View>

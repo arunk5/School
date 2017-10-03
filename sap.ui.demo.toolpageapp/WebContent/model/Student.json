@@ -1,0 +1,42 @@
+{
+	"ProductCollection": [
+		{
+			"SNo": "1",
+			"StudentCategory": " OC "
+		},
+		{
+			"SNo": "2",
+			"StudentCategory": " BC "
+		},
+		{
+			"SNo": "3",
+			"StudentCategory": " SC "
+		},
+		{
+			"SNo": "4",
+			"StudentCategory": " ST "
+		},
+		{
+			"SNo": "5",
+			"StudentCategory": " OBC "
+		},
+		{
+			"SNo": "6",
+			"StudentCategory": " BC-A "
+		},
+		{
+			"SNo": "7",
+			"StudentCategory": " BC-B "
+		},
+		{
+			"SNo": "8",
+			"StudentCategory": " BC-C "
+		},
+		{
+			"SNo": "9",
+			"StudentCategory": " BC-D "
+		}
+					
+	  ]
+}
+

@@ -1,0 +1,214 @@
+<core:View
+        xmlns="sap.m"
+        xmlns:tnt="sap.tnt"
+        xmlns:l="sap.ui.layout"
+        xmlns:layout="sap.ui.layout"
+        xmlns:viz="sap.viz.ui5.controls"
+        xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+		xmlns:viz.data="sap.viz.ui5.data"
+        xmlns:core="sap.ui.core"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:u="sap.ui.unified"
+		xmlns:unified="sap.ui.unified"
+		controllerName="sap.ui.demo.nav.controller.root1">
+
+        <ScrollContainer id="page1"
+                             horizontal="false"
+                             vertical="true"
+                             height="100%">
+               <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="TOTAL STUDENTS" frameType="OneByOne"
+							press="press">
+							<tileContent>
+								<TileContent>
+									<content>
+										<NumericContent value="1762" icon="sap-icon://line-charts"/>
+									</content>
+								</TileContent>
+							</tileContent>
+						</GenericTile>
+					 
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="TOTAL EMPLOYEES" frameType="OneByOne"
+							press="press">
+							<tileContent>
+								<TileContent>
+									<content>
+										<NumericContent value="12"/>
+									</content>
+								</TileContent>
+							</tileContent>
+						</GenericTile>
+						
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="TOTAL Course" frameType="OneByOne"
+							press="press">
+							<tileContent>
+								<TileContent>
+									<content>
+										<NumericContent value="27"/>
+									</content>
+								</TileContent>
+							</tileContent>
+						</GenericTile>
+						
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="TOTAL Batch" frameType="OneByOne"
+							press="press">
+							<tileContent>
+								<TileContent>
+									<content>
+										<NumericContent value="19"/>
+									</content>
+								</TileContent>
+							</tileContent>
+						</GenericTile>
+						
+						<IconTabBar
+						expanded="true"
+						id="idIconTabBar"
+						select="handleIconTabBarSelect"
+						class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter
+								icon="sap-icon://begin"
+								iconColor="Positive"
+								text="Activity"
+								key="Ok">
+							<layout:FixFlex id='chartFixFlex' minFlexSize="250">
+        <!--Below is the setting panel -->
+        <layout:flexContent>
+            <viz:Popover id="idPopOver"></viz:Popover>
+            <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='column' vizProperties="'plotArea': {
+                        
+                        'secondaryScale': {
+                            'fixedRange': true,
+                            'minValue': 0,
+                            'maxValue': 30000
+                        }
+ ">
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{ChartData>/milk}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Week"
+                                value="{Week}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Cost1"
+                                value="{Cost1}" />
+                            <viz.data:MeasureDefinition name="Cost2"
+                                value="{Cost2}" />
+                        
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure"
+                        values="Cost2,Cost1" />
+                     <viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension"
+                        values="Week" />
+                </viz:feeds>
+            </viz:VizFrame>
+        </layout:flexContent>
+            </layout:FixFlex>
+							</IconTabFilter>
+							<IconTabFilter
+								icon="sap-icon://compare"
+								iconColor="Critical"
+								
+								text="Schedule"
+								key="Heavy">
+							
+							<PlanningCalendar
+			id="PC1"
+			startDate="{path: '/startDate'}"
+			rows="{path: '/people'}"
+			appointmentsVisualization="Filled"
+			appointmentSelect="handleAppointmentSelect"
+			showEmptyIntervalHeaders="false">
+			<toolbarContent>
+				<Title text="Title" titleStyle="H4"/>
+			</toolbarContent>
+			<rows>
+				<PlanningCalendarRow
+					icon="{pic}"
+					title="{name}"
+					text="{role}"
+					appointments="{appointments}"
+					intervalHeaders="{headers}">
+					<appointments>
+						<unified:CalendarAppointment
+							startDate="{start}"
+							endDate="{end}"
+							icon="{pic}"
+							title="{title}"
+							text="{info}"
+							type="{type}"
+							tentative="{tentative}">
+						</unified:CalendarAppointment>
+					</appointments>
+					<intervalHeaders>
+						<unified:CalendarAppointment
+							startDate="{start}"
+							endDate="{end}"
+							icon="{pic}"
+							title="{title}"
+							type="{type}">
+						</unified:CalendarAppointment>
+					</intervalHeaders>
+				</PlanningCalendarRow>
+			</rows>
+		</PlanningCalendar>
+		
+		</IconTabFilter>
+							<IconTabFilter
+								icon="sap-icon://inventory"
+								iconColor="Negative"
+								text="Reports"
+								key="Overweight">
+							
+		<layout:FixFlex id='chartFixFlex1' minFlexSize="250">
+        <!--Below is the setting panel -->
+        <layout:flexContent>
+            <viz:Popover id="idPopOver1"></viz:Popover>
+            <viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}"
+                height='100%' width="100%" vizType='column' vizProperties="'plotArea': {
+                        
+                        'secondaryScale': {
+                            'fixedRange': true,
+                            'minValue': 0,
+                            'maxValue': 30000
+                        }
+ ">
+                <viz:dataset>
+                    <viz.data:FlattenedDataset data="{ChartData>/milk}">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="Week"
+                                value="{Week}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="Cost1"
+                                value="{Cost1}" />
+                            <viz.data:MeasureDefinition name="Cost2"
+                                value="{Cost2}" />
+                        
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed1' uid="valueAxis" type="Measure"
+                        values="Cost2,Cost1" />
+                     <viz.feeds:FeedItem id='categoryAxisFeed1' uid="categoryAxis" type="Dimension"
+                        values="Week" />
+                </viz:feeds>
+            </viz:VizFrame>
+        </layout:flexContent>
+            </layout:FixFlex>
+            
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+					
+        </ScrollContainer>
+
+
+</core:View>

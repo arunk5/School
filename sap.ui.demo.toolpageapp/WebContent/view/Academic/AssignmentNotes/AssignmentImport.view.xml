@@ -1,0 +1,41 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:l="sap.ui.layout" xmlns:m="sap.m" xmlns:u="sap.ui.unified"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.AssignmentNotes.AssignmentImport" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	  
+		<l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = " Assignments Import "  width="100%">
+		
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					<l:VerticalLayout class="sapUiSmallMargin" >
+						<Label text=" Browse File   " required="true"></Label>
+						<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"/>
+						
+								
+								<Button text=" Submit " />
+					</l:VerticalLayout>		
+					</items>
+				</FlexBox>
+		
+			<layoutData><l:SplitterLayoutData size="50%" resizable="false"/></layoutData>
+		</m:Panel>
+		
+	</l:Splitter>
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

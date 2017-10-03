@@ -1,0 +1,153 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.StoreMgmt.InventoryItem"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	<ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true"
+		focusable="true">
+    			
+	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		xmlns:layout="sap.ui.layout"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Add Inventory Item">
+				<m:Panel headerText="Add Inventory Item">
+				    <l:Grid defaultSpan="XL4 L6 M6 S12" width="100%">
+				    <l:VerticalLayout width="100%">
+					<Label text="Vendors.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false">
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+					</Select>
+					</l:VerticalLayout>
+					
+				    <l:VerticalLayout width="100%">
+					<Label text="Category.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false">
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+					</Select>
+					</l:VerticalLayout>
+					
+				    <l:VerticalLayout width="100%">
+					<Label text="Inventory Item.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false">
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+					</Select>
+					</l:VerticalLayout>
+					
+					 
+					 <l:VerticalLayout width="100%">
+					<Label text="Quantity (required)" labelFor="input-d"/>
+					<Input id="input-d" required="true"/>
+					</l:VerticalLayout>
+					
+					  <l:VerticalLayout width="100%">
+					<Label text="Re-Order Level (required)" labelFor="input-e"/>
+					<Input id="input-e" required="true"/>
+					</l:VerticalLayout>
+					
+					  <l:VerticalLayout width="100%">
+					<Label text="Free (required)" labelFor="input-f"/>
+					<Input id="input-f" required="true"/>
+					</l:VerticalLayout>
+					
+					  <l:VerticalLayout width="100%">
+					<Label text="Discount(required)" labelFor="input-g"/>
+					<Input id="input-g" required="true"/>
+					</l:VerticalLayout>
+					
+					   <l:VerticalLayout width="100%">
+					<Label text="MRP" labelFor="input-h"/>
+					<Input id="input-h" required="true"/>
+					</l:VerticalLayout>
+					
+					    <l:VerticalLayout width="100%">
+					<Label text="Rate(required)" labelFor="input-i"/>
+					<Input id="input-i" required="true"/>
+					</l:VerticalLayout>
+							
+				</l:Grid>
+				<ToggleButton text="Save" enabled="true" pressed="true" press="onPress" />
+				</m:Panel>
+			</IconTabFilter>
+			<IconTabFilter text="Category List"><Table id="idProductsTable"
+						inset="false"
+						selectionMode="MultiToggle"
+						visibleRowCount="7"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}"
+						itemPress = "check">
+					<headerToolbar>
+			<Toolbar>
+				<Title text="Vendor Details" level="H2"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button	icon="sap-icon://download" press="onDataExport" />
+			</Toolbar>
+		</headerToolbar>
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Vendor"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="Inventory Item"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="Quantity"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="Re-Order Level"/>
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<HBox>
+											<Button icon="sap-icon://edit" press="onPress"/>
+											
+											<Button icon="sap-icon://delete" press="onPress"/>
+											</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+		</Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	</ScrollContainer>
+	
+</mvc:View>

@@ -1,0 +1,77 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.SubjectCreditPoint" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Add Subject Credit Point">
+				
+				 <l:VerticalLayout width="90%">
+		    <Label text="Subject" labelFor="input-a" design="Bold" required="true" />
+			<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Subject}" text="{Subject}" />
+								</Select>
+			<Label text="Subject Credit Point" labelFor="input-b" design="Bold" />
+			<Input
+				value=" "
+				
+				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+			<Button text="Add"/>
+			 <l:layoutData><l:SplitterLayoutData size="70%" /></l:layoutData>
+		     </l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Subject Credit Point List">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column width="12em" hAlign="Center">
+										<Text text="SNo" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Subject" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" 
+										hAlign="Center">
+										<Text text="Subject Credit Point" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Subject}" />
+											<Text text="{LowerMark}" />
+										  <HBox>
+                                        <Button icon="sap-icon://edit" press="onPress"/>
+                                        <Button icon="sap-icon://delete" press ="onDelete1" />
+                                       </HBox>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+		</content>
+	</Page>
+</core:View>

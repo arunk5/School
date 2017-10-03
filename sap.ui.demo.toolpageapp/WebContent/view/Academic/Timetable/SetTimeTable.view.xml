@@ -1,0 +1,104 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Timetable.SetTimeTable" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="TimeTable View">
+		<content>
+		
+		<GenericTile id="Tile1"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Set TimeTable" failedText = "Academic/Timetable/TimeTableView"
+				press="SetTimeTable">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile2"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Active TimeTable" failedText = "Academic/Timetable/ActiveTimeTable"
+				press="ActiveTimeTable">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile3"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="View Batch TimeTable" failedText = "Academic/Timetable/ViewBatchTimeTable"
+				press="BatchTimeTable">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile4"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="View Teacher TimeTable" failedText = "Academic/Timetable/ViewTeacherTimeTable"
+				press="TeacherTimeTable">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile5"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Search Proxy" failedText = "Academic/Timetable/SearchProxy"
+				press="SearchProxy">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+	<GenericTile id="Tile6"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Teacher Working Hours" failedText = "Academic/Timetable/TeacherWorkingHrs"
+				press="TeacherWorkingHours">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	    <GenericTile id="Tile7"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="TimeTable Export" failedText = "Academic/Timetable/TimeTableExport"
+				press="TimeTableExport">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	<GenericTile id="Tile8"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="TimeTable Import"  failedText = "Academic/Timetable/TimeTableImport"
+				press="TimeTableImport">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

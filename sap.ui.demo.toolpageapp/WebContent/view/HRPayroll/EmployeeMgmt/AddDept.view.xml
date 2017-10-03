@@ -1,0 +1,67 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.EmployeeMgmt.AddDept" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Department Details" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	 
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Add User Type">
+				<l:VerticalLayout width="100%">
+								<Label text=" Department Name " required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Input id="Select" width="100%" >
+									
+								</Input>
+
+								
+								<Button text=" Create " press="onCreate"/>
+							</l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Existing User Types">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Department Name " />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+														
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Department}" />
+											<Button icon="sap-icon://edit" press="onPress"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	 
+
+		</content>
+	</Page>
+</core:View>

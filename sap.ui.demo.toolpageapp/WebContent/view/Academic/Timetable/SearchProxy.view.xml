@@ -1,0 +1,87 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m" 
+xmlns:table="sap.ui.table"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Timetable.SearchProxy" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+		<l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = "Select Course And Batch"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					
+					    <Label text="Course" labelFor="Select" class="sapUiSmallMargin"/>
+						<Select id="Select" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+						<Label text="Batch" labelFor="Sele" class="sapUiSmallMargin"/>		
+						<Select id="Sele" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+								
+						<Label text="Day" labelFor="Sel" class="sapUiSmallMargin"/>		
+						<Select id="Sel" maxWidth="200px" width ="400px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Day}" text="{Day}" />
+								</Select>
+								
+								<TimePicker
+				id="TP3"
+				valueFormat="hh:mm a"
+				displayFormat="hh:mm a"
+				change="handleChange"
+				placeholder="Time"/> 
+				
+						
+								<Button text=" Find Proxy " press="OnSave"/>
+								
+					</items>
+				</FlexBox>
+		
+			<layoutData><l:SplitterLayoutData size="30%" resizable="true"/></layoutData>
+		</m:Panel>
+		<m:Panel headerText = "Proxy Teachers Available List" height="100%" width="100%">
+		<Table id="idProductsTable" items="{
+			path: '/ProductCollection'}"
+			 inset="false">							
+								<columns>
+									
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Teacher Name" />
+									</Column>
+									<Column hAlign="Right">
+										<Text text="Allocate" />
+									</Column>
+									
+									</columns>
+									
+									<items>
+									<ColumnListItem>
+										<cells>
+											
+											<Text text="{Student}" />
+											<Link
+				text="Allocate"
+				press="handleLinkPress" />
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+									
+									
+									
+									</Table>
+ 
+			<layoutData><l:SplitterLayoutData size="70%" resizable="true" /></layoutData>
+			
+		</m:Panel>
+	</l:Splitter>
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,35 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.PromotionsAlumni.PromotionAlumni" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Promotion and Alumni">
+		<content>
+		<GenericTile id="Tile1"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Promotions" failedText="Academic/PromotionsAlumni/Promotion"
+				press="Promotions">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile2"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Alumni" failedText="Academic/PromotionsAlumni/AlumniMemb"
+				press="Alumni">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	
+	
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

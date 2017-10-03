@@ -1,0 +1,107 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Subjects.SubjectAllocation" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Subject Allocation" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Subject Allocation">
+				<l:VerticalLayout width="100%">
+								<Label text=" Department" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+
+								<Label text=" Employee Name " labelFor="input-a" design="Bold"
+									required="true"/>
+									
+								<Select id="Select" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+								<Label text="Course" labelFor="input-b" design="Bold"
+									required="true" />
+								<Select id="Sele" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+								<Label text="Batch" design="Bold" labelFor="input-c"
+									required="true" />
+								<Select id="Sel" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+								<Label text="Subject" design="Bold" labelFor="input-c"
+									required="true" />
+								<Select id="S" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+								<Button text=" Save " press="onSave"/>
+							</l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Allocated Subjects">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Department" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Employee Name" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Course" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Batch" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Subject" />
+									</Column>
+																		
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SubjectID}" />
+											<Text text="{Department}" />
+											<Text text="{EmployeeName}" />
+											<Text text="{Course}" />
+											<Text text="{Batch}" />
+											<Text text="{SubjectName}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+	
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,107 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.StoreMgmt.InventoryCategory"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	<ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true"
+		focusable="true">
+    <Breadcrumbs currentLocationText="Inventory Category" class="sapUiMediumMargin">
+				<Link press="onPress" text="Store Management"/>
+			</Breadcrumbs>
+			
+	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		xmlns:layout="sap.ui.layout"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Add Category">
+				<m:Panel headerText="Add Category">
+				    <l:Grid defaultSpan="XL4 L6 M6 S12" width="100%">
+				    <l:VerticalLayout width="100%">
+					<Label text="Vendors.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false">
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+					</Select>
+					</l:VerticalLayout>
+					 <l:VerticalLayout width="100%">
+					<Label text="Category Name (required)" labelFor="input-d"/>
+					<Input id="input-d" required="true"/>
+					</l:VerticalLayout>
+							
+				</l:Grid>
+				<ToggleButton text="Save" enabled="true" pressed="true" press="onPress" />
+				</m:Panel>
+			</IconTabFilter>
+			<IconTabFilter text="Category List"><Table id="idProductsTable"
+						inset="false"
+						selectionMode="MultiToggle"
+						visibleRowCount="7"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}"
+						itemPress = "check">
+					<headerToolbar>
+			<Toolbar>
+				<Title text="Vendor Details" level="H2"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button	icon="sap-icon://download" press="onDataExport" />
+			</Toolbar>
+		</headerToolbar>
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Company Name"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="Contact Person"/>
+							</Column>
+							<Column
+								width="12em">
+								<Text text="Category"/>
+							</Column>
+							
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									<ObjectIdentifier
+										text="{ProductId}"/>
+									
+									<HBox>
+											<Button icon="sap-icon://edit" press="onPress"/>
+											
+											<Button icon="sap-icon://delete" press="onPress"/>
+											</HBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+		</Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	</ScrollContainer>
+	
+</mvc:View>

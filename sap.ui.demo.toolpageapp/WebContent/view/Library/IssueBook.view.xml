@@ -1,0 +1,127 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Library.IssueBook"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	xmlns:t="sap.ui.table"
+	height="100%">
+	<l:FixFlex class="fixFlexHorizontal" vertictal="true">
+	    <l:fixContent>
+   
+			</l:fixContent>
+		<l:flexContent>
+ 	<IconTabBar
+		id="idIconTabBarNoIcons"
+		stretchContentHeight="true"
+		expanded="{device>/isNoPhone}"
+		xmlns:layout="sap.ui.layout"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Issue Book">
+	
+			<ScrollContainer
+						height="100%"
+						width="100%"
+						horizontal="false"
+						vertical="true">
+			
+			
+							<m:Panel headerText="Book Issue">
+							<l:VerticalLayout width="100%">
+							    <SearchField
+				id="searchField"
+				width="50%"
+				placeholder="search for..."
+				enableSuggestions="true"
+				search="onSearch"
+				suggest="onSuggest"
+				suggestionItems="{
+					path: '/ProductCollection',
+					sorter: { path: 'Name' }
+				}"
+				>
+				<suggestionItems>
+					<SuggestionItem text="{Name}" description="{path:'Price'} {path:'CurrencyCode'}" key="{ProductId}"/>
+				</suggestionItems>
+			</SearchField>
+								<Label text="User Type" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select
+					forceSelection="false"
+					selectedKey="{/ProductCollection/1/ProductId}"
+					items="{
+						path: '/ProductCollection',
+						sorter: { path: 'Name' }
+					}">
+					<core:Item key="{ProductId}" text="{Name}" />
+				</Select>
+
+								
+								<Label text="Start Date" labelFor="input-b" design="Bold"
+									required="true" />
+								<DatePicker id="input-b" placeholder="Enter Date ..."
+									change="handleChange" class="sapUiSmallMarginBottom" />
+								<Label text="End Date" design="Bold" labelFor="input-c"
+									required="true" />
+								<DatePicker id="input-c" placeholder="Enter Date ..."
+									change="handleChange" class="sapUiSmallMarginBottom" />
+								
+								<Button text=" Add Batch " />
+							</l:VerticalLayout>
+						</m:Panel>
+									
+							
+			
+			
+			
+	</ScrollContainer>
+	</IconTabFilter>
+	
+			<IconTabFilter
+				text="Issued List">
+				<t:Table
+				id="table"
+				selectionMode="MultiToggle"
+				rows="{/ProductCollection}"
+				visibleRowCount="7"
+				sort="sortDeliveryDate"
+				ariaLabelledBy="title">
+				<t:toolbar>
+					<m:Toolbar>
+						<m:Title id="title" text="Book List"></m:Title>
+						<m:ToolbarSpacer/>
+						<m:Button
+							icon="sap-icon://sorting-ranking"
+							tooltip="Sort ascending across Categories and Name"
+							press="sortCategoriesAndName"/>
+						<m:Button
+							icon="sap-icon://sort"
+							tooltip="Sort Categories"
+							press="sortCategories"/>
+						<m:Button
+							icon="sap-icon://decline"
+							tooltip="Clear all sortings"
+							press="clearAllSortings"/>
+					</m:Toolbar>
+				</t:toolbar>
+				<t:columns>
+				
+					<t:Column width="9rem">
+						<m:Label text="Image" />
+						<t:template>
+							<m:Link text="Show Image" href="{ProductPicUrl}" target="_blank"/>
+						</t:template>
+					</t:Column>
+					
+				</t:columns>
+				
+			</t:Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	</l:flexContent>
+	</l:FixFlex>
+</mvc:View>

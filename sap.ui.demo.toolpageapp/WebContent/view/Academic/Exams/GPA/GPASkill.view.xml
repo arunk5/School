@@ -1,0 +1,105 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.GPASkill" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Skill And SubSkill" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+   <IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Add Skill And SubSkill">
+				
+                <Label text="Course" labelFor="input-a" design="Bold" required="true" />
+				<Select id="Select20" width="100%" class="sapUiSmallMarginBottom"
+				items="{path: '/ProductCollection' }">
+				<core:Item key="{Course}" text="{Course}" />
+				</Select>
+				<Label text="Batch" labelFor="input-b" design="Bold" />
+				<Select id="Select21" width="100%" class="sapUiSmallMarginBottom"
+				items="{path: '/ProductCollection' }">
+				<core:Item key="{Batch}" text="{Batch}" />
+				</Select>
+				 
+		       <Label text="Term" labelFor="input-a" design="Bold" required="true" />
+			   <Select id="Select" width="100%" class="sapUiSmallMarginBottom" items="{path: '/ProductCollection' }">
+			   <core:Item key="{Term}" text="{Term}" />
+			   </Select>
+							
+				 <Label text="Skill" labelFor="input-a" design="Bold" required="true" />
+			    <Input
+				value=" "
+				id="skill"				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				 <Label text="SubSkill" labelFor="input-a" design="Bold" required="true" />
+			    <Input
+				value=" "
+				id="subskill"				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				 <Label text="Weightage" labelFor="input-a" design="Bold" required="true" />
+			    <Input
+				value=" "
+				id="weight"				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />				
+				<Button text="Add"/>
+				
+				</IconTabFilter>
+				<IconTabFilter text="List Skills">
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column width="12em" hAlign="Center">
+									<Text text="Course" />
+									</Column>
+									<Column width="12em" hAlign="Center">
+									<Text text="Batch" />
+									</Column>
+									<Column width="12em" hAlign="Center">
+									<Text text="Term" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+									<Text text="Skill" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" 
+									hAlign="Center">
+									<Text text="SubSkill" />
+									</Column>
+									<Column hAlign="Left">
+									<Text text="Manage" />
+									</Column>
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{Course}"/>
+											<Text text="{Batch}"/>
+											<Text text="{Term}"/>
+											<Text text="{Skill}" />
+											<Text text="{SubSkill}" />
+											<HBox>
+                                            <Button icon="sap-icon://edit" press="onPress"/>
+                                            <Button icon="sap-icon://delete" press="onDelete"/>
+                                            </HBox>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+		</content>
+	</Page>
+</core:View>

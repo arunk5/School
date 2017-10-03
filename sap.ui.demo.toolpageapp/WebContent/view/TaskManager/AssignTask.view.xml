@@ -1,0 +1,51 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.TaskManager.AssignTask"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+  								<m:Panel headerText="Assign Task">
+								    <l:VerticalLayout width="100%">
+					 <Label text="Task" labelFor="input-a" design="Bold"
+									required="true" />
+					 <Input id="input-a"/>
+					 <Label text="Description" labelFor="input-b" design="Bold"
+									required="true" />
+					 <Input id="input-b"/>
+					<Label text="Priority.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+					<Label text="Task Date (required)" labelFor="input-f"/>
+					<DatePicker id="input-f" placeholder="Enter Date ..."
+									change="handleChange" class="sapUiSmallMarginBottom" />
+					<Label text="User Type.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>	
+				<Label text="Status.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>					
+
+								
+				</l:VerticalLayout>
+				</m:Panel>
+		
+	
+</mvc:View>

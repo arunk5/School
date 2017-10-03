@@ -1,0 +1,129 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.LeaveMgmt.LeaveApprovals" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+		
+		<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Leave Approvals">
+				<l:VerticalLayout width="100%">
+									<Table id="idProductsTable1" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Employee Code" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="From Date" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="To Date" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Leave Type" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Remaining Leaves" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+																		
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Department}" />
+											<Text text="{EmployeeName}" />
+											<Text text="{Course}" />
+											<Text text="{Batch}" />
+											<Text text="{Subject}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+								
+							</l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="List">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Employee Code" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="From Date" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="To Date" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Leave Type" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Remaining Leaves" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+																		
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Hours}" />
+											<Text text="{StartDate}" />
+											<Text text="{StartDate}" />
+											<Text text="{LeaveType}" />
+											<Text text="{Hours}" />
+											<Button icon="sap-icon://show"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+		
+		
+		
+		
+		
+		
+	
+		</content>
+	</Page>
+</core:View>

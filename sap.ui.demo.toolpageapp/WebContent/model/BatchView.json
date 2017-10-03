@@ -1,0 +1,105 @@
+{
+	"ProductCollection": [
+		{
+			"SNo": "1",
+			"Course": " MBA ",
+			"Batch": "MBA HR Mrng",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "2",
+			"Course": " MBA ",
+			"Batch": "MBA Finance Eveng",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.01.2016",
+			"EndDate": "01.01.2017",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "3",
+			"Course": " BCA ",
+			"Batch": " A ",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016 ",
+			"EndDate": "01.02.2017",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "4",
+			"Course": " Economics ",
+			"Batch": " Semester-1 ",
+			"MaxNoOfStudents": "70",
+			"StartDate": " 01.07.2016 ",
+			"EndDate": " 01.02.2017 ",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "5",
+			"Course": "B.Com",
+			"Batch": "Semester II",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016",
+			"EndDate": " 01.12.2017 ",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "6",
+			"Course": "PCM",
+			"Batch": "Semester II",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016",
+			"EndDate": " 01.12.2017 ",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "7",
+			"Course": " STD-VII",
+			"Batch": "Semester II",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016",
+			"EndDate": " 01.12.2017 ",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "8",
+			"Course": " STD-VIII",
+			"Batch": "Semester II",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016",
+			"EndDate": " 01.12.2017 ",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "9",
+			"Course": " STD-IX",
+			"Batch": "Semester II",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016",
+			"EndDate": " 01.07.2016 ",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "10",
+			"Course": " STD-X",
+			"Batch": "Semester II",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016",
+			"EndDate": " 01.07.2016 ",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "11",
+			"Course": " PREP ",
+			"Batch": "Semester II",
+			"MaxNoOfStudents": "70",
+			"StartDate": "01.07.2016",
+			"EndDate": " 01.07.2016 ",
+			"Manage": "EDIT"
+		}		
+					
+	  ]
+}
+

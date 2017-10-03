@@ -1,0 +1,157 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.CreateExam" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Create Exam" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Create Exam">
+				 <l:VerticalLayout width="90%">
+				 
+				                    <Label text="Course" labelFor="input-a" design="Bold"
+										required="true" />
+									<Select id="Select20" width="100%"
+									items="{path: '/ProductCollection' }">
+									<core:Item key="{Course}" text="{Course}" />
+									</Select>
+									<Label text="Batch" labelFor="input-b" design="Bold" change="BatchFilter"/>
+									<Select id="Select21" width="100%"
+									items="{path: '/ProductCollection' }">
+									<core:Item key="{Batch}" text="{Batch}" />
+									</Select>
+				 
+		    <Label text="Term" labelFor="input-a" design="Bold" required="true" />
+			<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+			<core:Item key="{Term}" text="{Term}" />
+			</Select>
+			<Label text="Exam Name" labelFor="input-b" design="Bold" />
+			<Input
+			value=" "
+			id="ExamName"
+			class="sapUiSmallMarginBottom" />
+							
+			<Button text="Add" press="Create"/></l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Exam List">
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">								<columns>
+									<Column width="12em" hAlign="Center">
+										<Text text="Course" />
+									</Column>
+									<Column width="12em" hAlign="Center">
+										<Text text="Batch" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text=" Term " />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" 
+										hAlign="Center">
+										<Text text="Exam Name" />
+									</Column>
+									<Column hAlign="Left">
+										<Text text="Manage" />
+									</Column>
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{Course}" />
+											<Text text="{Batch}" />
+											<Text text="{Term}" />
+											<Text text="{ExamName}" />
+											<HBox>
+                                        <Button icon="sap-icon://edit" press="onPress"/>
+                                        <Button icon="sap-icon://delete" press="onDelete"/>
+                                       </HBox>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				</IconTabFilter>
+				
+				
+			<!--  
+				<IconTabFilter text="Report Card">
+					<l:Splitter id="mainSplitter" height="500px" width="100%">
+		<Panel width="100%" headerText="Report Card Settings">
+					<Label text=" Term " required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId1" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Term}" text="{Term}" />
+								</Select>
+
+								<Label text=" Exam " labelFor="input-a" design="Bold"
+									required="true" />
+									
+								<Select id="Select1" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Subject}" text="{Subject}" />
+								</Select>
+								
+								<Button text="save" press="save"/>
+					<layoutData><l:SplitterLayoutData size="500px" /></layoutData>
+				</Panel>
+			
+		<Table id="idProductsTable1"
+						inset="false"
+						items="{
+							path: '/ProductCollection'
+							
+						}">
+
+						<columns>
+							<Column
+								width="12em">
+								<Text text="SNo"/>
+							</Column>
+							<Column>
+								
+								<Text text="Term" />
+							</Column>
+							<Column>
+								
+								<Text text="Exam" />
+							</Column>
+							
+							<Column>
+								
+								<Text text="Manage" />
+							</Column>
+							
+							
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									
+									<Text text="{SNo}" />
+									<Text text="{Term}" />
+									<Text text="{Subject}" />
+									<Button icon="sap-icon://delete" press="Delete"/>
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+		</Table>
+		
+	</l:Splitter>
+				</IconTabFilter>  -->
+				
+				</items>
+</IconTabBar>
+		</content>
+	</Page>
+</core:View>

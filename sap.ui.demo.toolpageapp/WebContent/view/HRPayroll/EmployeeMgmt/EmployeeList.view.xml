@@ -1,0 +1,105 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.EmployeeMgmt.EmployeeList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Employee Management">
+		<content>
+		
+			<GenericTile id="Tile1"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Add UserType" failedText = "HRPayroll/EmployeeMgmt/AddUserType"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile2"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Add Department" failedText = "HRPayroll/EmployeeMgmt/AddDept"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile3"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Add Designation" failedText = "HRPayroll/EmployeeMgmt/AddDesgina"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		
+		<GenericTile id="Tile4"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Add Employee" failedText = "HRPayroll/EmployeeMgmt/AddEmployee"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile id="Tile5"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Employee List" 
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+			<GenericTile id="Tile6"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Add Bank Details"  failedText = "HRPayroll/EmployeeMgmt/AddBankDetails"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		<GenericTile id="Tile7"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Print List"   failedText = "HRPayroll/EmployeeMgmt/PrintList"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		
+		<GenericTile id="Tile8"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Withdrawal"   failedText = "HRPayroll/EmployeeMgmt/WithDrawal"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+		
+		
+		
+		
+	
+		</content>
+	</Page>
+</core:View>

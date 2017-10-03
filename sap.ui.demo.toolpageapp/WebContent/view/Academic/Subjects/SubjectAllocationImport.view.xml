@@ -1,0 +1,115 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified" xmlns:m="sap.m" 
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Subjects.SubjectAllocationImport" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Student Import" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+		<l:Splitter  width="100%" orientation ="Vertical">		
+		<Panel>
+				<headerToolbar>
+					<Toolbar>
+						<Title level="H2" text="Bulk Student Import" />
+					</Toolbar>
+				</headerToolbar>
+				
+				
+			<l:VerticalLayout width="100%">
+		    <u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"
+			change="handleValueChange"
+			typeMissmatch="handleTypeMissmatch"
+			style="Emphasized"
+			fileType="txt,jpg"
+			placeholder="Choose a file for Upload...">
+				<u:parameters>
+					<u:FileUploaderParameter
+						name="param1"
+						value="Foo"/>
+					<u:FileUploaderParameter
+						name="param2"
+						value="bar"/>
+				</u:parameters>
+				<u:headerParameters>
+					<u:FileUploaderParameter
+						name="headerParam1"
+						value="Foo"/>
+					<u:FileUploaderParameter
+						name="headerParam2"
+						value="bar"/>
+				</u:headerParameters>
+			</u:FileUploader>
+		<Button
+			text="Upload File"
+			press="handleUploadPress"/>
+					
+					</l:VerticalLayout>
+					
+			
+<layoutData><l:SplitterLayoutData size="30%" resizable="false"/></layoutData>
+</Panel>
+<l:Splitter  width="100%">
+		
+		<m:Panel headerText = "Course And Batch" textAlign="Right" width="100%">
+		<Panel expandable="true" expanded="false" headerText="STD I" width="auto" class="sapUiResponsiveMargin"><content>  <List >
+				<DisplayListItem
+					label="Name"
+					 />
+				<DisplayListItem
+					label="Street"
+					 />
+				<DisplayListItem
+					label="City"
+					/>
+				<DisplayListItem
+					label="Country"/>
+			</List> </content>  </Panel>
+		<Panel expandable="true" expanded="false" headerText="STD II" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD III" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD IV" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD V" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD VI" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD VII" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD VIII" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD IX" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="STD X" width="auto" class="sapUiResponsiveMargin"></Panel>
+		
+			<layoutData><l:SplitterLayoutData size="300px" /></layoutData>
+			
+		</m:Panel>
+		
+		<m:Panel headerText = "Department And Employee Code" textAlign="Right" width="100%">
+		<Panel expandable="true" expanded="false" headerText="Computer" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Accounts" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Faculty" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Physics" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Administration" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Faculty Of Maths" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Faculty Of IT" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="English" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Chemistry" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="MBA" width="auto" class="sapUiResponsiveMargin"></Panel>
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+		</m:Panel>
+		<m:Panel headerText = "Subject" textAlign="Right" width="100%">
+		<Panel expandable="true" expanded="false" headerText="Computer" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Accounts" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Faculty" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Physics" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Administration" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Faculty Of Maths" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Faculty Of IT" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="English" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="Chemistry" width="auto" class="sapUiResponsiveMargin"></Panel>
+		<Panel expandable="true" expanded="false" headerText="MBA" width="auto" class="sapUiResponsiveMargin"></Panel>
+			<layoutData><l:SplitterLayoutData size="30%" minSize="200px" /></layoutData>
+		</m:Panel>
+	</l:Splitter>
+
+</l:Splitter>
+
+		</content>
+	</Page>
+</core:View>

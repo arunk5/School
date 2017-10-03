@@ -1,0 +1,116 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Hostel.HostelDetails"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+    			
+ 	<IconTabBar
+		id="idIconTabBarNoIcons"
+		stretchContentHeight="true"
+		expanded="{device>/isNoPhone}"
+		xmlns:layout="sap.ui.layout"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Hostel Type">
+	<l:ResponsiveSplitter defaultPane="default">
+		<l:PaneContainer>
+			<l:SplitPane  requiredParentWidth="600">
+								<m:Panel headerText="Add Hostel Type">
+								    <l:VerticalLayout width="100%">
+					<Label text="Hostel Type.(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+					
+										
+
+								
+				</l:VerticalLayout>
+				</m:Panel>
+			</l:SplitPane>
+			
+			<l:SplitPane requiredParentWidth="400" id="default">
+				<m:Panel>
+					<Table id="idProductsTable"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Vehicle No" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Code" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Route Start Place" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Route Stop Place" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"/>
+									<Text
+										text="{SupplierName}" />
+									<Text
+										text="Hyderabad" />
+									<Text
+										text="Banjara Hills" />
+									<core:Icon
+									    id="test"
+			src="sap-icon://syringe"
+			class="size1"
+			color="#031E48"
+			ariaLabelledBy="Library/AddBooks"
+			press="handleStethoscopePress" >
+			<core:layoutData>
+				<FlexItemData growFactor="1" />
+			</core:layoutData>
+		</core:Icon>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</m:Panel>
+			</l:SplitPane>
+			
+			
+			
+		</l:PaneContainer>
+	</l:ResponsiveSplitter>
+	</IconTabFilter>
+	<IconTabFilter
+				text="Hostel Details">
+				
+		</IconTabFilter>
+		</items>
+		</IconTabBar>
+</mvc:View>

@@ -1,0 +1,174 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPAOverView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="GPA Overview">
+		<content>
+	<GenericTile id="Tile1" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Set Term"
+		failedText = "Academic/Exams/GPA/SetTerm" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile2" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Create Exam"
+		failedText = "Academic/Exams/GPA/CreateExam" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile3" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="GPA Skill"
+		failedText = "Academic/Exams/GPA/GPASkill" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile4" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="GPA Skill Mark"
+		failedText = "Academic/Exams/GPA/GPASkillMark" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Set Grade Scale"
+		failedText = "Academic/Exams/GPA/SetGradeScale" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+<!-- 	<GenericTile id="Tile6" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Subject Credit Point"
+		failedText = "Academic/Exams/GPA/SubjectCreditPoint" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>   -->
+	
+	<GenericTile id="Tile7" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Total Mark %"
+		failedText = "Academic/Exams/GPA/TotalMarksPer" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile8" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Set Assessment"
+		failedText = "Academic/Exams/GPA/SetAssessment" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile9" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Set Exam"
+		failedText = "Academic/Exams/GPA/SetExam" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile10" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Set MarkList"
+		failedText = "Academic/Exams/GPA/SetMarkList" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile11" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Teacher Score Card"
+		failedText = "Academic/Exams/GPA/TeacherScoreCard" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	
+	<GenericTile id="Tile12" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Broad Sheet"
+		failedText = "Academic/Exams/GPA/BoardSheet" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile13" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Generate Report Card"
+		failedText = "Academic/Exams/GPA/GenerateReportCard" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile14" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="GPA Mark Import"
+		failedText = "Academic/Exams/GPA/GPAMarksImport" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	<GenericTile id="Tile15" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Remarks Import"
+		failedText = "Academic/Exams/GPA/RemarksImport" press="pressSetTerm">
+		<tileContent>
+			<TileContent>
+				<content>
+					<ImageContent src="sap-icon://course-program"></ImageContent>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+	
+	
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,110 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Hostel.HostelRegister"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+    		
+ 	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Hostel Room">
+	
+			
+				<m:Panel headerText="Add Hostel Room">
+				    <l:VerticalLayout width="100%">
+					<Label text="Hostel Type(required)" labelFor="input-a"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+					<Label text="Hostel Name(bold)" labelFor="input-b" design="Bold" />
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+					<Label text="Floor Name (normal)" labelFor="input-c"/>
+					<Input id="input-c"/>
+					<Label text="Room No (normal)" labelFor="input-d"/>
+					<Input id="input-d"/>
+					<Label text="No Of Beds(required)" labelFor="input-e"/>
+					<Input id="input-e"/>
+					<Label text="Amount(required)" labelFor="input-f"/>
+					<Input id="input-f"/>
+					</l:VerticalLayout>
+				</m:Panel>
+			
+			
+			
+			
+			
+		
+	</IconTabFilter>
+	
+			<IconTabFilter
+				text="List">
+				<m:Panel>
+					<Table id="idProductsTable"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Start Year" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Start Month" />
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Manage" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"
+										/>
+									<Text
+										text="{SupplierName}" />
+									<core:Icon
+									    id="test"
+			src="sap-icon://syringe"
+			class="size1"
+			color="#031E48"
+			ariaLabelledBy="Library/AddBooks"
+			press="handleStethoscopePress" >
+			<core:layoutData>
+				<FlexItemData growFactor="1" />
+			</core:layoutData>
+		</core:Icon>
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</m:Panel>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+</mvc:View>

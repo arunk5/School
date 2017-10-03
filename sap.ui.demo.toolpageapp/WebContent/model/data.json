@@ -1,0 +1,22 @@
+
+		 {
+			        "Products": [
+			              {
+			                  "Name": "Apple",
+			                  "Description": "Netherlands",
+			                  "Rating": 4  
+			              },
+			              {
+			                  "Name": "Orange",
+			                  "Description": "Spain",
+			                  "Rating": 2
+			              },
+			              {
+			                  "Name": "Strawberry",
+			                  "Description": "Poland",
+			                  "Rating": 3
+			              }
+			          ]
+	
+
+	}

@@ -1,0 +1,55 @@
+<mvc:View
+ controllerName="sap.ui.demo.toolpageapp.controller.Library.Reports"
+ xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:m="sap.m"  xmlns:l="sap.ui.layout"
+ xmlns:html="http://www.w3.org/1999/xhtml">
+<m:Page
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+		<m:content>
+	<Breadcrumbs currentLocationText="Laptop" class="sapUiMediumMargin">
+				<Link press="onPress" text="Products"/>
+				<Link press="onPress" text="Suppliers"/>
+				<Link press="onPress" text="Titanium"/>
+				<Link press="onPress" text="Ultra portable"/>
+				<Link press="onPress" text="12 inch"/>
+				<Link press="onPress" text="Super portable deluxe"/>
+			</Breadcrumbs>
+		
+	
+	
+		    
+		    
+		<Panel>
+				<headerToolbar>
+					<Toolbar>
+						<Title level="H2" text="Reports" />
+					</Toolbar>
+				</headerToolbar>
+				
+						
+			<l:VerticalLayout width="100%">
+		    <Label text="Reports for" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+								<Select
+								    width="500px"
+					forceSelection="false"
+					selectedKey="{/ProductCollection/1/ProductId}"
+					items="{
+						path: '/ProductCollection',
+						sorter: { path: 'Name' }
+					}">
+					<core:Item key="{ProductId}" text="{Name}" />
+				</Select>
+					
+					<Button type="Reject"
+						text="Print Report"
+						press="onPress"
+						ariaDescribedBy="rejectButtonDescription genericButtonDescription"/>
+					
+					</l:VerticalLayout>
+					
+			</Panel>
+		</m:content>
+	</m:Page>
+</mvc:View>

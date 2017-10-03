@@ -1,0 +1,32 @@
+{
+	"items" : [
+		{
+			"documentId" : "bcc27c4d-a8ce-3ab6-e807-ec05119685a5",
+			"visibleEdit" : true,
+			"visibleDelete" : true,
+			"fileName" : "Business Plan Topics.xls",
+			"mimeType" : "application/msexcel",
+			"thumbnailUrl" : "",
+			"url" : " http://localhost:49584/sap.ui.demo.toolpageapp/view/settings/USER_DETAILS_DEV.xls",
+			"attributes":[
+				{
+					"title":"Uploaded By",
+					"text":"John Black"
+				},
+				{
+					"title":"Uploaded On",
+					"text":"2014-07-27"
+				},
+				{
+					"title":"File Size",
+					"type" :"size",
+					"text":"3000000"
+				},
+				{
+					"title":"Version",
+					"text":"1"
+				}
+			]
+		}
+	]
+}

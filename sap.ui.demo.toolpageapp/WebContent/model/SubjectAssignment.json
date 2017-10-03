@@ -1,0 +1,127 @@
+{
+	"ProductCollection": [
+		{
+			"SNo": "1",
+			"Course": " MBA ",
+			"Batch": "MBA HR Mrng",
+			"Subject": "Artifical Intelligence",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "2",
+			"Course": " MBA ",
+			"Batch": "MBA Finance Eveng",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "Managerial Economics",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "3",
+			"Course": " BCA ",
+			"Batch": " A ",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "Design Algorithms",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "4",
+			"Course": " Economics ",
+			"Batch": " Semester-1 ",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "Ethical Hacking",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "5",
+			"Course": "B.Com",
+			"Batch": "Semester II",
+			"Subject": "Computer Architecture And Organization",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "6",
+			"Course": "PCM",
+			"Batch": "Semester II",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "Networks",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "7",
+			"Course": " STD-VII",
+			"Batch": "Semester II",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "Physics",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "8",
+			"Course": " STD-VIII",
+			"Batch": "Semester II",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "Maths",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "9",
+			"Course": " STD-IX",
+			"Batch": "Semester II",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "Chemistry",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "10",
+			"Course": " STD-X",
+			"Batch": "Semester II",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "English",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "11",
+			"Course": " PREP ",
+			"Batch": "Semester II",
+			"StartDate": "01.03.2016",
+			"EndDate": "01.12.2016",
+			"Term":"Term 1",
+			"ExamName":"MidTerm",
+			"Subject": "History",
+			"Manage": "EDIT"
+		}		
+					
+	  ]
+}
+

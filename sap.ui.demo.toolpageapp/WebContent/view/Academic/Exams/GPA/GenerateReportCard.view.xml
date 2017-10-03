@@ -1,0 +1,73 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.GenerateReportCard" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Generate Report Card" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	<IconTabBar id="idIconTabBarNoIcons"
+					stretchContentHeight="true" expanded="{device>/isNoPhone}"
+					xmlns:layout="sap.ui.layout" class="sapUiResponsiveContentPadding">
+					<items>
+						<IconTabFilter text="Generate Report Card ">
+						<ScrollContainer height="100%" width="100%"
+								horizontal="false" vertical="true">
+
+
+								<m:Panel headerText="Report Card">
+								
+								
+					
+							<Label text="Term" width="auto" labelFor="Select"
+								required="true" class="sapUiSmallMargin" />
+							<Select id="Course" width="auto" items="{path: '/ProductCollection' }">
+								<core:Item key="{Course}" text="{Course}" />
+							</Select>
+							
+							<Label text="Exam Title" width="auto" labelFor="Select"
+								required="true" class="sapUiSmallMargin" />
+							<Select id="Course2" width="auto" items="{path: '/ProductCollection' }">
+								<core:Item key="{Course}" text="{Course}" />
+							</Select>
+							
+							<Label text="Course" width="auto" labelFor="Select"
+								required="true" class="sapUiSmallMargin" />
+							<Select id="Course1" width="auto" items="{path: '/ProductCollection' }">
+								<core:Item key="{Course}" text="{Course}" />
+							</Select>
+							<Label text="Batch" width="auto" labelFor="Register"
+								required="true" class="sapUiSmallMargin" />
+							<Select id="Batch1" width="auto" items="{path: '/ProductCollection' }">
+								<core:Item key="{Batch}" text="{Batch}" />
+							</Select>
+							
+							
+							
+							<HBox>
+							<Label width="720px"></Label>
+							<Button text="Print" class="sapUiLargeMargin" />
+							</HBox>
+							
+							</m:Panel>
+							
+							<m:Panel headerText="Academic Performance">
+							</m:Panel>
+							<m:Panel headerText="Remarks">
+							<Label text="Principal's Remarks" required="true" labelFor="input-a"
+							design="Bold" class="settingsLabel" />
+
+						<Input id="input-a" required="true" width="100%" />
+						<Label text="Class Teacher's Remarks" required="true" labelFor="input-a"
+							design="Bold" class="settingsLabel" />
+
+						<Input id="input-b" required="true" width="100%" />
+						<Label width="720px"></Label>
+						<Button text="Save" class="sapUiLargeMargin" />
+							</m:Panel>
+							
+							</ScrollContainer>
+							
+										
+						</IconTabFilter>
+						</items>
+						</IconTabBar>
+		</content>
+	</Page>
+</core:View>

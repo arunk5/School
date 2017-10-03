@@ -1,0 +1,86 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Occurrence.OccurrenceRegi" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Occurence">
+		<content>
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Occurence Register">
+				
+				<l:VerticalLayout width="100%">
+								
+								<Label text="Employee Name" design="Bold"
+									 required="true" />
+								<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Student}" text="{Student}" />
+								</Select>
+								
+								<Label text="Date" design="Bold"
+									 required="true" />
+								<DatePicker
+			id="DP2"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+								
+								<Label text="Remarks" design="Bold"
+									 required="true" />
+								<TextArea id = "txtID" width="100%"/>
+								<Button text=" Save " press="onCircularAdd" />
+							</l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Occurence List">
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Employee Name" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Occurence Date" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Remarks" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+										    <Text text="{SNo}" />
+											<Text text="{Student}" />
+											<Text text="{StartDate}" />
+											<Text text="{TimeTableName}" />
+											<Button icon='sap-icon://edit' press="onPress"/>
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,82 @@
+{
+	"ProductCollection": [
+	
+	    {
+			"Name": "All Modules",
+			"Visibilty": " false "
+		},
+		{
+			"Name": "Academics",
+			"Visibilty": " true "
+		},
+		{
+			"Name": "Settings",
+			"Visibilty": " false "
+		},
+		{
+			"Name": "HR Payroll",
+			"Visibilty": " true "
+		},
+		
+		{
+			"Name": "Student",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Finance",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Library",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Transport",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Hostel",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Messages/SMS",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Store Management",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Performance",
+			"Visibilty": " true "
+		}	,
+		
+		{
+			"Name": "Events",
+			"Visibilty": " true "
+		}		,
+		
+		{
+			"Name": "Task Manager",
+			"Visibilty": " true "
+		}		,
+		
+		{
+			"Name": "Reports",
+			"Visibilty": " true "
+		},
+		{
+			"Name": "Data Export",
+			"Visibilty": " true "
+		}
+					
+	  ]
+}
+

@@ -1,0 +1,89 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.CourseBatch.ClassTeacherAllocation" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Class Teacher" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+		
+		
+		<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Class Teacher Allocation">
+				<l:VerticalLayout width="100%">
+				<Label text="Course" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+
+								<Label text=" Batch " labelFor="input-a" design="Bold"
+									required="true" />
+								<Select id="input-a" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+
+								<Label text=" Class Teacher " labelFor="input-b" design="Bold"
+									required="true" />
+				             	<Select id="input-b" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+					
+								<Button text=" Save " press = "save"/>
+				</l:VerticalLayout>
+				</IconTabFilter>
+				<IconTabFilter text="Teacher List">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">						
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Course" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Batch" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Class Teacher" />
+									</Column>
+									<Column hAlign="Left">
+										<Text text="Manage" />
+									</Column>
+									
+						
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{BatchID}" />
+											<Text text="{Course}" />
+											<Text text="{Batch}" />
+											<Text text="{ClassTeacher}" />
+											
+										<HBox>
+                                        <Button icon="sap-icon://edit" press="onPress"/>
+                                        <Button icon="sap-icon://delete" press="onDelete"/>
+                                       </HBox>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>		
+		
+		
+	
+		</content>
+	</Page>
+</core:View>

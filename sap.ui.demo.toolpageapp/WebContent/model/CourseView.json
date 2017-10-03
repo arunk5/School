@@ -1,0 +1,108 @@
+{
+	"ProductCollection": [
+		{
+			"SNo": "1",
+			"Course": " STD-I",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "2",
+			"Course": " STD-II",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "250",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "3",
+			"Course": " STD-III",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "4",
+			"Course": " STD-IV",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "5",
+			"Course": "STD-V",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "250",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "6",
+			"Course": "STD-VI",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "7",
+			"Course": " STD-VII",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "8",
+			"Course": " STD-VIII",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "9",
+			"Course": " STD-IX",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"MinimumAttendance": "300",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "10",
+			"Course": " STD-X",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"MinimumAttendance": "300",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		},
+		{
+			"SNo": "11",
+			"Course": " PREP ",
+			"AttendanceType": "DAILY",
+			"MinimumAttendance": "70",
+			"MinimumAttendance": "300",
+			"TotalWorkingDays": "300",
+			"Manage": " EDIT ",
+			"ProductPicUrl": "test-resources/sap/ui/demokit/explored/img/HT-6100.jpg"
+		}		
+					
+	  ]
+}
+

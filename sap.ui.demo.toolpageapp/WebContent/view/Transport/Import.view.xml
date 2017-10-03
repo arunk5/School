@@ -1,0 +1,57 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Transport.Import"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+   	
+	<Panel>
+				<headerToolbar>
+					<Toolbar>
+						<Title level="H2" text="Transport Allocation Import" />
+					</Toolbar>
+				</headerToolbar>
+				
+						
+			<l:VerticalLayout width="100%">
+		    <u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"
+			change="handleValueChange"
+			typeMissmatch="handleTypeMissmatch"
+			style="Emphasized"
+			fileType="txt,jpg"
+			placeholder="Choose a file for Upload...">
+				<u:parameters>
+					<u:FileUploaderParameter
+						name="param1"
+						value="Foo"/>
+					<u:FileUploaderParameter
+						name="param2"
+						value="bar"/>
+				</u:parameters>
+				<u:headerParameters>
+					<u:FileUploaderParameter
+						name="headerParam1"
+						value="Foo"/>
+					<u:FileUploaderParameter
+						name="headerParam2"
+						value="bar"/>
+				</u:headerParameters>
+			</u:FileUploader>
+		<Button
+			text="Upload File"
+			press="handleUploadPress"/>
+					
+					</l:VerticalLayout>
+					
+			</Panel>
+</mvc:View>

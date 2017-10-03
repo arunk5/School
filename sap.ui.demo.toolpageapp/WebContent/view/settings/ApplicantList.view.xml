@@ -1,0 +1,81 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.settings.ApplicantList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="">
+		<content>
+	
+	<Panel width="auto" class="sapUiResponsiveMargin">
+		<headerToolbar>
+			<Toolbar height="3rem">
+				<Title text="Applications"/>
+		    </Toolbar>
+		</headerToolbar>
+		
+		<Link
+				text="Please Download The Sample File For Bulk Import"
+				href="http://localhost:49584/sap.ui.demo.toolpageapp/index.html#/settings/USER_DETAILS_DEV.xls"
+				press="handleLinkPress" />
+		<Button id="downloadButton1" text="Download" press="handleLinkPress" enabled="false" type="Transparent"></Button>
+		
+		
+			<UploadCollection
+				id="UploadCollection"
+				maximumFilenameLength="55"
+				maximumFileSize="10"
+				multiple="false"
+				showSeparators="All"
+				change="onChange"
+				fileSizeExceed="onFileSizeExceed"
+				selectionChange="onSelectionChange"
+				typeMissmatch="onTypeMissmatch"
+				uploadComplete="onUploadComplete"
+				beforeUploadStarts="onBeforeUploadStarts"
+				uploadTerminated="onUploadTerminated"
+				items="{path : '/items', templateShareable : 'true'}"
+				mode="MultiSelect">
+				<toolbar>
+					<OverflowToolbar id="myId" >
+						<Title id="attachmentTitle"/>
+						<ToolbarSpacer/>
+						<Button id="downloadButton" text="Download" press="onDownloadItem" type="Transparent"></Button>
+						<UploadCollectionToolbarPlaceholder></UploadCollectionToolbarPlaceholder>
+					</OverflowToolbar>
+				</toolbar>
+				<items>
+					<UploadCollectionItem
+						documentId="{documentId}"
+						fileName="{fileName}"
+						mimeType="{mimeType}"
+						thumbnailUrl="{thumbnailUrl}"
+						url="{url}"
+						enableEdit="false"
+						enableDelete="false"
+						visibleDelete="false"
+						visibleEdit="false"
+						attributes="{path : 'attributes', templateShareable : 'true'}"
+						statuses="{path : 'statuses', templateShareable : 'true'}"
+						selected="{selected}">
+						<attributes>
+							<ObjectAttribute
+								title="{title}"
+								text="{parts : ['text', 'type']}"
+								active="{active}"/>
+						</attributes>
+						<statuses>
+							<ObjectStatus
+								title="{title}"
+								text="{text}"
+								state="{state}"
+								icon="{icon}"
+								iconDensityAware="{iconDensityAware}"
+								textDirection="{textDirection}"/>
+						</statuses>
+					</UploadCollectionItem>
+				</items>
+		</UploadCollection>
+		
+		
+		
+		</Panel>
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,88 @@
+<mvc:View controllerName="sap.ui.demo.toolpageapp.controller.settings.AssignCourse"
+	xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	xmlns:m="sap.m" xmlns="sap.m" height="100%">
+
+	<Page>
+		<content>
+
+			<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+
+				<items>
+					<IconTabFilter text="Academic Year Details">
+						<l:VerticalLayout width="90%">
+							<Label text="User Type" labelFor="input-a" design="Bold"
+								required="true" />
+							<Select id="Select1" width="100%" items="{path: '/ProductCollection' }">
+								<core:Item key="{User}" text="{User}" />
+							</Select>
+
+							<Label text="Select List Of Courses" labelFor="input-a" design="Bold"
+								required="true" />
+
+							<List id="ProductList" items="{/ProductCollection}" mode="MultiSelect"
+								includeItemInSelection="true">
+								<headerToolbar>
+									<Toolbar>
+										<content>
+											<Title text="Course List" level="H2" />
+											<ToolbarSpacer />
+											
+										</content>
+									</Toolbar>
+								</headerToolbar>
+								<StandardListItem title="{Course}" />
+							</List>
+
+
+							<Button text="save" press="onPress" />
+
+
+						</l:VerticalLayout>
+
+
+					</IconTabFilter>
+					<IconTabFilter text="Year Details List">
+
+						<Table id="idProductsTable" inset="false"
+							items="{
+							path: '/ProductCollection'
+							}">
+							<columns>
+								<Column width="12em">
+									<Text text="SNo" />
+								</Column>
+
+								<Column minScreenWidth="Tablet" demandPopin="true">
+									<Text text="User Type" />
+								</Column>
+
+								<Column width="12em">
+									<Text text="Course" />
+								</Column>
+
+								<Column width="12em">
+									<Text text="Manage" />
+								</Column>
+
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="{SNo}" />
+										<Text text="{User}" />
+										<Text text="{Course}" />
+										<Button icon="sap-icon://delete" />
+
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+	</Page>
+</mvc:View>

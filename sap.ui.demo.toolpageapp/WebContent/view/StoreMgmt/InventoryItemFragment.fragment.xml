@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:u="sap.ui.unified">
+	
+	 <Dialog title = "INFORMATION">
+    <l:Grid defaultSpan = "L12 M12 S12" width = "100%" id = "idGrid">
+    <l:content>
+        <f:SimpleForm id="SimpleFormDisplay354"
+            minWidth="1024"
+            maxContainerCols="2"
+            editable="false"
+            layout="ResponsiveGridLayout"
+            title="Course Info"
+            >
+            <f:content>
+                <l:VerticalLayout width="100%">
+            	<Label text="Event Name" />
+                <Input id = "idPersNo"/>
+                </l:VerticalLayout>
+                <l:VerticalLayout width="100%">
+                 <Label text="Event Type" />
+                <Input id = "idPersNo1"/>
+                </l:VerticalLayout>
+                <l:VerticalLayout width="100%">
+                 <Label text="Description" />
+                <Input id = "idPersNo2"/>
+                </l:VerticalLayout>
+                <l:VerticalLayout width="100%">
+                 <Label text="Description" />
+                <Input id = "input-d"/>
+                </l:VerticalLayout>
+            </f:content>
+        </f:SimpleForm>
+    </l:content>
+    </l:Grid>
+    <buttons>
+    <Button text = "CLOSE" press = "closeDialog" type = "Reject"/>
+    <Button text = "SAVE" press = "onSave" type = "Accept"/>
+    </buttons>
+    </Dialog>
+	
+	
+	
+	</core:FragmentDefinition>

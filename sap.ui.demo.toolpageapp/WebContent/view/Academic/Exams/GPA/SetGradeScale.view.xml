@@ -1,0 +1,108 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.SetGradeScale" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	            <IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Add GradeScale">
+				<l:VerticalLayout width="90%">
+				<Label text="Grade" labelFor="input-a" design="Bold" required="true" />
+			    <Input
+				value=" "			
+				id="GradeValue"
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				
+				<Label text="Grade Scale Value" labelFor="input-a" design="Bold" required="true" />
+			    <Input
+				value=" "
+				id="GradeScaleValue"				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				
+				<Label text="Lower Mark Range(in %)" labelFor="input-a" design="Bold" required="true" />
+			     <Input
+				 value=" "
+				 id="LowerValue"				
+				 fieldWidth="60%"
+				 class="sapUiSmallMarginBottom" />
+				
+				<Label text="Upper Mark Range(in %)" labelFor="input-a" design="Bold" required="true" />
+			    <Input
+				value=" "
+				id="UpperValue"				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				
+				<Label text="Principal Comment" labelFor="input-a" design="Bold" required="true" />
+			    <Input
+				value=" "
+				id="PrincipalValue"				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				
+				<Button text="Add" press="CreateGrade"/>		
+				
+				</l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="GradeScale List">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{path: '/ProductCollection'}">
+
+								<columns>
+									<Column width="12em" hAlign="Center">
+										<Text text="SNo"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Grade"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center"
+										>
+										<Text text="Grade Scale Value"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Lower Mark Range(in %)"/>
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Upper Mark Range(in %)"/>
+									</Column>
+									<Column hAlign="Left">
+										<Text text="Manage"/>
+									</Column>
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{Grade_ID}" />
+											<Text text="{Grade}" />
+											<Text text="{GradeScaleValue}" />
+											<Text text="{LowerMarkRange}" />
+											<Text text="{UpperMarkRange}" />
+											<HBox>
+                                        <Button icon="sap-icon://edit" press="onPress"/>
+                                        <Button icon="sap-icon://delete" press="onDelete"/>
+                                       </HBox>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				
+				</IconTabFilter>
+				</items>
+     </IconTabBar>
+	
+		</content>
+	</Page>
+</core:View>

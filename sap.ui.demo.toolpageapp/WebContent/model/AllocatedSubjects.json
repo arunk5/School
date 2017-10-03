@@ -1,0 +1,136 @@
+{
+	"ProductCollection": [
+		{
+			"SNo": "1",
+			"Course": " MBA ",
+			"Batch": "MBA HR Mrng",
+			"Subject": "Artifical Intelligence",
+			"Department": "CSE",
+			"Designation":"Professor",
+			"EmployeeName": " Abhinav ",
+			"ExamName":"English",
+			"MaximumMark":"100",			
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "2",
+			"Course": " MBA ",
+			"Batch": "MBA Finance Eveng",
+			"Subject": "Managerial Economics",
+			"Designation":"Assistant Professor",
+			"Department": "MBA",
+			"EmployeeName": " Spank ",
+			"ExamName":"Maths",
+			"MaximumMark":"100",	
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "3",
+			"Course": " BCA ",
+			"Batch": " A ",
+			"Subject": "C/C++",
+			"Department": " EEE ",
+			"Designation":"Admin",
+			"EmployeeName": " Rashmi ",
+			"ExamName":"Physics",
+			"MaximumMark":"100",	
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "4",
+			"Course": " Economics ",
+			"Batch": " Semester-1 ",
+			"Subject": "Ethical Hacking",
+			"Department": " Maths ",
+			"Designation":"HOD",
+			"ExamName":"Chemistry",
+			"MaximumMark":"100",	
+			"EmployeeName": " Vikas ",
+			"Manage": " EDIT "
+		},
+		{
+			"SNo": "5",
+			"Course": "B.Com",
+			"Batch": "Semester II",
+			"Subject": "Computer Architecture And Organization",
+			"Department": "Physical Education",
+			"EmployeeName": " Charan ",
+			"Designation":"Lab Assistant",
+			"ExamName":"Economics",
+			"MaximumMark":"100",	
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "6",
+			"Course": "PCM",
+			"Batch": "Semester II",
+			"Subject": "Networks",
+			"Department": "Network",
+			"Designation":"Professor",
+			"EmployeeName": " Shashank ",
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "7",
+			"Course": " STD-VII",
+			"Batch": "Semester II",
+			"Subject": "Physics",
+			"Department": "Admin",
+			"EmployeeName": " Balaji ",
+			"Designation":"Professor",
+			"ExamName":"Language-1",
+			"MaximumMark":"100",	
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "8",
+			"Course": " STD-VIII",
+			"Batch": "Semester II",
+			"Subject": "Maths",
+			"Department": "Contract",
+			"EmployeeName": " Shiva ",
+			"Designation":"Professor",
+			"ExamName":"History",
+			"MaximumMark":"100",	
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "9",
+			"Course": " STD-IX",
+			"Batch": "Semester II",
+			"Subject": "Managerial Economics",
+			"Department": "Managerial",
+			"EmployeeName": " Krishna ",
+			"Designation":"Professor",
+			"ExamName":"Science",
+			"MaximumMark":"100",	
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "10",
+			"Course": " STD-X",
+			"Batch": "Semester II",
+			"Subject": "70",
+			"Department": "Primary Teacher",
+			"Designation":"Professor",
+			"EmployeeName": " Maddy ",
+			"ExamName":"Social",
+			"MaximumMark":"100",	
+			"Manage": "EDIT"
+		},
+		{
+			"SNo": "11",
+			"Course": " PREP ",
+			"Batch": "Semester II",
+			"Subject": "70",
+			"Department": "Pre Primary Teacher",
+			"Designation":"Professor",
+			"EmployeeName": " Ganesh ",
+			"ExamName":"Language II",
+			"MaximumMark":"100",	
+			"Manage": "EDIT"
+		}		
+					
+	  ]
+}
+

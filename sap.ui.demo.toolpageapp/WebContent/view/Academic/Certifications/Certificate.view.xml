@@ -1,0 +1,89 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Certifications.Certificate" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Generate Certificate" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter
+			 text="  Generate Certificate ">
+								 
+			<l:Splitter height="500px" orientation="Vertical">
+		     <m:Panel headerText = "Generate Certificate"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					<Label text ="Certificate Type" class="sapUiSmallMargin"/>
+						<Select id="Select" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{CertificateType}" text="{CertificateType}" />
+								</Select>
+					<Label text ="Certificate Template" class="sapUiSmallMargin"/>			
+						<Select id="Sele" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+						<Label text ="Certificate For" class="sapUiSmallMargin"/>		
+						<Select id="Sel" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="Student" text="Student" />
+									
+								</Select>
+						<Label text ="Certificate Issue Date" class="sapUiSmallMargin"/>
+								
+								  <DatePicker
+		                         	id="DP1"
+			                        placeholder="Enter Date ..."
+			                        change="handleChange"
+			                        class="sapUiSmallMarginBottom"/>
+								
+								
+					</items>
+				</FlexBox>
+		</m:Panel>
+		  <m:Panel headerText = "Generate / Issue Certificate"  width="100%">
+		  <Table id="idProductsTable">
+
+								<columns>
+									<Column width="12em">
+										<Text text="Student Employee Register No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text=" Student/Employee Name " />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Right">
+										<Text text=" View Certificate " />
+									</Column>
+									
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Right">
+										<Text text=" Issue Certificate " />
+									</Column>
+									
+								</columns>
+								</Table>
+		  </m:Panel>
+	</l:Splitter>
+				
+			</IconTabFilter>
+			
+			<IconTabFilter
+				text="  Issued Certificate List  ">
+				 <m:Panel headerText = "Issued Certificate List"  width="100%">
+			 <Select id="Select1" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Certificate Type}" text="{Certificate Type}" />
+								</Select>
+								<Button text=" Print "/>
+				 </m:Panel>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	
+		</content>
+	</Page>
+</core:View>

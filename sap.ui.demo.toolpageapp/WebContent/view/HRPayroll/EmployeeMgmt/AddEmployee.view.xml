@@ -1,0 +1,163 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m" xmlns:u="sap.ui.unified"
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.EmployeeMgmt.AddEmployee" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Registration" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	<l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = "Employee Registration"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					
+					    <Label text="Employee Code" labelFor="Select" class="sapUiSmallMargin" design="Bold"/>
+						<Input id="Select21" maxWidth="200px" width ="200px">
+									
+								</Input>
+						<Label text="Joining Date" labelFor="Sele" class="sapUiSmallMargin" design="Bold"/>		
+						<DatePicker
+			id="DP211"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+								
+						<Label text="Department" labelFor="Sel" class="sapUiSmallMargin" design="Bold"/>		
+						<Select id="Sel12" maxWidth="200px" width ="200px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Department}" text="{Department}" />
+						</Select>
+					
+					</items>
+			</FlexBox>
+			<FlexBox width="100%"
+					alignItems="Start">
+			
+			<items>
+					
+					   <Label text="Designation" labelFor="Select" class="sapUiSmallMargin" design="Bold"/>
+						<Select id="Sel121" maxWidth="200px" width ="200px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Designation}" text="{Designation}" />
+						</Select>
+						<Label text="Qualification" labelFor="Sele" class="sapUiSmallMargin" design="Bold"/>		
+							<Input id="Select2341" maxWidth="200px" width ="200px">
+									
+							</Input>
+						<Label text="Total Experience" labelFor="Sel" class="sapUiSmallMargin" design="Bold"/>		
+						<Input id="Select233441" maxWidth="200px" width ="200px">
+									
+						</Input>
+								
+					<Label text="User Type" labelFor="Select" class="sapUiSmallMargin" design="Bold"/>
+					<Select id="Sel13421" maxWidth="200px" width ="200px" items="{path: '/ProductCollection' }">
+									<core:Item key="{User}" text="{User}" />
+					</Select>
+								
+					
+					</items>
+
+			</FlexBox>
+			
+			<layoutData><l:SplitterLayoutData/></layoutData>
+		</m:Panel>
+		<m:Panel width="100%">
+		<l:Splitter id="mainSplitter"  width="100%">
+		<Panel width="100%" headerText="Personal Details">
+					<l:VerticalLayout width="100%">
+								<Label text=" First Name" required="true" 
+									design="Bold" class="settingsLabel" />
+
+								<Input id="FirstName" width="100%" ></Input>
+
+								<Label text=" Middle Name "  design="Bold"
+									required="true" />
+									
+								<Input id="Middle" width="100%" ></Input>
+								
+								<Label text="Last Name"  design="Bold"/>
+								<Input id="Last" width="100%" ></Input>
+								
+								<Label text="Date Of Birth" design="Bold" 
+									required="true" />
+									<DatePicker
+			id="DOB"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+															
+								<Label text="Gender" design="Bold" labelFor="input-c"
+									required="true" />
+								<Select id="Gender" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+								
+							</l:VerticalLayout>
+					<layoutData><l:SplitterLayoutData/></layoutData>
+				</Panel>
+			<Panel headerText = "Contact Details" >
+		<l:VerticalLayout width="100%">
+								<Label text="Present Address" required="true" 
+									design="Bold" class="settingsLabel" />
+
+								<Input id="PresAddrs" width="100%" ></Input>
+
+								<Label text="Permanent Address"  design="Bold"
+									required="true" />
+									
+								<Input id="PermAddrs" width="100%" ></Input>
+								
+								<Label text="City"  design="Bold"/>
+								<Input id="City" width="100%" ></Input>
+								
+								<Label text="Pin" design="Bold" 
+									required="true" />
+								<Input id="Pin" width="100%" ></Input>	
+														
+								<Label text="Country" design="Bold" labelFor="input-c"
+									required="true" />
+								<Select id="Country" width="100%" >
+									<core:Item text="India" />
+								</Select>
+								
+								<Label text="State" design="Bold" labelFor="input-c"
+									required="true" />
+								<Select id="State" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+								<Label text="Phone" design="Bold" 
+									required="true" />
+								<Input id="Phone" width="100%" ></Input>
+								
+								<Label text="Mobile" design="Bold" 
+									required="true" />
+								<Input id="Mobile" width="100%" ></Input>
+								
+								<Label text="Email" design="Bold" 
+									required="true" />
+								<Input id="Email" width="100%" ></Input>
+								
+								<Label text="Upload Photo" design="Bold" 
+									required="true" />
+								<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="upload/"
+			width="400px"
+			tooltip="Upload your file to the local server"
+			uploadComplete="handleUploadComplete"/>
+								
+							</l:VerticalLayout>
+					
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+		</Panel>
+		
+	</l:Splitter>
+</m:Panel></l:Splitter>
+	
+	<Button text="Add Employee" press="OnSave"/>
+	
+	
+		</content>
+	</Page>
+</core:View>

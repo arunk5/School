@@ -1,0 +1,104 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.SetTerm" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Term Addition">
+				
+						     <l:VerticalLayout width="90%">
+						     
+						     <Label text=" Course " required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel"/>
+
+								<Select id="SelectId" width="100%" items="{path: '/trips' }" class="sapUiSmallMarginBottom">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+						     
+						     
+		    <Label text="Term" labelFor="input-a" design="Bold" required="true" />
+			<Input
+				value=" "
+				id="input-a"				
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+			<Label text="Start Date" labelFor="input-b" design="Bold" />
+				<DatePicker
+			id="DP1"
+			valueFormat="dd.MM.yyyy"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+			<Label text="End Date" labelFor="input-b" design="Bold" />
+				<DatePicker
+			id="DP11"
+			valueFormat="dd.MM.yyyy"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>				
+			<Button text="Add" press="Create"/>
+			
+		     </l:VerticalLayout>
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Terms List">
+				
+					<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column width="12em" hAlign="Center">
+										<Text text="S No" />
+									</Column>
+									
+									<Column width="12em" hAlign="Center">
+										<Text text="Course" />
+									</Column>
+									
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Term" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" 
+										hAlign="Center">
+										<Text text="Start Date" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="End Date" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{Term_ID}" />
+											<Text text="{Course}" />
+											<Text text="{Term}" />
+											<Text text="{StartDate}" />
+											<Text text="{EndDate}" />
+											<Button icon= 'sap-icon://edit' />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+		</content>
+	</Page>
+</core:View>

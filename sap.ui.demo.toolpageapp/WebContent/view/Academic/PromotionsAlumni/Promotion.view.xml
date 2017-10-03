@@ -1,0 +1,85 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.PromotionsAlumni.Promotion" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Promotion and Alumni" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter
+			 text="  Step 1 ">
+				<m:Panel header="Promotion And Alumni"	>			
+			<l:Splitter height="500px">
+		     <l:VerticalLayout width="90%">
+		    <Label text="Course" labelFor="input-a" design="Bold" required="true" />
+			<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+			<Label text="Batch" labelFor="input-b" design="Bold" />
+			<Select id="Select1" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+			<Button text="Promote"/>
+			 <l:layoutData><l:SplitterLayoutData size="70%" /></l:layoutData>
+		     </l:VerticalLayout>
+		    				
+						
+					
+	</l:Splitter>
+				</m:Panel>
+			</IconTabFilter>
+			<IconTabFilter
+				text="  Promotion List  ">
+					<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+
+								<columns>
+									<Column width="12em" hAlign="Center">
+										<Text text="Student Admission No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Student Name" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" 
+										hAlign="Center">
+										<Text text="Attendance %" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Status" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Student}" />
+											<Text text="{Attendance}" />
+											<Text text="{Status}" />
+											<Button icon= 'sap-icon://edit' />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

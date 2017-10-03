@@ -1,0 +1,96 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.settings.AcademicDetails"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m"
+	xmlns="sap.m"
+	height="100%">
+	
+   		
+ 	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Academic Details">
+	        
+	        <l:VerticalLayout width="90%">
+		    <Label text="Start Year" labelFor="input-a" design="Bold" required="true" />
+			<Select id="Select1" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+			<Label text="Start Month" labelFor="input-b" design="Bold" />
+			<Select id="Select2" width="100%" items="{path: '/trip' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+			<Label text="End Year" labelFor="input-b" design="Bold" />
+			<Select id="Select3" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+			<Label text="End Month" labelFor="input-b" design="Bold" />
+			<Select id="Select4" width="100%" items="{path: '/trip' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+			<Label text="Activate/Deactivate" labelFor="input-b" design="Bold" />
+			<Select id="Select5" width="100%" items="{path: '/trip' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+			</Select>															
+			<Button text="Save"/>
+			</l:VerticalLayout>
+	
+	
+	
+	         </IconTabFilter>
+	
+			<IconTabFilter
+				text="Academic Year Details">
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+
+								<columns>
+									<Column width="12em" hAlign="Center">
+										<Text text="SNo" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Start Year" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center"
+										>
+										<Text text="Start Month" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="End Year" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="End Month" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Status" />
+									</Column>
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Student}" />
+											<Text text="{Width}" />
+											<Text text="{Status}" />
+											<Button icon= 'sap-icon://edit' />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+</mvc:View>

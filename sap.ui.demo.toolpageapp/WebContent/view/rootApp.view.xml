@@ -1,0 +1,72 @@
+<core:View height="100%"
+           xmlns:core="sap.ui.core"
+           xmlns="sap.m"
+           xmlns:tnt="sap.tnt"
+           xmlns:l="sap.ui.layout"
+           xmlns:html="http://www.w3.org/1999/xhtml"
+           xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+           controllerName="sap.ui.demo.toolpageapp.controller.rootApp"
+           id="mainContent">
+    <Text text="Hellodddfsf"></Text>
+    <tnt:ToolPage id="rootApp">
+        <tnt:header>
+            <tnt:ToolHeader>
+            
+                <Button id="sideNavigationToggleButton"
+                        icon="sap-icon://menu2"
+                        type="Transparent"
+                        press="onSideNavButtonPress">
+                    <layoutData>
+                        <OverflowToolbarLayoutData priority="NeverOverflow" />
+                    </layoutData>
+                </Button>
+                <ToolbarSpacer width="90%" />
+                 <Button id="btn1" type="Transparent">
+            <layoutData>
+                <OverflowToolbarLayoutData priority="NeverOverflow" />
+            </layoutData>
+        </Button>
+               	
+                
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation expanded="true"
+                                itemSelect="onItemSelect">
+                <tnt:NavigationList items="{path: '/navigation'}" id="list">
+                    <tnt:NavigationListItem text="{title}"
+                                            id="listItems"
+                                            icon="{icon}"
+                                            enabled="true"
+                                            expanded="false"
+                                            items="{path:'items', templateShareable:true}"
+                                            key="{key}">
+                        <tnt:NavigationListItem text="{title}"
+	                                           
+	                                            enabled="true"
+	                                            expanded="false"
+	                                            items="{path:'subitems', templateShareable:true}"
+	                                            key="{key}">
+                                                <tnt:NavigationListItem text="{title}"
+                                                    expanded="false"
+                                                key="{key}"
+                                                enabled="true">
+                                                </tnt:NavigationListItem>
+                        </tnt:NavigationListItem>
+                    </tnt:NavigationListItem>
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+                    <tnt:NavigationList items="{path: '/fixedNavigation'}">
+                        <tnt:NavigationListItem text="{title}"
+                                                icon="{icon}">
+                        </tnt:NavigationListItem>
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents id ="MyID">
+          <App id="Content"/>  
+        </tnt:mainContents>
+    </tnt:ToolPage>
+
+</core:View>

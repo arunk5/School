@@ -1,0 +1,74 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.Library.AddCategory"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	
+	xmlns="sap.m">
+		   <Breadcrumbs currentLocationText="Laptop" class="sapUiMediumMargin">
+				<Link press="onPress" text="Products"/>
+				<Link press="onPress" text="Suppliers"/>
+				<Link press="onPress" text="Titanium"/>
+				<Link press="onPress" text="Ultra portable"/>
+				<Link press="onPress" text="12 inch"/>
+				<Link press="onPress" text="Super portable deluxe"/>
+			</Breadcrumbs>
+						
+	<l:Splitter id="mainSplitter" height="500px" width="100%">
+		<Panel width="100%" headerText="Add Book Category">
+					<Label text="Category Name(required)" labelFor="input-a"/>
+					<Input id="input-a" required="true"/>
+					<Label text="Section Code" labelFor="input-b" />
+					<Input id="input-b"/>
+					<layoutData><l:SplitterLayoutData size="700px" /></layoutData>
+				</Panel>
+			
+		<Table id="idProductsTable"
+						inset="false"
+						items="{
+							path: '/ProductCollection',
+							sorter: {
+								path: 'Name'
+							}
+						}">
+					<headerToolbar>
+			<Toolbar>
+				<Title text="Products" level="H2"/>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button	icon="sap-icon://download" press="onDataExport" />
+			</Toolbar>
+		</headerToolbar>
+						<columns>
+							<Column
+								width="12em">
+								<Text text="Book Category"/>
+							</Column>
+							<Column
+								minScreenWidth="Tablet"
+								demandPopin="true">
+								<Text text="Section Code" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier
+										title="{Name}"
+										text="{ProductId}"/>
+									<Text
+										text="{SupplierName}" />
+									
+								</cells>
+							</ColumnListItem>
+						</items>
+					
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+		</Table>
+		
+	</l:Splitter>
+	<l:HorizontalLayout class="buttons">
+		
+	</l:HorizontalLayout>
+	<l:VerticalLayout id="mainOptions" class="options">
+	</l:VerticalLayout>
+</mvc:View>

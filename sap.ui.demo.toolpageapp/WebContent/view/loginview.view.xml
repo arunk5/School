@@ -1,0 +1,32 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.loginview" xmlns:html="http://www.w3.org/1999/xhtml"
+		id="mainContents">
+	
+	<!--  <Page> <content> -->
+		
+		<App id = "mainContents">
+
+                  <FlexBox
+					height="100px"
+					alignItems="Center"
+					justifyContent="Center">
+		
+	 <VBox ><!--fitContainer="true" justifyContent="Center" alignItems="Center" alignContent="Center">  -->	
+			<items>
+							<Input id="uid" placeholder="User ID"></Input>
+							<Input id="pasw" placeholder="Password" type="Password"></Input>
+							<Button width="12rem" text="Login" type="Emphasized" press="onLoginTap"></Button>
+							<Select id="SelectId1" width="100%" items="{path: '/login' }">
+                            <core:Item key="{username}" text="{username}" />
+                            </Select>
+                            <Select id="SelectId2" width="100%" items="{path: '/login' }">
+                            <core:Item key="{password}" text="{password}" />
+                            </Select>					
+		  </items>
+		</VBox></FlexBox>		
+
+         </App>	
+	<!--</content> </Page> -->
+				  
+	
+</core:View>

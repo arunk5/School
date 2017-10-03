@@ -1,0 +1,191 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"  xmlns:l="sap.ui.layout" xmlns:m="sap.m" xmlns:z="sap.ui.core.LayoutData"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.GPASkillMark" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Enter Marks">
+				<l:Splitter  width="100%" orientation ="Vertical">
+		        <m:Panel headerText = "Select Category"  width="100%">
+		        <FlexBox					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					<Label text="Term" labelFor="Select" design="Bold" required="true" class="sapUiSmallMargin" />
+						<Select id="Select" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Term}" text="{Term}" />
+								</Select>
+						<Label text="Skills" labelFor="Sele" design="Bold" required="true" class="sapUiSmallMargin" />		
+						<Select id="Sele" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{SkillName}" text="{SkillName}" />
+								</Select>
+								
+								<Label text="Course" labelFor="Sel" design="Bold" required="true" class="sapUiSmallMargin" />		
+						<Select id="Sel" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+								
+								
+					<Label text="Batch" labelFor="input" design="Bold" required="true" class="sapUiSmallMargin" />
+					<Select id="input" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+								
+								
+						
+								
+					  <Button text="Save" press="FilterSkill"/>
+					</items>
+				</FlexBox>
+		
+			<layoutData><l:SplitterLayoutData size="30%" resizable="false"/></layoutData>
+		</m:Panel>
+		
+		
+						
+				<Table id="idProductsTabless" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Student Name" />
+									</Column>
+									<Column width="12em">
+										<Text text="Skill Name" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Sub Skill Name" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+									<Text text="Max. Mark" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Mark" />
+									</Column>
+								
+																		
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											
+											<Text text="{StudentName}" />
+											<Text text="{SkillName}" />
+											<Text text="{SubSkillName}" />
+											<Text text="100" />
+										<Input
+				id="passwordInput"
+				type="Password"
+				 />
+										</cells>
+									</ColumnListItem>
+								</items>
+							
+				
+		
+		
+		
+		
+		
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+		</Table>
+		<Button text="save" press="presssave"/>
+	</l:Splitter>
+				
+				
+				
+				</IconTabFilter>
+				<IconTabFilter text="Mark List">
+				
+				<l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = "Select Category"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					<Label text="Term" labelFor="Select" design="Bold" required="true" class="sapUiSmallMargin" />
+						<Select id="S" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Term}" text="{Term}" />
+								</Select>
+						<Label text="Skills" labelFor="Sele" design="Bold" required="true" class="sapUiSmallMargin" />		
+						<Select id="Sle" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{SkillName}" text="{SkillName}" />
+								</Select>
+					<Label text="Batch" labelFor="input" design="Bold" required="true" class="sapUiSmallMargin" />
+					<Select id="input12" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+								
+								
+						<Label text="Course" labelFor="Sel" design="Bold" required="true" class="sapUiSmallMargin" />		
+						<Select id="Sel12" maxWidth="150px" width ="300px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Course}" text="{Course}" />
+								</Select>
+								
+					  <Button text="Save"/>
+					</items>
+				</FlexBox>
+		
+			<layoutData><l:SplitterLayoutData size="30%" resizable="false"/></layoutData>
+		</m:Panel>
+				<m:Panel headerText = "Marks List"  width="100%">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Student Name" />
+									</Column>
+									
+									<Column width="12em" hAlign="Center">
+										<Text text="Skill Name" />
+									</Column>
+									
+									<Column minScreenWidth="Tablet" demandPopin="true" 
+										hAlign="Center">
+										<Text text="Sub Skill Name" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Marks" />
+									</Column>
+									
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{StudentName}" />
+											<Text text="{SkillName}" />
+											<Text text="{SubSkillName}" />
+											<Text text="{SkillMarks}" />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				</m:Panel></l:Splitter>
+				</IconTabFilter>
+				</items>
+                </IconTabBar>	
+		</content>
+	</Page>
+</core:View>

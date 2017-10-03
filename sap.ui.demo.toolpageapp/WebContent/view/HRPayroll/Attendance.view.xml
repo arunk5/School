@@ -1,0 +1,134 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.Attendance" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Daily Attendance">
+					<l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = "Attendance"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					
+					    <Label text="Department" labelFor="Select" class="sapUiSmallMargin"/>
+						<Select id="Select" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Subject}" text="{Subject}" />
+								</Select>
+						<Label text="Date" labelFor="Sele" class="sapUiSmallMargin"/>		
+						<DatePicker
+			id="DP11"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+						
+					</items>
+				</FlexBox>
+		
+			<layoutData><l:SplitterLayoutData size="30%" resizable="false"/></layoutData>
+		</m:Panel>
+		<m:Panel headerText = "Employee Attendance Marking" height="100%" width="100%">
+		<Table id="1" items="{
+			path: '/ProductCollection'}"
+			 inset="false">							
+								<columns>
+									<Column width="12em">
+										<Text text="Check all" />
+									</Column>
+		
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Employee Code" />
+									</Column>
+									<Column hAlign="Right">
+										<Text text="Name" />
+									</Column>
+									<Column hAlign="Left">
+										<Text text="Remarks" />
+									</Column>
+									
+									</columns>
+									
+									<items>
+									<ColumnListItem>
+										<cells>
+											<CheckBox />
+											<Text text="{LectureCode}" />
+											
+											<Text text="{Student}" />
+											<Input id="ip"/>
+											
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+									
+									
+									
+									</Table>
+                       <Button text="Save"/>
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+			
+		</m:Panel>
+	</l:Splitter>
+	
+				
+				</IconTabFilter>
+				<IconTabFilter text="View Attendance">
+				
+				<l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = "Attendance"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					
+					    <Label text="Department" labelFor="Select" class="sapUiSmallMargin"/>
+						<Select id="Select123" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Department}" text="{Department}" />
+								</Select>
+						<Label text="Month" labelFor="Sele" class="sapUiSmallMargin"/>		
+						<Select id="Select1234" maxWidth="200px" width ="600px" items="{path: '/trips' }">
+									<core:Item key="{VALUE}" text="{VALUE}" />
+					    </Select>
+						
+						<Button text="Print" press="onPrint"/>
+						
+					</items>
+				</FlexBox>
+				
+				
+		
+			<layoutData><l:SplitterLayoutData size="30%" resizable="false"/></layoutData>
+		</m:Panel>
+		<m:Panel headerText = "Attendance Report" height="100%" width="100%">
+		<FlexBox>
+		
+		
+		
+		
+		</FlexBox>
+        <layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+			
+		</m:Panel>
+	     </l:Splitter>
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,96 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m" 
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.EmployeeMgmt.PrintList" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+	<l:Splitter  width="100%" orientation ="Vertical">
+		<m:Panel headerText = "Report Generation"  width="100%">
+		<FlexBox
+					
+					width="100%"
+					alignItems="Start"
+					>
+					<items>
+					
+					    <Label text="Report Type" labelFor="Select" class="sapUiSmallMargin"/>
+						<Select id="Select" maxWidth="200px" width ="600px" >
+									<core:Item key="Department Wise" text="Department Wise" />
+								</Select>
+						<Label text="Department" labelFor="Sele" class="sapUiSmallMargin"/>		
+						<Select id="Sele" maxWidth="200px" width ="600px" items="{path: '/ProductCollection' }">
+									<core:Item key="{Batch}" text="{Batch}" />
+								</Select>
+		                <Button text=" Print PDF "  />
+								
+					</items>
+				</FlexBox>
+		
+			<layoutData><l:SplitterLayoutData size="30%" resizable="false"/></layoutData>
+		</m:Panel>
+		<m:Panel headerText = "Employee List" height="100%" width="100%">
+		<Table id="idProductsTable" items="{
+			path: '/ProductCollection'}"
+			 inset="false">							
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+		
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Employee Code" />
+									</Column>
+									<Column hAlign="Right">
+										<Text text="Employee Name" />
+									</Column>
+									
+									<Column hAlign="Right">
+										<Text text="Joining Date" />
+									</Column>
+									
+									<Column hAlign="Right">
+										<Text text="Designation" />
+									</Column>
+									
+									<Column hAlign="Right">
+										<Text text="Address" />
+									</Column>
+									
+									<Column hAlign="Right">
+										<Text text="Mobilex" />
+									</Column>
+									
+									<Column hAlign="Right">
+										<Text text="Mobile" />
+									</Column>
+									
+									</columns>
+									
+									<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{Student}" />
+											<Link
+				text="Allocate"
+				press="handleLinkPress" />
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+									
+									
+									
+									</Table>
+ 
+			<layoutData><l:SplitterLayoutData size="auto" /></layoutData>
+			
+		</m:Panel>
+	</l:Splitter>
+	
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

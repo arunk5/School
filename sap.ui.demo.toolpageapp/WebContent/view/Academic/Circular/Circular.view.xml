@@ -1,0 +1,103 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Circular.Circular" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Circular">
+		<content>
+		
+		<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter
+			 text="  Circular Details  ">
+								
+			<l:Splitter height="500px">
+		     <l:VerticalLayout width="90%">
+		    <Label text="Circular Subject" labelFor="input-a" design="Bold" required="true" />
+			<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{Circular}" text="{Circular}" />
+								</Select>
+			<Label text="Reference No" labelFor="input-b" design="Bold" />
+			<Input id="input-b" required="true" width="100%"/>
+			<Label text="Circular Contents" labelFor="input-c" design="Bold"/>
+			<Input id="input-c" required="true" width="100%"/>
+			<Label text="Circular Date" labelFor="input-d" design="Bold"/>
+			<DatePicker
+			id="DP1"
+			placeholder="Enter Date ..."
+			change="handleChange"
+			class="sapUiSmallMarginBottom"/>
+			
+			<Button text="Add" press="onCircularAdd"/>
+		    <l:layoutData><l:SplitterLayoutData size="70%" /></l:layoutData>
+		     </l:VerticalLayout>
+		      
+		      
+			
+	
+	</l:Splitter>
+				
+			</IconTabFilter>
+			<IconTabFilter
+				text="  List  ">
+				 <Table
+						id="idProductsTable"
+						inset="false"
+						items="{/ProductCollection}" >
+ 
+					<columns>
+						<Column
+								minScreenWidth="Tablet" hAlign="Center"
+								demandPopin="true">
+							<Text text="SNo"/>
+						</Column>
+						<Column
+								minScreenWidth="Tablet" hAlign="Center"
+								demandPopin="true">
+							<Text text="Circular Subject "/>
+						</Column>
+						<Column
+								minScreenWidth="Tablet" hAlign="Center"
+								demandPopin="true">
+							<Text text="Reference No"/>
+						</Column>
+						
+						<Column
+								minScreenWidth="Tablet" hAlign="Center"
+								demandPopin="true">
+							<Text text=" Date "/>
+						</Column>
+						
+						<Column
+								minScreenWidth="Tablet" hAlign="Center"
+								demandPopin="true">
+							<Text text=" Manage "/>
+						</Column>
+					</columns>
+ 
+					<items>
+						<ColumnListItem
+								vAlign="Middle">
+							<cells>
+								
+									<Text text="{SNo}" />
+					<Text text="{Circular}" />
+									<Text text="{RefNo}" />
+					<Text text="{StartDate}" />		
+									<Button icon='sap-icon://edit' press="onPress"/>
+							</cells>
+										
+						</ColumnListItem>
+					</items>
+				</Table>
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+	
+	
+	
+		
+	
+		</content>
+	</Page>
+</core:View>

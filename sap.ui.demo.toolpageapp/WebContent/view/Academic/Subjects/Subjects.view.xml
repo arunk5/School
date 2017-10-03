@@ -1,0 +1,68 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="sap.ui.demo.toolpageapp.controller.Academic.Subjects.Subjects"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Subjects Page">
+		<content>
+			<GenericTile id="Tile1"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Subjects" failedText = "Academic/Subjects/SubjectView"
+				press="pressSubject">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile2"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Assign Subjects" failedText = "Academic/Subjects/AssignSubjects"
+				press="AssignSubjects">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile3"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Subject Allocation" failedText = "Academic/Subjects/SubjectAllocation"
+				press="SubjectAllocation">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile4"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Elective Subject" failedText = "Academic/Subjects/ElectiveSubject"
+				press="ElectiveSubject">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+			<GenericTile id="Tile5"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Subject Allocation Import" failedText = "Academic/Subjects/SubjectAllocationImport"
+				press="SubjectAllocationImport">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+		</content>
+	</Page>
+</core:View>

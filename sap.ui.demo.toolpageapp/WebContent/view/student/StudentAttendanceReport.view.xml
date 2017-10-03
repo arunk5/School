@@ -1,0 +1,62 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"  xmlns:u="sap.ui.unified"
+controllerName="sap.ui.demo.toolpageapp.controller.student.StudentAttendanceReport" xmlns:html="http://www.w3.org/1999/xhtml">
+<Page title="Student Attendance Import">
+<content>
+<l:Splitter  width="100%" orientation ="Vertical">	
+<Panel>
+<headerToolbar>
+<Toolbar>
+<Title level="H2" text="Student Attendance Import" />
+</Toolbar>
+</headerToolbar>
+
+<Label text="Year" width="auto" labelFor="Select"
+required="true" class="sapUiSmallMargin" />
+<Select id="Year" width="auto" items="{path: '/ProductCollection' }">
+<core:Item key="{Course}" text="{Course}" />
+</Select>
+<Label text="Month" width="auto" labelFor="Register"
+required="true" class="sapUiSmallMargin" />
+<Select id="Month" width="auto" items="{path: '/ProductCollection' }">
+<core:Item key="{Batch}" text="{Batch}" />
+</Select>	
+<l:VerticalLayout width="100%">
+<u:FileUploader
+id="fileUploader"
+name="myFileUpload"
+uploadUrl="upload/"
+width="400px"
+tooltip="Upload your file to the local server"
+uploadComplete="handleUploadComplete"
+change="handleValueChange"
+typeMissmatch="handleTypeMissmatch"
+style="Emphasized"
+fileType="txt,jpg"
+placeholder="Choose a file for Upload...">
+<u:parameters>
+<u:FileUploaderParameter
+name="param1"
+value="Foo"/>
+<u:FileUploaderParameter
+name="param2"
+value="bar"/>
+</u:parameters>
+<u:headerParameters>
+<u:FileUploaderParameter
+name="headerParam1"
+value="Foo"/>
+<u:FileUploaderParameter
+name="headerParam2"
+value="bar"/>
+</u:headerParameters>
+</u:FileUploader>
+<Button
+text="Upload File"
+press="handleUploadPress"/>
+
+</l:VerticalLayout>
+</Panel>
+</l:Splitter>
+</content>
+</Page>
+</core:View>

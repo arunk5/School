@@ -1,0 +1,54 @@
+<mvc:View
+	controllerName="sap.ui.demo.toolpageapp.controller.DataExport.AccountGroup"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	class="sapUiSmallMargin">
+	<l:VerticalLayout>
+		<l:content>
+		   
+			<Label text="Data Export" required="true" labelFor="SelectId"
+									 class="settingsLabel" />
+								<Select
+								    width="500px"
+								    id="firstdropdown"
+								    visible="true"
+					forceSelection="false"
+					change="listen"
+					selectedKey="PleaseSelect"
+					>
+					<core:Item key="PleaseSelect" text="Please Select" />
+					<core:Item key="Student" text="Student" />
+					<core:Item key="School" text="School" />
+					<core:Item key="Employee" text="Employee" />
+				</Select>
+					
+					<Select
+						    width="500px"
+						    visible="false"
+						    id="seconddropdown"
+							forceSelection="false"
+							selectedKey="{/ProductCollection/1/ProductId}"
+							items="{
+								path: '/ProductCollection',
+								sorter: { path: 'Name' }
+							}">
+					<core:Item key="{ProductId}" text="{Name}" />
+				</Select>
+				<Select
+						    width="500px"
+						    visible="false"
+						    id="thirddropdown"
+							forceSelection="false"
+							selectedKey="PleaseSelect">
+					<core:Item key="PleaseSelect" text="Please Select" />
+					<core:Item key="Attendance" text="Attendance" />
+					<core:Item key="Exam" text="Exam" />
+					<core:Item key="Fees" text="Fees" />
+					<core:Item key="StudentDetails" text="Student Details" />
+				</Select>
+	<ToggleButton text="Save" enabled="true" pressed="true" press="onPress" />
+		</l:content>
+	</l:VerticalLayout>
+</mvc:View>

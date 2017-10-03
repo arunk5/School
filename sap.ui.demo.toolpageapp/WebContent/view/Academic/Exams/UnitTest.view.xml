@@ -1,0 +1,58 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.UnitTest" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Exams Section">
+		<content>
+	
+		<GenericTile id="Tile1"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="GPA" failedText = "Academic/Exams/GPAOverView"
+				press="pressGPA">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+
+		<!-- 	<GenericTile id="Tile2"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="CCE"
+				press="pressCourse">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>   -->
+
+	
+			<GenericTile id="Tile5"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Unit Test" failedText = "Academic/Exams/OnlineExam/NewOnlineExam"
+				press="pressGPA">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	
+	<GenericTile id="Tile6"
+				class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Settings" failedText = "Academic/Exams/OnlineExam/ViewExamDetails"
+				press="pressGPA">
+				<tileContent>
+					<TileContent>
+						<content>
+							<ImageContent src="sap-icon://course-program"></ImageContent>
+						</content>
+					</TileContent>
+				</tileContent>
+			</GenericTile>
+	
+	
+		</content>
+	</Page>
+</core:View>

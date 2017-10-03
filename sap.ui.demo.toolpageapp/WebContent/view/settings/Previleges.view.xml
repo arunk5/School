@@ -1,0 +1,81 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:u="sap.ui.unified" xmlns:m="sap.m"
+	controllerName="sap.ui.demo.toolpageapp.controller.settings.Previleges"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Previleges">
+		<content>
+
+			<l:Splitter width="100%" orientation="Vertical">
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title level="H2" text="Privilege Settings" />
+						</Toolbar>
+					</headerToolbar>
+
+					<FlexBox width="100%" alignItems="Start">
+						<items>
+							<Label text="User Type" labelFor="Select" class="sapUiSmallMargin"
+								type="bold" />
+							<Select id="Select" maxWidth="200px" width="600px">
+								<core:Item key="Admin" text="Admin"/>
+								<core:Item key="Student" text="Student"/>
+							</Select>
+						</items>
+					</FlexBox>
+
+
+					<layoutData>
+						<l:SplitterLayoutData size="30%" resizable="false" />
+					</layoutData>
+				</Panel>
+
+				<Panel>
+					<headerToolbar>
+						<Toolbar>
+							<Title level="H2" text="Set Privilege" />
+						</Toolbar>
+					</headerToolbar>
+						<l:VerticalLayout width="100%">
+					<Table id="HeaderTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+								
+								<columns>
+									<Column width="12em">
+										<Text text="Modules" />
+									</Column>
+									<Column width="12em">
+										<Text text="Enable/Disable" />
+									</Column>
+																		
+								</columns>
+								
+								
+								<items>
+									<ColumnListItem>
+									<Text text="{Name}" />
+								    <CheckBox selected="{Visibilty}" />
+									</ColumnListItem>
+								</items>
+
+							</Table>
+									
+					<Button text="Save"/>
+					
+					  </l:VerticalLayout>
+					<layoutData>
+						<l:SplitterLayoutData size="70%" resizable="false" />
+					</layoutData>
+				</Panel>
+			</l:Splitter>
+
+
+
+
+
+		</content>
+	</Page>
+</core:View>

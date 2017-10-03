@@ -1,0 +1,62 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:l="sap.ui.layout"
+ controllerName="sap.ui.demo.toolpageapp.controller.Performance.CCE.CoursePerformance" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Course Performance">
+		<content>
+	<ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true"
+		focusable="true">
+     	
+	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		xmlns:layout="sap.ui.layout"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Course Performance">
+				<m:Panel>
+				    <layout:Grid defaultSpan="XL4 L6 M6 S12" width="100%">
+					<l:VerticalLayout width="100%">
+				<Label text="Course" labelFor="input-a"/>
+					<Select
+					forceSelection="false">
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+					<Label text="Term" labelFor="input-a"/>
+					<Select
+					forceSelection="false"
+					
+					>
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>
+				<Label text="Assessment Name" labelFor="input-a"/>
+					<Select
+					forceSelection="false">
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>	
+					<Label text="Exam Name" labelFor="input-a"/>
+					<Select
+					forceSelection="false">
+					<core:Item key="ProductId" text="Contract" />
+					<core:Item key="ProductId1" text="Ownership" />
+				</Select>	
+					
+				
+				
+					</l:VerticalLayout>		
+				</layout:Grid>
+			<ToggleButton text="Save" enabled="true" pressed="true" press="onPress" />
+				</m:Panel>
+			</IconTabFilter>
+	
+		</items>
+	</IconTabBar>
+	</ScrollContainer>
+		</content>
+	</Page>
+</core:View>

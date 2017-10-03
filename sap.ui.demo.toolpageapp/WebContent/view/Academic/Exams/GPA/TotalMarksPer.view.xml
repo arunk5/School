@@ -1,0 +1,79 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:m="sap.m" xmlns:c="sap.ui.commons" xmlns:l="sap.ui.layout"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.Exams.GPA.TotalMarksPer" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Marks Distribution">
+				<l:VerticalLayout width="90%">
+		    <Label text="Written Exam" labelFor="input-a" design="Bold" required="true" />
+			<Input
+				value=" "
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+			<Label text="Assessment Exam" labelFor="input-b" design="Bold" />
+			<Input
+				value=" "
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				
+				<Label text="Total Mark" labelFor="input-b" design="Bold" />
+			    <Input
+				value="100"
+				fieldWidth="60%"
+				class="sapUiSmallMarginBottom" />
+				
+			<Button text="Add"/>
+			 <l:layoutData><l:SplitterLayoutData size="70%" /></l:layoutData>
+		     </l:VerticalLayout>
+			
+				
+				</IconTabFilter>
+				<IconTabFilter text="Marks List">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">
+
+								<columns>
+									<Column width="12em" hAlign="Center">
+										<Text text="SNo" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+										<Text text="Written Exam Mark" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center"
+										>
+										<Text text="Assessment Exam Mark" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Manage" />
+									</Column>
+									
+									
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{LowerMark}" />
+											<Text text="{UpperMark}" />
+											<Button icon= 'sap-icon://edit' />
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+		</content>
+	</Page>
+</core:View>

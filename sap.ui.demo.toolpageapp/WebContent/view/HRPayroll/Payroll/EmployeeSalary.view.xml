@@ -1,0 +1,151 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.HRPayroll.Payroll.EmployeeSalary" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="" showNavButton="true" navButtonPress="BackButtonPress">
+		<content>
+	
+		<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Salary Settings">
+				<l:VerticalLayout width="100%">
+								<Label text=" Designation" required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{User}" text="{User}" />
+								</Select>
+
+								<Label text=" Employee Name " labelFor="input-a" design="Bold"
+									required="true" />
+									
+								<Select id="Select" width="100%" items="{path: '/ProductCollection' }">
+									<core:Item key="{ClassTeacher}" text="{ClassTeacher}" />
+								</Select>
+								
+								<Label text="Month" labelFor="input-b" design="Bold"
+									required="true" />
+								<Select id="Sele" width="100%" items="{path: '/trips' }">
+									<core:Item key="{VALUE}" text="{VALUE}" />
+								</Select>
+								
+								<FlexBox width="100%" fitContainer="true"
+					height="100px"
+					alignItems="Center"
+					justifyContent="Center">
+					<items>
+						<Input id="1"  class="sapUiSmallMarginEnd" width="70%" />
+						<Input id="2"  class="sapUiSmallMarginEnd" width="70%" />
+						<Button icon ="sap-icon://add" press="Accept" />
+						<Button icon ="sap-icon://less" press="Acceptless" />
+					</items>
+				</FlexBox>	
+								
+								
+								
+								
+				<Table id="idProductsTables" inset="false"
+								items="{
+			path: '/trips'
+			
+		}">							
+								<columns>
+							
+									<Column hAlign="Center">
+										<Text text="Pay Head" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Amt Or %" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Amount" />
+									</Column>
+																																
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{VALUE}" />
+											<Text text="" />
+											<Text text="{Symbol}" />
+											<Text text="{KEY}" />
+																					
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+									<Button text=" Save " press="onSave"/>
+								
+							</l:VerticalLayout>
+				
+			
+				</IconTabFilter>
+				<IconTabFilter text="Salary List">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column width="12em">
+										<Text text="S.No" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true">
+										<Text text="Designation" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Employee Name" />
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true"
+										hAlign="Center">
+										<Text text="Month" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="IssueDate" />
+									</Column>
+									
+									<Column hAlign="Left">
+										<Text text="Manage" />
+									</Column>
+																		
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SNo}" />
+											<Text text="{User}" />
+											<Text text="{ClassTeacher}" />
+											<Text text="{Hours}" />
+											<Text text="{StartDate}" />
+											
+                                       
+                                        <Button icon="sap-icon://delete" press="OnDelete"/>
+                                      
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+	
+	
+	
+	
+	
+		</content>
+	</Page>
+</core:View>

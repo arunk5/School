@@ -1,0 +1,1850 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "sap.ui.demo.toolpageapp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"rootView": {
+			"viewName": "sap.ui.demo.toolpageapp.view.loginview",
+			"type": "XML",
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.tnt": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.ui.demo.toolpageapp.i18n.i18n"
+				}
+			},
+			"ChartData": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/betterMedium.json"
+			},
+			"Clothing": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Clothing.json"
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"controlId": "mainContents",
+				"viewType": "XML",
+				"controlAggregation": "pages",
+				"viewPath": "sap.ui.demo.toolpageapp.view",
+				"async": true
+			},
+			"routes": [{
+					"pattern": " ",
+					"name": "loginview",
+					"target": "loginview"
+				},
+				
+				{
+					"pattern": "dashboard",
+					"name": "dashboard",
+					"target": "dashboard"
+				},
+				
+
+				{
+					"pattern": "mainContent",
+					"name": "mainContent",
+					"target": "mainContents"
+				},
+
+
+				{
+					"pattern": "Academic/AssignmentNotes/AddAssignmentView",
+					"name": "Academic/AssignmentNotes/AddAssignmentView",
+					"target": "AddAssignmentView"
+				},
+				{
+					"pattern": "Academic/AssignmentNotes/AddNotes",
+					"name": "Academic/AssignmentNotes/AddNotes",
+					"target": "AAAddNotes"
+				},
+				{
+					"pattern": "Academic/AssignmentNotes/AddAssignment",
+					"name": "Academic/AssignmentNotes/AddAssignment",
+					"target": "AAAddNote"
+				},
+
+				{
+					"pattern": "Academic/AssignmentNotes/AssignmentImport",
+					"name": "Academic/AssignmentNotes/AssignmentImport",
+					"target": "AssignmentImport"
+				},
+
+				{
+					"pattern": "Academic/Exams/OnlineExam/NewOnlineExam",
+					"name": "Academic/Exams/OnlineExam/NewOnlineExam",
+					"target": "NewOnlineExam"
+				},
+
+
+				{
+					"pattern": "Academic/Exams/OnlineExam/ViewExamDetails",
+					"name": "Academic/Exams/OnlineExam/ViewExamDetails",
+					"target": "ViewExamDetails"
+				},
+
+
+
+				{
+					"pattern": "Academic/Exams/GPAOverView",
+					"name": "Academic/Exams/GPAOverView",
+					"target": "GPAOverView"
+				},
+
+				{
+					"pattern": "Academic/Certifications/CertificateType",
+					"name": "Academic/Certifications/CertificateType",
+					"target": "CertificateType"
+				},
+				{
+					"pattern": "Academic/Certifications/CertificateType",
+					"name": "Academic/Certifications/CertificateType",
+					"target": "CertificateType"
+				},
+				{
+					"pattern": "Academic/Certifications/CustomCertificate",
+					"name": "Academic/Certifications/CustomCertificate",
+					"target": "CustomCertificate"
+				},
+				{
+					"pattern": "Academic/Certifications/Certificate",
+					"name": "Academic/Certifications/Certificate",
+					"target": "GenerateCertificate"
+				},
+				{
+					"pattern": "Academic/Circular/Circular",
+					"name": "Academic/Circular/Circular",
+					"target": "Circular"
+				},
+				{
+					"pattern": "Academic/CourseBatch/Batch",
+					"name": "Academic/CourseBatch/Batch",
+					"target": "Batch"
+				},
+
+				{
+					"pattern": "Academic/CourseBatch/CourseView",
+					"name": "Academic/CourseBatch/CourseView",
+					"target": "CourseView"
+				},
+
+
+				{
+					"pattern": "Academic/CourseBatch/ClassTeacherAllocation",
+					"name": "Academic/CourseBatch/ClassTeacherAllocation",
+					"target": "ClassTeacherAllocation"
+				},
+				{
+					"pattern": "Academic/CourseBatch/Course",
+					"name": "Academic/CourseBatch/Course",
+					"target": "CCourse"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/CCEExam/BroadSheet",
+					"name": "Academic/Exams/CCE/CCEExam/BroadSheet",
+					"target": "BroadSheet"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/CCEExam/CCEExamScheme",
+					"name": "Academic/Exams/CCE/CCEExam/CCEExamScheme",
+					"target": "CCEExamScheme"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/CCEExam/CCEScholMarkList",
+					"name": "Academic/Exams/CCE/CCEExam/CCEScholMarkList",
+					"target": "CCEScholMarkList"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/CCEExam/CCESetExam",
+					"name": "Academic/Exams/CCE/CCEExam/CCESetExam",
+					"target": "CCESetExam"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/CCEExam/GenerateReportCard",
+					"name": "Academic/Exams/CCE/CCEExam/GenerateReportCard",
+					"target": "GenerateReportCard"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEAssessment",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEAssessment",
+					"target": "CCEAssessment"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEAssessTerm",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEAssessTerm",
+					"target": "CCEAssessTerm"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCECategory",
+					"name": "Academic/Exams/CCE/InitialSettings/CCECategory",
+					"target": "CCECategory"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEGradeDes15",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEGradeDes15",
+					"target": "CCEGradeDes15"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEGrades",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEGrades",
+					"target": "CCEGrades"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEGradeSet",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEGradeSet",
+					"target": "CCEGradeSet"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEGradeSkillMapp",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEGradeSkillMapp",
+					"target": "CCEGradeSkillMapp"
+				},
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEIndicator",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEIndicator",
+					"target": "CCEIndicator"
+				},
+
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEMarkImport",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEMarkImport",
+					"target": "CCEMarkImport"
+				},
+
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCERemarkImport",
+					"name": "Academic/Exams/CCE/InitialSettings/CCERemarkImport",
+					"target": "CCERemarkImport"
+				},
+
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCEReportCardSettings",
+					"name": "Academic/Exams/CCE/InitialSettings/CCEReportCardSettings",
+					"target": "CCEReportCardSettings"
+				},
+
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCESkills",
+					"name": "Academic/Exams/CCE/InitialSettings/CCESkills",
+					"target": "CCESkills"
+				},
+
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CCESubjectSub",
+					"name": "Academic/Exams/CCE/InitialSettings/CCESubjectSub",
+					"target": "CCESubjectSub"
+				},
+
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CourseIndiRelat",
+					"name": "Academic/Exams/CCE/InitialSettings/CourseIndiRelat",
+					"target": "CourseIndiRelat"
+				},
+
+				{
+					"pattern": "Academic/Exams/CCE/InitialSettings/CourseIndiRelat",
+					"name": "Academic/Exams/CCE/InitialSettings/CourseIndiRelat",
+					"target": "CourseIndiRelat"
+				},
+
+				{
+					"pattern": "Academic/Exams/ExamHall/ExamHall",
+					"name": "Academic/Exams/ExamHall/ExamHall",
+					"target": "ExamHall"
+				},
+
+				{
+					"pattern": "Academic/Exams/ExamHall/HallArrangement",
+					"name": "Academic/Exams/ExamHall/HallArrangement",
+					"target": "HallArrangement"
+				},
+
+				{
+					"pattern": "Academic/Exams/ExamHall/InvigilationDuties",
+					"name": "Academic/Exams/ExamHall/InvigilationDuties",
+					"target": "InvigilationDuties"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/BoardSheet",
+					"name": "Academic/Exams/GPA/BoardSheet",
+					"target": "BoardSheet"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/SetTerm",
+					"name": "Academic/Exams/GPA/SetTerm",
+					"target": "SetTerm"
+				},
+
+
+				{
+					"pattern": "Academic/Exams/GPA/CreateExam",
+					"name": "Academic/Exams/GPA/CreateExam",
+					"target": "CreateExam"
+				},
+
+
+				{
+					"pattern": "Academic/Exams/GPA/SetExam",
+					"name": "Academic/Exams/GPA/SetExam",
+					"target": "SetExam"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/SetMarkList",
+					"name": "Academic/Exams/GPA/SetMarkList",
+					"target": "SetMarkList"
+				},
+				{
+					"pattern": "Academic/Exams/GPA/GenerateReportCard",
+					"name": "Academic/Exams/GPA/GenerateReportCard",
+					"target": "GenerateReportCard"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/TeacherScoreCard",
+					"name": "Academic/Exams/GPA/TeacherScoreCard",
+					"target": "TeacherScoreCard"
+				},
+
+
+				{
+					"pattern": "Academic/Exams/GPA/GPAMarksImport",
+					"name": "Academic/Exams/GPA/GPAMarksImport",
+					"target": "GPAMarksImport"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/GPASkill",
+					"name": "Academic/Exams/GPA/GPASkill",
+					"target": "GPASkill"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/GPASkillMark",
+					"name": "Academic/Exams/GPA/GPASkillMark",
+					"target": "GPASkillMark"
+				},
+				{
+					"pattern": "Academic/Exams/GPA/RemarksImport",
+					"name": "Academic/Exams/GPA/RemarksImport",
+					"target": "RemarksImport"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/SetGradeScale",
+					"name": "Academic/Exams/GPA/SetGradeScale",
+					"target": "SetGradeScale"
+				},
+				{
+					"pattern": "Academic/Exams/GPA/TotalMarksPer",
+					"name": "Academic/Exams/GPA/TotalMarksPer",
+					"target": "TotalMarksPer"
+				},
+				{
+					"pattern": "Academic/Exams/GPA/SetAssessment",
+					"name": "Academic/Exams/GPA/SetAssessment",
+					"target": "SetAssessment"
+				},
+
+				{
+					"pattern": "Academic/Exams/GPA/SubjectCreditPoint",
+					"name": "Academic/Exams/GPA/SubjectCreditPoint",
+					"target": "SubjectCreditPoint"
+				},
+
+
+
+				{
+					"pattern": "Academic/Subjects/Subjects",
+					"name": "Academic/Subjects/Subjects",
+					"target": "Subjects"
+				},
+
+				{
+					"pattern": "Academic/Subjects/AssignSubjects",
+					"name": "Academic/Subjects/AssignSubjects",
+					"target": "AssignSubjects"
+				},
+
+				{
+					"pattern": "Academic/Subjects/SubjectAllocation",
+					"name": "Academic/Subjects/SubjectAllocation",
+					"target": "SubjectAllocation"
+				},
+
+				{
+					"pattern": "Academic/Subjects/ElectiveSubject",
+					"name": "Academic/Subjects/ElectiveSubject",
+					"target": "ElectiveSubject"
+				},
+
+				{
+					"pattern": "Academic/Subjects/SubjectAllocationImport",
+					"name": "Academic/Subjects/SubjectAllocationImport",
+					"target": "SubjectAllocationImport"
+				},
+
+				{
+					"pattern": "Academic/Subjects/SubjectView",
+					"name": "Academic/Subjects/SubjectView",
+					"target": "SubjectView"
+				},
+
+				{
+					"pattern": "Academic/LessonPlanning/LessonPlanning",
+					"name": "Academic/LessonPlanning/LessonPlanning",
+					"target": "LessonPlanning"
+				},
+
+				{
+					"pattern": "Academic/Timetable/SetTimeTable",
+					"name": "Academic/Timetable/SetTimeTable",
+					"target": "Timetable"
+				},
+
+				{
+					"pattern": "Academic/Timetable/TimeTableView",
+					"name": "Academic/Timetable/TimeTableView",
+					"target": "TimeTableView"
+				},
+
+
+				{
+					"pattern": "Academic/Timetable/ActiveTimeTable",
+					"name": "Academic/Timetable/ActiveTimeTable",
+					"target": "ActiveTimeTable"
+				},
+
+				{
+					"pattern": "Academic/Timetable/ViewBatchTimeTable",
+					"name": "Academic/Timetable/ViewBatchTimeTable",
+					"target": "ViewBatchTimeTable"
+				},
+
+				{
+					"pattern": "Academic/Timetable/ViewTeacherTimeTable",
+					"name": "Academic/Timetable/ViewTeacherTimeTable",
+					"target": "ViewTeacherTimeTable"
+				},
+
+				{
+					"pattern": "Academic/Timetable/SearchProxy",
+					"name": "Academic/Timetable/SearchProxy",
+					"target": "SearchProxy"
+				},
+
+				{
+					"pattern": "Academic/Timetable/TeacherWorkingHrs",
+					"name": "Academic/Timetable/TeacherWorkingHrs",
+					"target": "TeacherWorkingHrs"
+				},
+
+				{
+					"pattern": "Academic/Timetable/TimeTableExport",
+					"name": "Academic/Timetable/TimeTableExport",
+					"target": "TimeTableExport"
+				},
+
+				{
+					"pattern": "Academic/Timetable/TimeTableImport",
+					"name": "Academic/Timetable/TimeTableImport",
+					"target": "TimeTableImport"
+				},
+
+
+				{
+					"pattern": "Academic/Exams/UnitTest",
+					"name": "Academic/Exams/UnitTest",
+					"target": "UnitTest"
+				},
+
+				{
+					"pattern": "Academic/Placements/PlaceVendor",
+					"name": "Academic/Placements/PlaceVendor",
+					"target": "Placements"
+				},
+
+				{
+					"pattern": "Academic/Placements/Attendees",
+					"name": "Academic/Placements/Attendees",
+					"target": "Attendees"
+				},
+
+				{
+					"pattern": "Academic/Placements/PlacedDetails",
+					"name": "Academic/Placements/PlacedDetails",
+					"target": "PlacedDetails"
+				},
+
+				{
+					"pattern": "Academic/Placements/PlaceCellMemebers",
+					"name": "Academic/Placements/PlaceCellMemebers",
+					"target": "PlaceCellMemebers"
+				},
+
+
+
+				{
+					"pattern": "Academic/Certifications/GenerateCertificate",
+					"name": "Academic/Certifications/GenerateCertificate",
+					"target": "GenerateCertificate"
+				},
+
+				{
+					"pattern": "Academic/Certifications/Certificate",
+					"name": "Academic/Certifications/Certificate",
+					"target": "Certificate"
+				},
+
+				{
+					"pattern": "Academic/PromotionsAlumni/PromotionAlumni",
+					"name": "Academic/PromotionsAlumni/PromotionAlumni",
+					"target": "PromotionAlumni"
+				},
+
+				{
+					"pattern": "Academic/PromotionsAlumni/Promotion",
+					"name": "Academic/PromotionsAlumni/Promotion",
+					"target": "Promotion"
+				},
+				{
+					"pattern": "Academic/PromotionsAlumni/AlumniMemb",
+					"name": "Academic/PromotionsAlumni/AlumniMemb",
+					"target": "AlumniMemb"
+				},
+
+
+				{
+					"pattern": "Academic/Occurence/OccurrenceRegi",
+					"name": "Academic/Occurence/OccurrenceRegi",
+					"target": "Occurence"
+				},
+
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/EmployeeList",
+					"name": "HRPayroll/EmployeeMgmt/EmployeeList",
+					"target": "EmployeeList"
+				},
+
+
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/AddUserType",
+					"name": "HRPayroll/EmployeeMgmt/AddUserType",
+					"target": "AddUserType"
+				},
+
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/AddDept",
+					"name": "HRPayroll/EmployeeMgmt/AddDept",
+					"target": "AddDept"
+				},
+
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/AddDesgina",
+					"name": "HRPayroll/EmployeeMgmt/AddDesgina",
+					"target": "AddDesgina"
+				},
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/AddEmployee",
+					"name": "HRPayroll/EmployeeMgmt/AddEmployee",
+					"target": "AddEmployee"
+				},
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/AddBankDetails",
+					"name": "HRPayroll/EmployeeMgmt/AddBankDetails",
+					"target": "AddBankDetails"
+				},
+
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/PrintList",
+					"name": "HRPayroll/EmployeeMgmt/PrintList",
+					"target": "PrintList"
+				},
+
+				{
+					"pattern": "HRPayroll/EmployeeMgmt/WithDrawal",
+					"name": "HRPayroll/EmployeeMgmt/WithDrawal",
+					"target": "WithDrawal"
+				},
+
+				{
+					"pattern": "HRPayroll/LeaveMgmt/LeaveDetails",
+					"name": "HRPayroll/LeaveMgmt/LeaveDetails",
+					"target": "LeaveDetails"
+				},
+
+				{
+					"pattern": "HRPayroll/LeaveMgmt/LeaveApplication",
+					"name": "HRPayroll/LeaveMgmt/LeaveApplication",
+					"target": "LeaveApplication"
+				},
+
+				{
+					"pattern": "HRPayroll/LeaveMgmt/LeaveApprovals",
+					"name": "HRPayroll/LeaveMgmt/LeaveApprovals",
+					"target": "LeaveApprovals"
+				},
+
+				{
+					"pattern": "HRPayroll/LeaveMgmt/LeaveCategory",
+					"name": "HRPayroll/LeaveMgmt/LeaveCategory",
+					"target": "LeaveCategory"
+				},
+
+				{
+					"pattern": "HRPayroll/Attendance",
+					"name": "HRPayroll/Attendance",
+					"target": "Attendancee"
+				},
+
+				{
+					"pattern": "Academic/Circular/Circular",
+					"name": "Academic/Circular/Circular",
+					"target": "Circular"
+				},
+
+
+				{
+					"pattern": "HRPayroll/Payroll/PayHead",
+					"name": "HRPayroll/Payroll/PayHead",
+					"target": "PayHead"
+				},
+
+				{
+					"pattern": "HRPayroll/Payroll/PaymentsType",
+					"name": "HRPayroll/Payroll/PaymentsType",
+					"target": "PaymentsType"
+				},
+
+				{
+					"pattern": "HRPayroll/Payroll/SalarySettings",
+					"name": "HRPayroll/Payroll/SalarySettings",
+					"target": "SalarySettings"
+				},
+
+				{
+					"pattern": "HRPayroll/Payroll/EmployeeSalary",
+					"name": "HRPayroll/Payroll/EmployeeSalary",
+					"target": "EmployeeSalary"
+				},
+
+				{
+					"pattern": "HRPayroll/Payroll/GeneratePayslip",
+					"name": "HRPayroll/Payroll/GeneratePayslip",
+					"target": "GeneratePayslip"
+				},
+
+
+
+
+				{
+					"pattern": "settings/studentImport",
+					"name": "settings/studentImport",
+					"target": "studentimport"
+				},
+				{
+					"pattern": "settings/visitorsList",
+					"name": "settings/visitorsList",
+					"target": "visitorsList"
+				},
+				{
+					"pattern": "settings/InstitutionDetails",
+					"name": "settings/InstitutionDetails",
+					"target": "InstitutionDetails"
+				},
+				{
+					"pattern": "settings/AssignCourse",
+					"name": "settings/AssignCourse",
+					"target": "AssignCourse"
+				},
+				{
+					"pattern": "settings/AcademicDetails",
+					"name": "settings/AcademicDetails",
+					"target": "AcademicDetails"
+				},
+
+
+				{
+					"pattern": "settings/EmployeeImport",
+					"name": "settings/EmployeeImport",
+					"target": "EmployeeImport"
+				},
+
+				{
+					"pattern": "settings/Previleges",
+					"name": "settings/Previleges",
+					"target": "Previleges"
+				},
+
+				{
+					"pattern": "settings/ApplicantList",
+					"name": "settings/ApplicantList",
+					"target": "ApplicantList"
+				},
+
+				{
+					"pattern": "settings/FeesAllocationImport",
+					"name": "settings/FeesAllocationImport",
+					"target": "FeesAllocationImport"
+				},
+
+				{
+					"pattern": "settings/CasteReligion",
+					"name": "settings/CasteReligion",
+					"target": "CasteReligion"
+				},
+
+				{
+					"pattern": "settings/visitorsList",
+					"name": "settings/visitorsList",
+					"target": "visitorsList"
+				},
+
+
+				{
+					"pattern": "settings",
+					"name": "settings",
+					"target": "settings"
+				},
+
+
+
+
+
+				{
+					"pattern": "Library/AddBooks",
+					"name": "Library/AddBooks",
+					"target": "Library/AddBooks"
+				},
+				{
+					"pattern": "Library/AddCategory",
+					"name": "Library/AddCategory",
+					"target": "Library/AddCategory"
+				},
+				{
+					"pattern": "Library/BookReturn",
+					"name": "Library/BookReturn",
+					"target": "Library/BookReturn"
+				},
+				{
+					"pattern": "Library/IssueBook",
+					"name": "Library/IssueBook",
+					"target": "Library/IssueBook"
+				},
+				{
+					"pattern": "Library/RequestDetails",
+					"name": "Library/RequestDetails",
+					"target": "Library/RequestDetails"
+				},
+				{
+					"pattern": "Library/Reports",
+					"name": "Library/Reports",
+					"target": "Library/Reports"
+				},
+				{
+					"pattern": "Library/Import",
+					"name": "Library/Import",
+					"target": "Library/Import"
+				},
+				{
+					"pattern": "Transport/SmsAlert",
+					"name": "Transport/SmsAlert",
+					"target": "Transport/SmsAlert"
+				},
+				{
+					"pattern": "Transport/AddDestination",
+					"name": "Transport/AddDestination",
+					"target": "Transport/AddDestination"
+				},
+				{
+					"pattern": "Transport/AddDriver",
+					"name": "Transport/AddDriver",
+					"target": "Transport/AddDriver"
+				},
+				{
+					"pattern": "Transport/AddRoute",
+					"name": "Transport/AddRoute",
+					"target": "Transport/AddRoute"
+				},
+				{
+					"pattern": "Transport/AddVehicle",
+					"name": "Transport/AddVehicle",
+					"target": "Transport/AddVehicle"
+				},
+				{
+					"pattern": "Transport/FeeCollection",
+					"name": "Transport/FeeCollection",
+					"target": "Transport/FeeCollection"
+				},
+				{
+					"pattern": "Transport/Import",
+					"name": "Transport/Import",
+					"target": "Transport/Import"
+				},
+				{
+					"pattern": "Transport/TransportAllocation",
+					"name": "Transport/TransportAllocation",
+					"target": "Transport/TransportAllocation"
+				},
+				{
+					"pattern": "Hostel/HostelAllocation",
+					"name": "Hostel/HostelAllocation",
+					"target": "Hostel/HostelAllocation"
+				},
+				{
+					"pattern": "Hostel/HostelDetails",
+					"name": "Hostel/HostelDetails",
+					"target": "Hostel/HostelDetails"
+				},
+				{
+					"pattern": "Hostel/HostelFeeCollection",
+					"name": "Hostel/HostelFeeCollection",
+					"target": "Hostel/HostelFeeCollection"
+				},
+				{
+					"pattern": "Hostel/HostelRegister",
+					"name": "Hostel/HostelRegister",
+					"target": "Hostel/HostelRegister"
+				},
+				{
+					"pattern": "Hostel/HostelRoom",
+					"name": "Hostel/HostelRoom",
+					"target": "Hostel/HostelRoom"
+				},
+				{
+					"pattern": "Hostel/HostelTransVacate",
+					"name": "Hostel/HostelTransVacate",
+					"target": "Hostel/HostelTransVacate"
+				},
+				{
+					"pattern": "Hostel/HostelVisitors",
+					"name": "Hostel/HostelVisitors",
+					"target": "Hostel/HostelVisitors"
+				},
+				{
+					"pattern": "Hostel/RequestDetails",
+					"name": "Hostel/RequestDetails",
+					"target": "Hostel/RequestDetails"
+				},
+				{
+					"pattern": "Events/EventTypes",
+					"name": "Events/EventTypes",
+					"target": "Events/EventTypes"
+				},
+				{
+					"pattern": "Events/AddEvent",
+					"name": "Events/AddEvent",
+					"target": "Events/AddEvent"
+				},
+				{
+					"pattern": "TaskManager/AssignTask",
+					"name": "TaskManager/AssignTask",
+					"target": "TaskManager/AssignTask"
+				},
+				{
+					"pattern": "TaskManager/TaskDetails",
+					"name": "TaskManager/TaskDetails",
+					"target": "TaskManager/TaskDetails"
+				},
+
+
+
+				{
+					"pattern": "page1",
+					"name": "page1",
+					"target": ""
+				},
+
+				{
+					"pattern": "page2",
+					"name": "page2",
+					"target": "page2"
+				},
+				{
+					"pattern": "page3",
+					"name": "page3",
+					"target": "page3"
+				},
+				{
+					"pattern": "subpage1",
+					"name": "subpage1",
+					"target": "subpage1"
+				},
+				{
+					"pattern": "subpage2",
+					"name": "subpage2",
+					"target": "subpage2"
+				},
+				{
+					"pattern": "student/StudentCategory",
+					"name": "student/StudentCategory",
+					"target": "StudentCategory"
+				},
+
+				{
+					"pattern": "student/StudentAdmission",
+					"name": "student/StudentAdmission",
+					"target": "StudentAdmission"
+				},
+
+				{
+					"pattern": "student/StudentList",
+					"name": "student/StudentList",
+					"target": "StudentList"
+				},
+
+				{
+					"pattern": "student/Attendance",
+					"name": "student/Attendance",
+					"target": "Attendance"
+				},
+
+				{
+					"pattern": "student/GuardianList",
+					"name": "student/GuardianList",
+					"target": "GuardianList"
+				},
+
+				{
+					"pattern": "student/RollNumber",
+					"name": "student/RollNumber",
+					"target": "RollNumber"
+				},
+
+				{
+					"pattern": "student/StudentAttendanceReport",
+					"name": "student/StudentAttendanceReport",
+					"target": "StudentAttendanceReport"
+				},
+
+
+				{
+					"pattern": "StoreMgmt/Vendors",
+					"name": "StoreMgmt/Vendors",
+					"target": "Vendors"
+				},
+
+				{
+					"pattern": "StoreMgmt/InventoryCategory",
+					"name": "StoreMgmt/InventoryCategory",
+					"target": "InventoryCategory"
+				},
+
+				{
+					"pattern": "StoreMgmt/InventoryItem",
+					"name": "StoreMgmt/InventoryItem",
+					"target": "InventoryItem"
+				},
+
+				{
+					"pattern": "StoreMgmt/InventoryIssue",
+					"name": "StoreMgmt/InventoryIssue",
+					"target": "InventoryIssue"
+				},
+
+				{
+					"pattern": "StoreMgmt/StockRegistry",
+					"name": "StoreMgmt/StockRegistry",
+					"target": "StockRegistry"
+				},
+
+				{
+					"pattern": "StoreMgmt/IssuedReport",
+					"name": "StoreMgmt/IssuedReport",
+					"target": "IssuedReport"
+				},
+
+				{
+					"pattern": "Events/AddEvent",
+					"name": "Events/AddEvent",
+					"target": "AddEvent"
+				},
+
+				{
+					"pattern": "Events/EventTypes",
+					"name": "Events/EventTypes",
+					"target": "EventTypes"
+				},
+
+				{
+					"pattern": "Performance/CCE/StudentPerformance",
+					"name": "Performance/CCE/StudentPerformance",
+					"target": "StudentPerformance"
+				},
+
+				{
+					"pattern": "Performance/CCE/CoursePerformance",
+					"name": "Performance/CCE/CoursePerformance",
+					"target": "CoursePerformance"
+				},
+
+				{
+					"pattern": "TaskManager/AssignTask",
+					"name": "TaskManager/AssignTask",
+					"target": "AssignTask"
+				},
+				{
+					"pattern": "TaskManager/TaskDetails",
+					"name": "TaskManager/TaskDetails",
+					"target": "TaskDetails"
+				},
+
+				{
+					"pattern": "DataExport/Export",
+					"name": "DataExport/Export",
+					"target": "DataExport"
+				}
+
+
+
+			],
+			"targets": {
+
+
+				"mainContents": {
+					"viewName": "rootApp",
+					"viewLevel": 1
+				},
+
+
+				"DataExport": {
+					"parent": "mainContents",
+					"viewName": "DataExport.Export",
+					"controlId": "Content"
+				},
+
+				"StudentCategory": {
+					"parent": "mainContents",
+					"viewName": "student.StudentCategory",
+					"controlId": "Content"
+				},
+
+				"StudentAdmission": {
+					"parent": "mainContents",
+					"viewName": "student.StudentAdmission",
+					"controlId": "Content"
+				},
+
+				"StudentList": {
+					"parent": "mainContents",
+					"viewName": "student.StudentList",
+					"controlId": "Content"
+
+				},
+				
+				"Attendancee": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.Attendance",
+					"controlId": "Content"
+				},			
+				
+
+				"Attendance": {
+					"parent": "mainContents",
+					"viewName": "student.Attendance",
+					"controlId": "Content"
+				},
+
+				"GuardianList": {
+					"parent": "mainContents",
+					"viewName": "student.GuardianList",
+					"controlId": "Content"
+				},
+
+				"RollNumber": {
+					"parent": "mainContents",
+					"viewName": "student.RollNumber",
+					"controlId": "Content"
+				},
+
+				"StudentAttendanceReport": {
+					"parent": "mainContents",
+					"viewName": "student.StudentAttendanceReport",
+					"controlId": "Content"
+				},
+
+
+				"StudentPerformance": {
+					"parent": "mainContents",
+					"viewName": "Performance.CCE.StudentPerformance",
+					"controlId": "Content"
+				},
+
+				"AssignTask": {
+					"parent": "mainContents",
+					"viewName": "TaskManager.AssignTask",
+					"controlId": "Content"
+				},
+
+				"TaskDetails": {
+					"parent": "mainContents",
+					"viewName": "TaskManager.TaskDetails",
+					"controlId": "Content"
+				},
+
+				"CoursePerformance": {
+					"parent": "mainContents",
+					"viewName": "Performance.CCE.CoursePerformance",
+					"controlId": "Content"
+				},
+
+				"AddEvent": {
+					"parent": "mainContents",
+					"viewName": "Events.AddEvent",
+					"controlId": "Content"
+				},
+
+				"EventTypes": {
+					"parent": "mainContents",
+					"viewName": "Events.EventTypes",
+					"controlId": "Content"
+				},
+
+				"Vendors": {
+					"parent": "mainContents",
+					"viewName": "StoreMgmt.Vendors",
+					"controlId": "Content"
+				},
+
+				"InventoryCategory": {
+					"parent": "mainContents",
+					"viewName": "StoreMgmt.InventoryCategory",
+					"controlId": "Content"
+				},
+
+				"InventoryItem": {
+					"parent": "mainContents",
+					"viewName": "StoreMgmt.InventoryItem",
+					"controlId": "Content"
+				},
+
+				"InventoryIssue": {
+					"parent": "mainContents",
+					"viewName": "StoreMgmt.InventoryIssue",
+					"controlId": "Content"
+				},
+
+				"StockRegistry": {
+					"parent": "mainContents",
+					"viewName": "StoreMgmt.StockRegistry",
+					"controlId": "Content"
+				},
+
+				"IssuedReport": {
+					"parent": "mainContents",
+					"viewName": "StoreMgmt.IssuedReport",
+					"controlId": "Content"
+				},
+
+
+				"AAAddNotes": {
+					"parent": "mainContents",
+					"viewName": "Academic.AssignmentNotes.AddNotes",
+					"controlId": "Content"
+
+				},
+
+				"AAAddNote": {
+					"parent": "mainContents",
+					"viewName": "Academic.AssignmentNotes.AddAssignment",
+					"controlId": "Content"
+				},
+				"loginview": {
+					"viewName": "loginview",
+					"viewLevel": 1
+
+				},
+
+                 "dashboard": {
+					"parent": "mainContents",
+					"viewName": "dashboard",
+					"controlId": "Content"
+				},
+
+				"settings": {
+					"parent": "mainContents",
+					"viewName": "settings",
+					"controlId": "Content"
+				},
+				"AcademicDetails": {
+					"parent": "mainContents",
+					"viewName": "settings.AcademicDetails",
+					"controlId": "Content"
+				},
+
+				"EmployeeImport": {
+					"parent": "mainContents",
+					"viewName": "settings.EmployeeImport",
+					"controlId": "Content"
+				},
+				"Previleges": {
+					"parent": "mainContents",
+					"viewName": "settings.Previleges",
+					"controlId": "Content"
+				},
+
+				"ApplicantList": {
+					"parent": "mainContents",
+					"viewName": "settings.ApplicantList",
+					"controlId": "Content"
+				},
+
+				"FeesAllocationImport": {
+					"parent": "mainContents",
+					"viewName": "settings.FeesAllocationImport",
+					"controlId": "Content"
+				},
+
+				"CCourse": {
+					"parent": "mainContents",
+					"viewName": "Academic.CourseBatch.Course",
+					"controlId": "Content"
+
+				},
+
+				"Batch": {
+					"parent": "mainContents",
+					"viewName": "Academic.CourseBatch.Batch",
+					"controlId": "Content"
+
+				},
+
+
+				"CourseView": {
+					"parent": "mainContents",
+					"viewName": "Academic.CourseBatch.CourseView",
+					"controlId": "Content"
+
+				},
+
+				"ClassTeacherAllocation": {
+					"parent": "mainContents",
+					"viewName": "Academic.CourseBatch.ClassTeacherAllocation",
+					"controlId": "Content"
+				},
+
+
+				"CertificateType": {
+					"parent": "mainContents",
+					"viewName": "Academic.Certifications.CertificateType",
+					"controlId": "Content"
+				},
+
+				"Certificate": {
+					"parent": "mainContents",
+					"viewName": "Academic.Certifications.Certificate",
+					"controlId": "Content"
+				},
+
+				"CustomCertificate": {
+					"parent": "mainContents",
+					"viewName": "Academic.Certifications.CustomCertificate",
+					"controlId": "Content"
+				},
+
+
+				"Subjects": {
+					"parent": "mainContents",
+					"viewName": "Academic.Subjects.Subjects",
+					"controlId": "Content"
+
+				},
+
+				"AssignSubjects": {
+					"parent": "mainContents",
+					"viewName": "Academic.Subjects.AssignSubjects",
+					"controlId": "Content"
+
+				},
+
+				"SubjectAllocation": {
+					"parent": "mainContents",
+					"viewName": "Academic.Subjects.SubjectAllocation",
+					"controlId": "Content"
+
+				},
+
+				"ElectiveSubject": {
+					"parent": "mainContents",
+					"viewName": "Academic.Subjects.ElectiveSubject",
+					"controlId": "Content"
+
+				},
+
+				"SubjectAllocationImport": {
+					"parent": "mainContents",
+					"viewName": "Academic.Subjects.SubjectAllocationImport",
+					"controlId": "Content"
+
+				},
+
+				"SubjectView": {
+					"parent": "mainContents",
+					"viewName": "Academic.Subjects.SubjectView",
+					"controlId": "Content"
+
+				},
+
+
+				"LessonPlanning": {
+					"parent": "mainContents",
+					"viewName": "Academic.LessonPlanning.LessonPlanning",
+					"controlId": "Content"
+
+				},
+
+				"Timetable": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.SetTimeTable",
+					"controlId": "Content"
+
+				},
+
+				"TimeTableView": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.TimeTableView",
+					"controlId": "Content"
+
+				},
+
+				"ActiveTimeTable": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.ActiveTimeTable",
+					"viewId": "ATT",
+					"controlId": "Content"
+
+				},
+
+				"ViewBatchTimeTable": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.ViewBatchTimeTable",
+					"controlId": "Content"
+
+				},
+
+
+				"ViewTeacherTimeTable": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.ViewTeacherTimeTable",
+					"controlId": "Content"
+
+				},
+
+				"SearchProxy": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.SearchProxy",
+					"controlId": "Content"
+
+				},
+
+				"TeacherWorkingHrs": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.TeacherWorkingHrs",
+					"controlId": "Content"
+
+				},
+
+				"TimeTableExport": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.TimeTableExport",
+					"controlId": "Content"
+
+				},
+
+				"TimeTableImport": {
+					"parent": "mainContents",
+					"viewName": "Academic.Timetable.TimeTableImport",
+					"controlId": "Content"
+
+				},
+
+
+				"UnitTest": {
+					"parent": "mainContents",
+					"viewName": "Academic.Exams.UnitTest",
+					"controlId": "Content"
+
+				},
+
+				"GenerateCertificate": {
+					"parent": "mainContents",
+					"viewName": "Academic.Certifications.GenerateCertificate",
+					"controlId": "Content"
+
+				},
+
+				"Placements": {
+					"parent": "mainContents",
+					"viewName": "Academic.Placements.PlaceVendor",
+					"controlId": "Content"
+
+				},
+
+				"AddAssignmentView": {
+					"parent": "mainContents",
+					"viewName": "Academic.AssignmentNotes.AddAssignmentView",
+					"controlId": "Content"
+
+				},
+
+				"AssignmentImport": {
+					"parent": "mainContents",
+					"viewName": "Academic.AssignmentNotes.AssignmentImport",
+					"controlId": "Content"
+
+				},
+
+				"NewOnlineExam": {
+					"parent": "mainContents",
+					"viewName": "Academic.Exams.OnlineExam.NewOnlineExam",
+					"controlId": "Content"
+
+				},
+
+				"ViewExamDetails": {
+					"parent": "mainContents",
+					"viewName": "Academic.Exams.OnlineExam.ViewExamDetails",
+					"controlId": "Content"
+
+				},
+
+				"GPAOverView": {
+					"parent": "mainContents",
+					"viewName": "Academic.Exams.GPAOverView",
+					"controlId": "Content"
+
+				},
+
+
+				"PromotionAlumni": {
+					"parent": "mainContents",
+					"viewName": "Academic.PromotionsAlumni.PromotionAlumni",
+					"controlId": "Content"
+				},
+
+				"Promotion": {
+					"parent": "mainContents",
+					"viewName": "Academic.PromotionsAlumni.Promotion",
+					"controlId": "Content"
+				},
+
+				"AlumniMemb": {
+					"parent": "mainContents",
+					"viewName": "Academic.PromotionsAlumni.AlumniMemb",
+					"controlId": "Content"
+				},
+
+				"Occurence": {
+					"parent": "mainContents",
+					"viewName": "Academic.Occurrence.OccurrenceRegi",
+					"controlId": "Content"
+				},
+
+				"EmployeeList": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.EmployeeList",
+					"controlId": "Content"
+				},
+
+				"AddUserType": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.AddUserType",
+					"controlId": "Content"
+				},
+
+				"AddDept": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.AddDept",
+					"controlId": "Content"
+				},
+
+				"AddDesgina": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.AddDesgina",
+					"controlId": "Content"
+				},
+
+				"AddEmployee": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.AddEmployee",
+					"controlId": "Content"
+				},
+
+				"AddBankDetails": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.AddBankDetails",
+					"controlId": "Content"
+				},
+
+				"PrintList": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.PrintList",
+					"controlId": "Content"
+				},
+
+				"WithDrawal": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.EmployeeMgmt.WithDrawal",
+					"controlId": "Content"
+				},
+
+				"LeaveDetails": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.LeaveMgmt.LeaveDetails",
+					"controlId": "Content"
+				},
+
+				"LeaveApplication": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.LeaveMgmt.LeaveApplication",
+					"controlId": "Content"
+				},
+
+				"LeaveApprovals": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.LeaveMgmt.LeaveApprovals",
+					"controlId": "Content"
+				},
+
+				"LeaveCategory": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.LeaveMgmt.LeaveCategory",
+					"controlId": "Content"
+				},
+
+
+
+				"Circular": {
+					"parent": "mainContents",
+					"viewName": "Academic.Circular.Circular",
+					"controlId": "Content"
+				},
+
+				"PayHead": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.Payroll.PayHead",
+					"controlId": "Content"
+				},
+
+				"PaymentsType": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.Payroll.PaymentsType",
+					"controlId": "Content"
+				},
+				"SalarySettings": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.Payroll.SalarySettings",
+					"controlId": "Content"
+				},
+				"EmployeeSalary": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.Payroll.EmployeeSalary",
+					"controlId": "Content"
+				},
+				"GeneratePayslip": {
+					"parent": "mainContents",
+					"viewName": "HRPayroll.Payroll.GeneratePayslip",
+					"controlId": "Content"
+				},
+
+				"AssignCourse": {
+					"parent": "mainContents",
+					"viewName": "settings.AssignCourse",
+					"controlId": "Content"
+				},
+				"CasteReligion": {
+					"parent": "mainContents",
+					"viewName": "settings.CasteReligion",
+					"controlId": "Content"
+				},
+
+
+
+				"studentimport": {
+					"parent": "mainContents",
+					"viewName": "settings.studentImport",
+					"controlId": "Content"
+				},
+				"visitorsList": {
+					"parent": "mainContents",
+					"viewName": "settings.visitorsList",
+					"controlId": "Content"
+				},
+				"InstitutionDetails": {
+					"parent": "mainContents",
+					"viewName": "settings.InstitutionDetails",
+					"controlId": "Content"
+				},
+
+
+				"Library/AddBooks": {
+					"parent": "mainContents",
+					"viewName": "Library.AddBook",
+					"controlId": "Content"
+				},
+				"Library/AddCategory": {
+					"parent": "mainContents",
+					"viewName": "Library.AddCategory",
+					"controlId": "Content"
+				},
+				"Library/BookReturn": {
+					"parent": "mainContents",
+					"viewName": "Library.BookReturn",
+					"controlId": "Content"
+				},
+				"Library/IssueBook": {
+					"parent": "mainContents",
+					"viewName": "Library.IssueBook",
+					"controlId": "Content"
+				},
+				"Library/RequestDetails": {
+					"parent": "mainContents",
+					"viewName": "Library.RequestDetails",
+					"controlId": "Content"
+				},
+				"Library/Reports": {
+					"parent": "mainContents",
+					"viewName": "Library.Reports",
+					"controlId": "Content"
+				},
+				"Library/Import": {
+					"parent": "mainContents",
+					"viewName": "Library.Import",
+					"controlId": "Content"
+				},
+				"Transport/SmsAlert": {
+					"parent": "mainContents",
+					"viewName": "Transport.SmsAlert",
+					"controlId": "Content"
+				},
+				"Transport/AddDestination": {
+					"parent": "mainContents",
+					"viewName": "Transport.AddDestination",
+					"controlId": "Content"
+				},
+				"Transport/AddDriver": {
+					"parent": "mainContents",
+					"viewName": "Transport.AddDriver",
+					"controlId": "Content"
+				},
+				"Transport/AddRoute": {
+					"parent": "mainContents",
+					"viewName": "Transport.AddRoute",
+					"controlId": "Content"
+				},
+				"Transport/AddVehicle": {
+					"parent": "mainContents",
+					"viewName": "Transport.AddVehicle",
+					"controlId": "Content"
+
+				},
+				"Transport/FeeCollection": {
+					"parent": "mainContents",
+					"viewName": "Transport.FeeCollection",
+					"controlId": "Content"
+				},
+				"Transport/Import": {
+					"parent": "mainContents",
+					"viewName": "Transport.Import",
+					"controlId": "Content"
+				},
+				"Transport/TransportAllocation": {
+					"parent": "mainContents",
+					"viewName": "Transport.TransportAllocation",
+					"controlId": "Content"
+				},
+				"Hostel/HostelAllocation": {
+					"parent": "mainContents",
+					"viewName": "Hostel.HostelAllocation",
+					"controlId": "Content"
+				},
+				"Hostel/HostelDetails": {
+					"parent": "mainContents",
+					"viewName": "Hostel.HostelDetails",
+					"controlId": "Content"
+				},
+				"Hostel/HostelFeeCollection": {
+					"parent": "mainContents",
+					"viewName": "Hostel.HostelFeeCollection",
+					"controlId": "Content"
+				},
+				"Hostel/HostelRegister": {
+					"parent": "mainContents",
+					"viewName": "Hostel.HostelRegister",
+					"controlId": "Content"
+				},
+				"Hostel/HostelRoom": {
+					"parent": "mainContents",
+					"viewName": "Hostel.HostelRoom",
+					"controlId": "Content"
+				},
+				"Hostel/HostelTransVacate": {
+					"parent": "mainContents",
+					"viewName": "Hostel.HostelTransVacate",
+					"controlId": "Content"
+				},
+				"Hostel/HostelVisitors": {
+					"parent": "mainContents",
+					"viewName": "Hostel.HostelVisitors",
+					"controlId": "Content"
+				},
+				"Hostel/RequestDetails": {
+					"parent": "mainContents",
+					"viewName": "Hostel.RequestDetails",
+					"controlId": "Content"
+				},
+				"Events/AddEvent": {
+					"parent": "mainContents",
+					"viewName": "Events.AddEvent",
+					"controlId": "Content"
+				},
+				"Events/EventTypes": {
+					"parent": "mainContents",
+					"viewName": "Events.EventTypes",
+					"controlId": "Content"
+				},
+				"TaskManager/TaskDetails": {
+					"parent": "mainContents",
+					"viewName": "TaskManager.TaskDetails",
+					"controlId": "Content"
+				},
+				"TaskManager/AssignTask": {
+					"parent": "mainContents",
+					"viewName": "TaskManager.AssignTask",
+					"controlId": "Content"
+				},
+
+				"SetTerm": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/SetTerm",
+					"controlId": "Content"
+				},
+
+				"CreateExam": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/CreateExam",
+					"controlId": "Content"
+				},
+
+				"GPASkill": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/GPASkill",
+					"controlId": "Content"
+				},
+
+				"GPASkillMark": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/GPASkillMark",
+					"controlId": "Content"
+				},
+				"SetGradeScale": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/SetGradeScale",
+					"controlId": "Content"
+				},
+				"SubjectCreditPoint": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/SubjectCreditPoint",
+					"controlId": "Content"
+				},
+				"TotalMarksPer": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/TotalMarksPer",
+					"controlId": "Content"
+				},
+				"SetAssessment": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/SetAssessment",
+					"controlId": "Content"
+				},
+				"SetExam": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/SetExam",
+					"controlId": "Content"
+				},
+				"SetMarkList": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/SetMarkList",
+					"controlId": "Content"
+				},
+				"TeacherScoreCard": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/TeacherScoreCard",
+					"controlId": "Content"
+				},
+				"BoardSheet": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/BoardSheet",
+					"controlId": "Content"
+				},
+				"GenerateReportCard": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/GenerateReportCard",
+					"controlId": "Content"
+				},
+				"GPAMarksImport": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/GPAMarksImport",
+					"controlId": "Content"
+				},
+				"RemarksImport": {
+					"parent": "mainContents",
+					"viewName": "Academic/Exams/GPA/RemarksImport",
+					"controlId": "Content"
+				},
+
+
+
+				"page2": {
+					"viewName": "Root2"
+				},
+				"page3": {
+					"viewName": "Root3"
+				}
+
+			}
+		}
+	}
+}

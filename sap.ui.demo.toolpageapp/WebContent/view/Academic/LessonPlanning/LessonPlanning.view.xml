@@ -1,0 +1,144 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:m="sap.m"
+		controllerName="sap.ui.demo.toolpageapp.controller.Academic.LessonPlanning.LessonPlanning" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="LessonPlanning">
+		<content>
+	<IconTabBar id="idIconTabBarNoIcons" stretchContentHeight="true"
+				expanded="{device>/isNoPhone}" xmlns:layout="sap.ui.layout"
+				class="sapUiResponsiveContentPadding">
+				
+				<items>
+				<IconTabFilter text="Lesson Planning">
+				<l:VerticalLayout width="100%">
+								<Label text=" Course " required="true" labelFor="SelectId"
+									design="Bold" class="settingsLabel" />
+
+								<Select id="SelectId" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+
+								<Label text=" Batch " labelFor="input-a" design="Bold"
+									required="true" />
+									
+								<Select id="Select" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+								
+								<Label text=" Subject " labelFor="input-b" design="Bold"
+									required="true" />
+								<Select id="Sele" width="100%" items="{path: '/trips' }">
+									<core:Item key="{KEY}" text="{VALUE}" />
+								</Select>
+							
+								<FlexBox width="100%" fitContainer="true"
+					height="100px"
+					alignItems="Center"
+					justifyContent="Center">
+					<items>
+						<Input id="1"  class="sapUiSmallMarginEnd" width="70%" />
+						<Input id="2"  class="sapUiSmallMarginEnd" width="70%" />
+						<Button icon ="sap-icon://add" press="Accept" />
+					</items>
+				</FlexBox>	
+								
+								
+								
+								
+				<Table id="idProductsTables1" inset="false"
+								items="{
+			path: '/trips'
+			
+		}">							
+								<columns>
+							
+									<Column hAlign="Center">
+										<Text text="Lecture Code" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Topic" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="" />
+									</Column>
+																																
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{VALUE}" />
+											<Text text="{KEY}" />
+											<Button icon="sap-icon://delete" press ="onDel"/>
+																					
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+											
+								<Button text=" Save " press="addLesson" />
+							</l:VerticalLayout>
+				
+				</IconTabFilter>
+				<IconTabFilter text="Planning List">
+				
+				<Table id="idProductsTable" inset="false"
+								items="{
+			path: '/ProductCollection'
+			
+		}">							
+								<columns>
+									<Column >
+										<Text text="S.No" />
+									</Column>
+		
+									<Column
+										hAlign="Center">
+										<Text text="Course" />
+									</Column>
+									<Column hAlign="Center">
+										<Text text="Batch" />
+									</Column>
+									
+									<Column hAlign="Center">
+										<Text text="Student" />
+									</Column>
+									
+									
+									
+									<Column hAlign="Center">
+										<Text text=" Lecture Code " />
+									</Column>
+									
+									<Column hAlign="Left">
+										<Text text=" Manage " />
+									</Column>
+																		
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<Text text="{SubjectID}" />
+											<Text text="{Course}" />
+											<Text text="{Batch}" />
+											<Text text="{Student}" />
+											<Text text="{SubjectCode}" />
+											<HBox>
+                                        <Button icon="sap-icon://edit" press="onPress"/>
+                                        <Button icon="sap-icon://delete" press="OnDelete"/>
+                                            </HBox>
+											
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+				
+				
+				
+				</IconTabFilter>
+				</items>
+</IconTabBar>
+	
+	
+		</content>
+	</Page>
+</core:View>
